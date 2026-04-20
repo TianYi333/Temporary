@@ -1,0 +1,14 @@
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/croutine.c
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+sch_schematic_f412\croutine.o: D:\APP\keill5\ARM\ARMCC\Bin\..\include\stddef.h
+sch_schematic_f412\croutine.o: D:\APP\keill5\ARM\ARMCC\Bin\..\include\stdint.h
+sch_schematic_f412\croutine.o: ../Core/Inc/FreeRTOSConfig.h
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F/portmacro.h
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/croutine.h
+sch_schematic_f412\croutine.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

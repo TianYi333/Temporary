@@ -1,0 +1,142 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1.1 (win64) Build 3286242 Wed Jul 28 13:10:47 MDT 2021
+| Date         : Fri Oct 24 10:23:40 2025
+| Host         : FXT333 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_Pro_FPGA_ctrl_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_Pro_FPGA_ctrl_0_2 (xilinx.com:user:Pro_FPGA_ctrl:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Thu Sep  4 10:08:26 2025
+| Host         : FXT333 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_Pro_FPGA_ctrl_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_Pro_FPGA_ctrl_0_2 (xilinx.com:user:Pro_FPGA_ctrl:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Wed May 28 15:55:56 2025
+| Host         : FXT333 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_Pro_FPGA_ctrl_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_Pro_FPGA_ctrl_0_2 (xilinx.com:user:Pro_FPGA_ctrl:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon May 26 14:01:14 2025
+| Host         : FXT333 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_Pro_FPGA_ctrl_0_2'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_Pro_FPGA_ctrl_0_2 (xilinx.com:user:Pro_FPGA_ctrl:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon May 26 11:41:06 2025
+| Host         : FXT333 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_Pro_FPGA_ctrl_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_Pro_FPGA_ctrl_0_1 (xilinx.com:user:Pro_FPGA_ctrl:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Mon May 26 11:16:52 2025
+| Host         : FXT333 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_Pro_FPGA_ctrl_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_Pro_FPGA_ctrl_0_1 (xilinx.com:user:Pro_FPGA_ctrl:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Fri May 23 15:29:57 2025
+| Host         : FXT333 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-2
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'system_Pro_FPGA_ctrl_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of system_Pro_FPGA_ctrl_0_1 (xilinx.com:user:Pro_FPGA_ctrl:1.0) from (Rev. 6) to (Rev. 5)
+

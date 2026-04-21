@@ -1,0 +1,24 @@
+Nothing to build in platform 'system_wrapper'
+
+17:19:06 **** Incremental Build of configuration Debug for project 2243 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/tcp_server.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/tcp_server.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/ASUS-PC/Desktop/temporary/2243/vitis/system_wrapper/export/system_wrapper/sw/system_wrapper/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/tcp_server.d" -MT"src/tcp_server.o" -o "src/tcp_server.o" "../src/tcp_server.c"
+'Finished building: ../src/tcp_server.c'
+' '
+'Building target: 2243.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/ASUS-PC/Desktop/temporary/2243/vitis/system_wrapper/export/system_wrapper/sw/system_wrapper/freertos10_xilinx_ps7_cortexa9_0/bsplib/lib -o "2243.elf"  ./src/PS_PL.o ./src/iic_phyreset.o ./src/main.o ./src/mmw_radar_cfg.o ./src/tcp_server.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+'Finished building target: 2243.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size 2243.elf  |tee "2243.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 205790	  35160	302127168	302368118	1205c576	2243.elf
+'Finished building: 2243.elf.size'
+' '

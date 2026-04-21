@@ -1,0 +1,99 @@
+#include "timer_intr.h"
+
+/**** 全局变量 ****/
+
+XScuGic InterruptController;
+static volatile uint32_t usElapsed = 0; // 累计微秒数
+static uint32_t timerFreq;              // 定时器实际频率
+static uint32_t loadValue;              // 自动重载值
+
+/**** 中断服务程序 ****/
+void TimerIntrHandler(void *Instance) {
+    XScuTimer *TimerPtr = (XScuTimer *)Instance;
+    XScuTimer_ClearInterruptStatus(TimerPtr); // 清除中断标志
+    usElapsed += TIMER_INTERVAL_US;          // 累计微秒数
+}
+
+/**** 定时器控制API ****/
+// 初始化定时器
+int Timer_Init(void) {
+    XScuTimer_Config *TimerConfig;
+
+    // 获取CPU频率并计算定时器频率
+    uint32_t cpuFreq = XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ;
+    timerFreq = cpuFreq / 2;  // 私有定时器时钟为CPU频率的1/2
+
+    // 计算自动重载值
+    loadValue = (timerFreq / 1000000) * TIMER_INTERVAL_US - 1;
+
+    // 初始化定时器硬件
+    //定位配置定时器设备ID
+    TimerConfig = XScuTimer_LookupConfig(TIMER_DEVICE_ID);
+    if (!TimerConfig) return XST_FAILURE;
+    //定时器配置初始化
+    if (XScuTimer_CfgInitialize(&xTimer, TimerConfig,
+                               TimerConfig->BaseAddr) != XST_SUCCESS)
+        return XST_FAILURE;
+    //配置自动重装载值
+    XScuTimer_LoadTimer(&xTimer, loadValue);//加载计时间   注册计数器
+    // 自动重载模式
+    XScuTimer_EnableAutoReload(&xTimer);
+    return XST_SUCCESS;
+}
+
+// 启动计时
+void Timer_Start(void) {
+    XScuTimer_Start(&xTimer);//启动定时器
+}
+
+// 停止计时
+void Timer_Stop(void) {
+    XScuTimer_Stop(&xTimer);
+}
+
+// 获取已用时间（微秒）
+uint32_t Timer_GetUs(void) {
+    uint32_t currentCount;
+    uint32_t preciseUs;
+
+    // 临界区保护（防止读取时被中断修改）
+    Xil_ExceptionDisable();
+    currentCount = XScuTimer_GetCounterValue(&xTimer);
+    preciseUs = usElapsed + (loadValue - currentCount) * (1000000 / timerFreq);
+    Xil_ExceptionEnable();
+
+    return preciseUs;
+}
+
+// 重置计时器
+void Timer_Reset(void) {
+    XScuTimer_Stop(&xTimer);
+    usElapsed = 0;
+    XScuTimer_LoadTimer(&xTimer, loadValue);
+}
+
+/**** 中断初始化 ****/
+int Interrupt_Init(void) {
+//    XScuGic_Config *GicConfig;
+
+    // 初始化中断控制器-freertos任务调度器已执行
+//    GicConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+//    if (!GicConfig) return XST_FAILURE;
+	//初始化中断配置和主结构体是否正确
+//    if (XScuGic_CfgInitialize(&InterruptController, GicConfig,
+//                             GicConfig->CpuBaseAddress) != XST_SUCCESS)
+//        return XST_FAILURE;
+
+    // 注册中断处理
+    XScuGic_Connect(&InterruptController, TIMER_IRQ_ID,
+                   (Xil_ExceptionHandler)TimerIntrHandler, &TimerInstance);
+
+    //使能 GIC 中的定时器中断
+    XScuGic_Enable(&InterruptController, TIMER_IRQ_ID);
+    //使能定时器中断
+    XScuTimer_EnableInterrupt(&TimerInstance);
+
+
+    return XST_SUCCESS;
+}
+

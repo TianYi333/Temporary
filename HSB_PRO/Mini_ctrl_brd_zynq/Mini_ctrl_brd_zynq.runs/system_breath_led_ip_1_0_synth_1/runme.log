@@ -1,0 +1,4 @@
+
+*** Running vivado
+    with args -log system_breath_led_ip_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_breath_led_ip_1_0.tcl
+

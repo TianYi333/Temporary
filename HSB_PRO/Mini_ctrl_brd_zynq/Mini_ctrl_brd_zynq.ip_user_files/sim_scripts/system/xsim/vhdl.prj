@@ -1,0 +1,67 @@
+vhdl xil_defaultlib  \
+"../../../bd/system/ip/system_rst_ps7_0_125M_0/sim/system_rst_ps7_0_125M_0.vhd" \
+
+vhdl xbip_utils_v3_0_10  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+
+vhdl axi_utils_v2_0_6  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/axi_utils_v2_0_vh_rfs.vhd" \
+
+vhdl xbip_pipe_v3_0_6  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+
+vhdl xbip_dsp48_wrapper_v3_0_4  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
+
+vhdl xbip_dsp48_addsub_v3_0_6  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
+
+vhdl xbip_bram18k_v3_0_6  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+
+vhdl mult_gen_v12_0_17  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+
+vhdl floating_point_v7_0_19  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/floating_point_v7_0_vh_rfs.vhd" \
+
+vhdl xbip_dsp48_mult_v3_0_6  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/xbip_dsp48_mult_v3_0_vh_rfs.vhd" \
+
+vhdl xbip_dsp48_multadd_v3_0_6  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd" \
+
+vhdl div_gen_v5_1_18  \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/div_gen_v5_1_vh_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/sim/div_gen_hex_2_dec.vhd" \
+"../../../bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/mult_gen_0_1/sim/mult_gen_0.vhd" \
+"../../../bd/system/ipshared/fcf5/src/Biss_c.vhd" \
+"../../../bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0_S00_AXI.vhd" \
+"../../../bd/system/ipshared/fcf5/src/TOP.vhd" \
+"../../../bd/system/ipshared/fcf5/src/UART.vhd" \
+"../../../bd/system/ipshared/fcf5/src/VERSION_CHECK.vhd" \
+"../../../bd/system/ipshared/fcf5/hdl/axi4_2_gmii.vhd" \
+"../../../bd/system/ipshared/fcf5/src/d_ram_ssd1309.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_AM2302.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_J.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_am2302_check.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_d_ram_ssd1309.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_dec_2_rom_addr.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_dec_2_rom_addr_1.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_display_am2302.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_display_gy_25.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_hex_2_dec.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_hex_2_dec_1.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_servo.vhd" \
+"../../../bd/system/ipshared/fcf5/src/fun_ssd1309.vhd" \
+"../../../bd/system/ipshared/fcf5/src/led_ctrl.vhd" \
+"../../../bd/system/ipshared/fcf5/src/servo_rx.vhd" \
+"../../../bd/system/ipshared/fcf5/src/servo_tx.vhd" \
+"../../../bd/system/ipshared/fcf5/src/spi_gen.vhd" \
+"../../../bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0.vhd" \
+"../../../bd/system/ip/system_Pro_FPGA_ctrl_0_2/sim/system_Pro_FPGA_ctrl_0_2.vhd" \
+"../../../bd/system/sim/system.vhd" \
+
+nosort

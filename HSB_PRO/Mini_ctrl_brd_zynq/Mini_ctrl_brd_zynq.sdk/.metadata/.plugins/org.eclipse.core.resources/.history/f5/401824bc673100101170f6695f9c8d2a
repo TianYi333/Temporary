@@ -1,0 +1,85 @@
+#include "TTC_timer_intr.h"
+
+/**** 全局变量 ****/
+// TTC实例配置
+XTtcPs 			ttcInstance;
+volatile int timer_flag = 0; // 中断标志
+
+static volatile uint32_t usElapsed = 0; // 累计微秒数
+
+/**** 中断服务程序 ****/
+void TTC_IRQHandler(void *InstancePtr) {
+	XTtcPs *TtcInst = (XTtcPs *)InstancePtr;
+	u32 status;
+	// 获取中断状态
+	status = XTtcPs_GetInterruptStatus(TtcInst);
+	if (status & XTTCPS_IXR_INTERVAL_MASK) {
+//		TTC_test();
+		timer_flag = 1;  // 设置标志位
+		//清除中断标志位
+		XTtcPs_ClearInterruptStatus(TtcInst, XTTCPS_IXR_INTERVAL_MASK);
+//		XTtcPs_Stop(&ttcInstance);
+	}
+}
+
+void TTC_test(void)
+{
+	if(XGpioPs_ReadPin(&gpiops_inst, EMIO1_PIN)==0)
+	{
+		XGpioPs_WritePin(&gpiops_inst, EMIO1_PIN, 1);
+	}
+	else if(XGpioPs_ReadPin(&gpiops_inst, EMIO1_PIN)==1)
+	{
+		XGpioPs_WritePin(&gpiops_inst, EMIO1_PIN, 0);
+	}
+}
+
+/**** 定时器控制API ****/
+// 初始化定时器
+int TTC_Init(void) {
+	XTtcPs_Config 	*ttcConfig;
+    //定位配置定时器设备ID
+    ttcConfig = XTtcPs_LookupConfig(TTC_DEVICE_ID);
+    if (!ttcConfig)
+    {
+    	xil_printf("TTC init failed!\n");
+    	return XST_FAILURE;
+    }
+    if (XTtcPs_CfgInitialize(&ttcInstance, ttcConfig, ttcConfig->BaseAddress) != XST_SUCCESS)
+    {
+    	xil_printf("TTC init failed!\n");
+    	return XST_FAILURE;
+    }
+
+    // 计算1秒延时的装载值（假设预分频=CPU时钟/2）
+//     XTtcPs_SetPrescaler(&ttcInstance, 132); // 1MHz
+     XTtcPs_SetInterval(&ttcInstance, 111);// 1us延时
+
+    // 间隔模式,禁用波形输出
+    XTtcPs_SetOptions(&ttcInstance, XTTCPS_OPTION_INTERVAL_MODE | XTTCPS_OPTION_WAVE_DISABLE);
+
+    // 启用中断
+    XTtcPs_EnableInterrupts(&ttcInstance, XTTCPS_IXR_INTERVAL_MASK);
+    // 启动定时器
+    XTtcPs_Start(&ttcInstance);
+    return XST_SUCCESS;
+}
+
+
+/**** 中断初始化 ****/
+int Interrupt_Init(void) {
+//    XScuGic_Config *GicConfig;
+
+    // 初始化中断控制器-freertos任务调度器已执行
+//    XScuGic_Config *GicConfig = XScuGic_LookupConfig(XPAR_SCUGIC_SINGLE_DEVICE_ID);
+//    XScuGic_CfgInitialize(&xInterruptController, GicConfig, GicConfig->CpuBaseAddress);
+
+//	XScuGic_SetPriorityTriggerType(&xInterruptController, TTC_INTR_ID, 0xA0, 0x3);
+    // 注册中断服务函数
+    XScuGic_Connect(&xInterruptController, TTC_INTR_ID,
+                   (Xil_ExceptionHandler)TTC_IRQHandler, &ttcInstance);
+    XScuGic_Enable(&xInterruptController, TTC_INTR_ID);
+    Xil_ExceptionEnable();
+    return XST_SUCCESS;
+}
+

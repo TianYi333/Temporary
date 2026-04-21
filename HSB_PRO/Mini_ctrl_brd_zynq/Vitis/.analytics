@@ -1,0 +1,576 @@
+timestamp=[2025-05-22 14:37:39], mode=WORKBENCH_START, duration=0:00:02.578, duration_ms=2578, data={}
+timestamp=[2025-05-22 14:37:39], mode=WORKBENCH_UI_INIT, duration=0:00:00.200, duration_ms=200, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2025-05-22 14:37:39], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.071, duration_ms=71, data={}
+timestamp=[2025-05-22 14:38:42], mode=APP_CREATION, duration=0:00:08.399, duration_ms=8399, data={name=Mini_ctrl_brd_zynq, project_type=sdk, os=freertos10_xilinx, processor=ps7_cortexa9, runtime=cpp, platform=system_wrapper, application_type=application}
+timestamp=[2025-05-22 14:41:58], mode=PLATFORM_GENERATION, duration=0:00:09.085, duration_ms=9085, data={name=system_wrapper}
+timestamp=[2025-05-22 14:49:27], mode=PLATFORM_GENERATION, duration=0:00:04.723, duration_ms=4723, data={name=system_wrapper}
+timestamp=[2025-05-22 14:49:47], mode=PLATFORM_GENERATION, duration=0:00:03.575, duration_ms=3575, data={name=system_wrapper}
+timestamp=[2025-05-22 14:54:18], mode=PLATFORM_GENERATION, duration=0:00:05.952, duration_ms=5952, data={name=system_wrapper}
+timestamp=[2025-05-22 14:55:25], mode=BUILD, duration=0:00:00.702, duration_ms=702, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-22 15:13:39], mode=PLATFORM_GENERATION, duration=0:00:07.571, duration_ms=7571, data={name=system_wrapper}
+timestamp=[2025-05-22 15:13:39], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-22 15:14:12], mode=PLATFORM_GENERATION, duration=0:00:02.427, duration_ms=2427, data={name=system_wrapper}
+timestamp=[2025-05-22 15:14:12], mode=BUILD, duration=0:00:00.095, duration_ms=95, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=true}
+timestamp=[2025-05-22 15:14:24], mode=PLATFORM_GENERATION, duration=0:00:08.946, duration_ms=8946, data={name=system_wrapper}
+timestamp=[2025-05-22 15:15:55], mode=PLATFORM_GENERATION, duration=0:00:10.099, duration_ms=10099, data={name=system_wrapper}
+timestamp=[2025-05-22 15:17:03], mode=PLATFORM_GENERATION, duration=0:00:10.156, duration_ms=10156, data={name=system_wrapper}
+timestamp=[2025-05-22 15:21:39], mode=PLATFORM_GENERATION, duration=0:00:05.395, duration_ms=5395, data={name=system_wrapper}
+timestamp=[2025-05-22 15:21:39], mode=BUILD, duration=0:00:00.722, duration_ms=722, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 11:57:43], mode=WORKBENCH_START, duration=0:00:05.182, duration_ms=5182, data={}
+timestamp=[2025-05-23 11:57:44], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.034, duration_ms=34, data={}
+timestamp=[2025-05-23 11:57:44], mode=WORKBENCH_UI_INIT, duration=0:00:00.787, duration_ms=787, data={editors_count=5, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-23 11:57:49], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=true}
+timestamp=[2025-05-23 11:57:52], mode=BUILD, duration=0:00:00.775, duration_ms=775, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 11:59:57], mode=BUILD, duration=0:00:00.614, duration_ms=614, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:01:21], mode=BUILD, duration=0:00:00.675, duration_ms=675, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:03:25], mode=BUILD, duration=0:00:00.649, duration_ms=649, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:11:31], mode=BUILD, duration=0:00:00.669, duration_ms=669, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:14:29], mode=BUILD, duration=0:00:00.675, duration_ms=675, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:19:27], mode=BUILD, duration=0:00:00.679, duration_ms=679, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:26:34], mode=BUILD, duration=0:00:00.605, duration_ms=605, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:47:19], mode=BUILD, duration=0:00:00.671, duration_ms=671, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:50:25], mode=BUILD, duration=0:00:00.665, duration_ms=665, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:52:08], mode=BUILD, duration=0:00:00.662, duration_ms=662, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:54:49], mode=BUILD, duration=0:00:00.736, duration_ms=736, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:56:16], mode=BUILD, duration=0:00:00.659, duration_ms=659, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 12:58:09], mode=BUILD, duration=0:00:00.599, duration_ms=599, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:11:03], mode=WORKBENCH_START, duration=0:00:04.163, duration_ms=4163, data={}
+timestamp=[2025-05-23 14:11:04], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.026, duration_ms=26, data={}
+timestamp=[2025-05-23 14:11:04], mode=WORKBENCH_UI_INIT, duration=0:00:00.529, duration_ms=529, data={editors_count=5, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-23 14:11:17], mode=BUILD, duration=0:00:00.536, duration_ms=536, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:11:20], mode=BUILD, duration=0:00:02.795, duration_ms=2795, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:11:50], mode=WORKBENCH_START, duration=0:00:04.751, duration_ms=4751, data={}
+timestamp=[2025-05-23 14:11:51], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.033, duration_ms=33, data={}
+timestamp=[2025-05-23 14:11:51], mode=WORKBENCH_UI_INIT, duration=0:00:00.729, duration_ms=729, data={editors_count=5, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-23 14:12:13], mode=BUILD, duration=0:00:00.251, duration_ms=251, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:14:50], mode=WORKBENCH_START, duration=0:00:04.251, duration_ms=4251, data={}
+timestamp=[2025-05-23 14:14:51], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.025, duration_ms=25, data={}
+timestamp=[2025-05-23 14:14:51], mode=WORKBENCH_UI_INIT, duration=0:00:00.403, duration_ms=403, data={editors_count=5, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-23 14:15:37], mode=BUILD, duration=0:00:00.594, duration_ms=594, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:15:40], mode=BUILD, duration=0:00:01.990, duration_ms=1990, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:16:05], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:16:07], mode=BUILD, duration=0:00:02.061, duration_ms=2061, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:17:28], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:18:26], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:18:29], mode=BUILD, duration=0:00:02.051, duration_ms=2051, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:19:27], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:19:30], mode=BUILD, duration=0:00:02.043, duration_ms=2043, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:22:15], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:22:17], mode=BUILD, duration=0:00:02.052, duration_ms=2052, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:27:28], mode=PLATFORM_GENERATION, duration=0:00:04.735, duration_ms=4735, data={name=system_wrapper}
+timestamp=[2025-05-23 14:27:29], mode=BUILD, duration=0:00:00.584, duration_ms=584, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:27:32], mode=BUILD, duration=0:00:02.961, duration_ms=2961, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:27:42], mode=BUILD, duration=0:00:00.211, duration_ms=211, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 14:27:45], mode=BUILD, duration=0:00:02.783, duration_ms=2783, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:13:45], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:13:48], mode=BUILD, duration=0:00:02.777, duration_ms=2777, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:31:20], mode=WORKBENCH_START, duration=0:00:04.359, duration_ms=4359, data={}
+timestamp=[2025-05-23 15:31:20], mode=WORKBENCH_UI_INIT, duration=0:00:00.429, duration_ms=429, data={editors_count=4, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-23 15:31:21], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.061, duration_ms=61, data={}
+timestamp=[2025-05-23 15:32:09], mode=WORKBENCH_START, duration=0:00:03.751, duration_ms=3751, data={}
+timestamp=[2025-05-23 15:32:10], mode=WORKBENCH_UI_INIT, duration=0:00:00.344, duration_ms=344, data={editors_count=4, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-23 15:32:10], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.046, duration_ms=46, data={}
+timestamp=[2025-05-23 15:33:18], mode=PLATFORM_GENERATION, duration=0:00:06.544, duration_ms=6544, data={name=system_wrapper}
+timestamp=[2025-05-23 15:33:19], mode=BUILD, duration=0:00:00.659, duration_ms=659, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:33:23], mode=BUILD, duration=0:00:03.045, duration_ms=3045, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:39:22], mode=PLATFORM_GENERATION, duration=0:00:07.929, duration_ms=7929, data={name=system_wrapper}
+timestamp=[2025-05-23 15:39:22], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:43:50], mode=PLATFORM_GENERATION, duration=0:00:05.746, duration_ms=5746, data={name=system_wrapper}
+timestamp=[2025-05-23 15:43:51], mode=BUILD, duration=0:00:00.738, duration_ms=738, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:43:54], mode=BUILD, duration=0:00:02.240, duration_ms=2240, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:44:23], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:44:26], mode=BUILD, duration=0:00:02.198, duration_ms=2198, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:45:36], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:45:39], mode=BUILD, duration=0:00:02.170, duration_ms=2170, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:46:16], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:46:18], mode=BUILD, duration=0:00:02.225, duration_ms=2225, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:46:23], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:46:26], mode=BUILD, duration=0:00:02.233, duration_ms=2233, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:46:53], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:46:55], mode=BUILD, duration=0:00:02.173, duration_ms=2173, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:46:55], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:47:03], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:47:05], mode=BUILD, duration=0:00:00.212, duration_ms=212, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:47:07], mode=BUILD, duration=0:00:02.173, duration_ms=2173, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:47:57], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:47:59], mode=BUILD, duration=0:00:02.189, duration_ms=2189, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:49:44], mode=PLATFORM_GENERATION, duration=0:00:05.581, duration_ms=5581, data={name=system_wrapper}
+timestamp=[2025-05-23 15:49:45], mode=BUILD, duration=0:00:00.592, duration_ms=592, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 15:49:48], mode=BUILD, duration=0:00:03.033, duration_ms=3033, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:16:45], mode=BUILD, duration=0:00:00.648, duration_ms=648, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:17:16], mode=BUILD, duration=0:00:00.760, duration_ms=760, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:25:04], mode=PLATFORM_GENERATION, duration=0:00:01.314, duration_ms=1314, data={name=system_wrapper}
+timestamp=[2025-05-23 16:25:05], mode=BUILD, duration=0:00:00.539, duration_ms=539, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:25:22], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:26:37], mode=BUILD, duration=0:00:00.522, duration_ms=522, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:34:34], mode=PLATFORM_GENERATION, duration=0:00:01.248, duration_ms=1248, data={name=system_wrapper}
+timestamp=[2025-05-23 16:34:35], mode=BUILD, duration=0:00:00.525, duration_ms=525, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:34:38], mode=BUILD, duration=0:00:03.020, duration_ms=3020, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:35:24], mode=BUILD, duration=0:00:00.522, duration_ms=522, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:35:46], mode=PLATFORM_GENERATION, duration=0:00:01.246, duration_ms=1246, data={name=system_wrapper}
+timestamp=[2025-05-23 16:35:47], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:35:50], mode=BUILD, duration=0:00:02.969, duration_ms=2969, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:35:54], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:35:57], mode=BUILD, duration=0:00:02.975, duration_ms=2975, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:47:48], mode=WORKBENCH_START, duration=0:00:04.143, duration_ms=4143, data={}
+timestamp=[2025-05-23 16:47:48], mode=WORKBENCH_UI_INIT, duration=0:00:00.402, duration_ms=402, data={editors_count=6, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-23 16:47:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.037, duration_ms=37, data={}
+timestamp=[2025-05-23 16:48:13], mode=PLATFORM_GENERATION, duration=0:00:02.486, duration_ms=2486, data={name=system_wrapper}
+timestamp=[2025-05-23 16:48:14], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:48:17], mode=BUILD, duration=0:00:03.098, duration_ms=3098, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:48:25], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:48:43], mode=BUILD, duration=0:00:00.525, duration_ms=525, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:51:39], mode=PLATFORM_GENERATION, duration=0:00:08.077, duration_ms=8077, data={name=system_wrapper}
+timestamp=[2025-05-23 16:51:39], mode=BUILD, duration=0:00:00.286, duration_ms=286, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:51:45], mode=PLATFORM_GENERATION, duration=0:00:05.075, duration_ms=5075, data={name=system_wrapper}
+timestamp=[2025-05-23 16:51:45], mode=BUILD, duration=0:00:00.278, duration_ms=278, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:52:42], mode=PLATFORM_GENERATION, duration=0:00:05.906, duration_ms=5906, data={name=system_wrapper}
+timestamp=[2025-05-23 16:52:43], mode=BUILD, duration=0:00:00.775, duration_ms=775, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:52:46], mode=BUILD, duration=0:00:02.483, duration_ms=2483, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:52:50], mode=BUILD, duration=0:00:00.215, duration_ms=215, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:53:15], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:53:17], mode=BUILD, duration=0:00:02.228, duration_ms=2228, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:53:39], mode=PLATFORM_GENERATION, duration=0:00:01.244, duration_ms=1244, data={name=system_wrapper}
+timestamp=[2025-05-23 16:53:40], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:53:43], mode=BUILD, duration=0:00:03.037, duration_ms=3037, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:57:14], mode=BUILD, duration=0:00:00.521, duration_ms=521, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:57:59], mode=BUILD, duration=0:00:00.521, duration_ms=521, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 16:58:53], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 17:03:13], mode=WORKBENCH_START, duration=0:00:04.927, duration_ms=4927, data={}
+timestamp=[2025-05-23 17:03:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.091, duration_ms=91, data={}
+timestamp=[2025-05-23 17:03:14], mode=WORKBENCH_UI_INIT, duration=0:00:00.703, duration_ms=703, data={editors_count=8, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-23 17:05:24], mode=BUILD, duration=0:00:00.573, duration_ms=573, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 17:05:27], mode=BUILD, duration=0:00:02.968, duration_ms=2968, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 17:20:39], mode=WORKBENCH_START, duration=0:00:04.285, duration_ms=4285, data={}
+timestamp=[2025-05-23 17:20:40], mode=WORKBENCH_UI_INIT, duration=0:00:00.432, duration_ms=432, data={editors_count=9, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-23 17:20:40], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.106, duration_ms=106, data={}
+timestamp=[2025-05-23 17:21:18], mode=BUILD, duration=0:00:00.249, duration_ms=249, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 17:21:21], mode=BUILD, duration=0:00:02.861, duration_ms=2861, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 17:58:12], mode=WORKBENCH_START, duration=0:00:03.792, duration_ms=3792, data={}
+timestamp=[2025-05-23 17:58:13], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.031, duration_ms=31, data={}
+timestamp=[2025-05-23 17:58:13], mode=WORKBENCH_UI_INIT, duration=0:00:00.437, duration_ms=437, data={editors_count=7, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-23 17:58:45], mode=BUILD, duration=0:00:00.319, duration_ms=319, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-23 17:59:36], mode=BUILD, duration=0:00:00.489, duration_ms=489, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:03:26], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:03:29], mode=BUILD, duration=0:00:02.645, duration_ms=2645, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:04:26], mode=MISC, duration=0:00:01.987, duration_ms=1987, data={name=Mini_ctrl_brd_zynq_system, type=bif_creation}
+timestamp=[2025-05-26 10:04:43], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:04:46], mode=BUILD, duration=0:00:02.622, duration_ms=2622, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:05:39], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:05:42], mode=BUILD, duration=0:00:02.604, duration_ms=2604, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:06:30], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:06:33], mode=BUILD, duration=0:00:02.626, duration_ms=2626, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:26:37], mode=BUILD, duration=0:00:00.482, duration_ms=482, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:28:29], mode=BUILD, duration=0:00:00.283, duration_ms=283, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 10:28:42], mode=BUILD, duration=0:00:00.476, duration_ms=476, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:26:31], mode=WORKBENCH_START, duration=0:00:03.948, duration_ms=3948, data={}
+timestamp=[2025-05-26 11:26:32], mode=WORKBENCH_UI_INIT, duration=0:00:00.406, duration_ms=406, data={editors_count=10, platform_editors_count=6, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-26 11:26:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.065, duration_ms=65, data={}
+timestamp=[2025-05-26 11:26:57], mode=PLATFORM_GENERATION, duration=0:00:01.291, duration_ms=1291, data={name=system_wrapper}
+timestamp=[2025-05-26 11:26:58], mode=BUILD, duration=0:00:00.492, duration_ms=492, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:27:01], mode=BUILD, duration=0:00:02.801, duration_ms=2801, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:27:52], mode=PLATFORM_GENERATION, duration=0:00:01.224, duration_ms=1224, data={name=system_wrapper}
+timestamp=[2025-05-26 11:27:52], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:27:55], mode=BUILD, duration=0:00:02.812, duration_ms=2812, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:28:55], mode=PLATFORM_GENERATION, duration=0:00:01.161, duration_ms=1161, data={name=system_wrapper}
+timestamp=[2025-05-26 11:28:55], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:28:58], mode=BUILD, duration=0:00:02.861, duration_ms=2861, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:31:11], mode=PLATFORM_GENERATION, duration=0:00:01.166, duration_ms=1166, data={name=system_wrapper}
+timestamp=[2025-05-26 11:31:12], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:31:15], mode=BUILD, duration=0:00:02.826, duration_ms=2826, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:31:21], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:33:38], mode=PLATFORM_GENERATION, duration=0:00:07.535, duration_ms=7535, data={name=system_wrapper}
+timestamp=[2025-05-26 11:33:38], mode=BUILD, duration=0:00:00.215, duration_ms=215, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:35:36], mode=PLATFORM_GENERATION, duration=0:00:05.972, duration_ms=5972, data={name=system_wrapper}
+timestamp=[2025-05-26 11:35:36], mode=BUILD, duration=0:00:00.723, duration_ms=723, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:35:39], mode=BUILD, duration=0:00:02.145, duration_ms=2145, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:36:22], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:36:24], mode=BUILD, duration=0:00:02.039, duration_ms=2039, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:36:25], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:51:05], mode=WORKBENCH_START, duration=0:00:04.297, duration_ms=4297, data={}
+timestamp=[2025-05-26 11:51:06], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.074, duration_ms=74, data={}
+timestamp=[2025-05-26 11:51:06], mode=WORKBENCH_UI_INIT, duration=0:00:00.795, duration_ms=795, data={editors_count=7, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-26 11:52:30], mode=PLATFORM_GENERATION, duration=0:00:02.473, duration_ms=2473, data={name=system_wrapper}
+timestamp=[2025-05-26 11:52:30], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=true}
+timestamp=[2025-05-26 11:52:30], mode=BUILD, duration=0:00:00.112, duration_ms=112, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=true}
+timestamp=[2025-05-26 11:52:40], mode=PLATFORM_GENERATION, duration=0:00:09.637, duration_ms=9637, data={name=system_wrapper}
+timestamp=[2025-05-26 11:53:30], mode=WORKBENCH_START, duration=0:00:03.240, duration_ms=3240, data={}
+timestamp=[2025-05-26 11:53:30], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.028, duration_ms=28, data={}
+timestamp=[2025-05-26 11:53:30], mode=WORKBENCH_UI_INIT, duration=0:00:00.507, duration_ms=507, data={editors_count=7, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-26 11:54:39], mode=PLATFORM_GENERATION, duration=0:00:11.217, duration_ms=11217, data={name=system_wrapper}
+timestamp=[2025-05-26 11:54:41], mode=BUILD, duration=0:00:00.741, duration_ms=741, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:54:45], mode=BUILD, duration=0:00:03.331, duration_ms=3331, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:54:53], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:54:56], mode=BUILD, duration=0:00:02.808, duration_ms=2808, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:55:00], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:59:21], mode=BUILD, duration=0:00:00.469, duration_ms=469, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:59:27], mode=BUILD, duration=0:00:00.192, duration_ms=192, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 11:59:30], mode=BUILD, duration=0:00:02.787, duration_ms=2787, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:01:10], mode=BUILD, duration=0:00:00.207, duration_ms=207, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:03:00], mode=BUILD, duration=0:00:00.488, duration_ms=488, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:03:53], mode=BUILD, duration=0:00:00.475, duration_ms=475, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:03:56], mode=BUILD, duration=0:00:00.189, duration_ms=189, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:03:59], mode=BUILD, duration=0:00:02.756, duration_ms=2756, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:06:05], mode=PLATFORM_GENERATION, duration=0:00:01.220, duration_ms=1220, data={name=system_wrapper}
+timestamp=[2025-05-26 12:06:05], mode=BUILD, duration=0:00:00.205, duration_ms=205, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:23:20], mode=WORKBENCH_START, duration=0:00:03.618, duration_ms=3618, data={}
+timestamp=[2025-05-26 12:23:21], mode=WORKBENCH_UI_INIT, duration=0:00:00.419, duration_ms=419, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-26 12:23:21], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.053, duration_ms=53, data={}
+timestamp=[2025-05-26 12:23:51], mode=PLATFORM_GENERATION, duration=0:00:07.406, duration_ms=7406, data={name=system_wrapper}
+timestamp=[2025-05-26 12:23:51], mode=BUILD, duration=0:00:00.285, duration_ms=285, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:24:39], mode=PLATFORM_GENERATION, duration=0:00:05.879, duration_ms=5879, data={name=system_wrapper}
+timestamp=[2025-05-26 12:24:41], mode=BUILD, duration=0:00:00.734, duration_ms=734, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:24:43], mode=BUILD, duration=0:00:02.140, duration_ms=2140, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:24:55], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:24:57], mode=BUILD, duration=0:00:02.041, duration_ms=2041, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:25:17], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 12:25:19], mode=BUILD, duration=0:00:02.040, duration_ms=2040, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 13:46:56], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 13:46:58], mode=BUILD, duration=0:00:02.153, duration_ms=2153, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 13:48:21], mode=PLATFORM_GENERATION, duration=0:00:07.452, duration_ms=7452, data={name=system_wrapper}
+timestamp=[2025-05-26 13:48:21], mode=BUILD, duration=0:00:00.227, duration_ms=227, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 13:48:27], mode=PLATFORM_GENERATION, duration=0:00:05.976, duration_ms=5976, data={name=system_wrapper}
+timestamp=[2025-05-26 13:52:00], mode=PLATFORM_GENERATION, duration=0:00:02.969, duration_ms=2969, data={name=system_wrapper}
+timestamp=[2025-05-26 13:52:03], mode=PLATFORM_GENERATION, duration=0:00:02.938, duration_ms=2938, data={name=system_wrapper}
+timestamp=[2025-05-26 13:52:15], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.031, duration_ms=31, data={}
+timestamp=[2025-05-26 13:52:15], mode=WORKBENCH_START, duration=0:00:03.696, duration_ms=3696, data={}
+timestamp=[2025-05-26 13:52:16], mode=WORKBENCH_UI_INIT, duration=0:00:00.508, duration_ms=508, data={editors_count=5, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-26 13:53:22], mode=PLATFORM_GENERATION, duration=0:00:13.543, duration_ms=13543, data={name=system_wrapper}
+timestamp=[2025-05-26 13:54:23], mode=PLATFORM_GENERATION, duration=0:00:06.087, duration_ms=6087, data={name=system_wrapper}
+timestamp=[2025-05-26 13:54:25], mode=BUILD, duration=0:00:00.791, duration_ms=791, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 13:54:29], mode=BUILD, duration=0:00:02.071, duration_ms=2071, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 13:54:30], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 13:54:32], mode=BUILD, duration=0:00:02.054, duration_ms=2054, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 13:56:47], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 13:56:49], mode=BUILD, duration=0:00:02.010, duration_ms=2010, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:11:49], mode=WORKBENCH_START, duration=0:00:03.612, duration_ms=3612, data={}
+timestamp=[2025-05-26 14:11:50], mode=WORKBENCH_UI_INIT, duration=0:00:00.388, duration_ms=388, data={editors_count=5, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-26 14:11:50], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.070, duration_ms=70, data={}
+timestamp=[2025-05-26 14:13:04], mode=PLATFORM_GENERATION, duration=0:00:09.024, duration_ms=9024, data={name=system_wrapper}
+timestamp=[2025-05-26 14:13:04], mode=BUILD, duration=0:00:00.290, duration_ms=290, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:15:19], mode=PLATFORM_GENERATION, duration=0:00:06.057, duration_ms=6057, data={name=system_wrapper}
+timestamp=[2025-05-26 14:15:20], mode=BUILD, duration=0:00:00.525, duration_ms=525, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:15:51], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:16:35], mode=BUILD, duration=0:00:00.451, duration_ms=451, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:16:37], mode=BUILD, duration=0:00:02.035, duration_ms=2035, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:16:48], mode=BUILD, duration=0:00:00.216, duration_ms=216, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:22:34], mode=BUILD, duration=0:00:00.515, duration_ms=515, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:22:36], mode=BUILD, duration=0:00:02.024, duration_ms=2024, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:23:06], mode=BUILD, duration=0:00:00.207, duration_ms=207, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:23:08], mode=BUILD, duration=0:00:02.018, duration_ms=2018, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:27:25], mode=BUILD, duration=0:00:00.217, duration_ms=217, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:27:27], mode=BUILD, duration=0:00:02.028, duration_ms=2028, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:29:38], mode=BUILD, duration=0:00:00.223, duration_ms=223, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:29:40], mode=BUILD, duration=0:00:02.016, duration_ms=2016, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:30:28], mode=BUILD, duration=0:00:00.215, duration_ms=215, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:30:30], mode=BUILD, duration=0:00:02.090, duration_ms=2090, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:35:02], mode=BUILD, duration=0:00:00.211, duration_ms=211, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 14:35:04], mode=BUILD, duration=0:00:02.030, duration_ms=2030, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-26 16:34:17], mode=WORKBENCH_START, duration=0:00:03.582, duration_ms=3582, data={}
+timestamp=[2025-05-26 16:34:17], mode=WORKBENCH_UI_INIT, duration=0:00:00.371, duration_ms=371, data={editors_count=5, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-26 16:34:18], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.095, duration_ms=95, data={}
+timestamp=[2025-05-27 15:00:51], mode=BUILD, duration=0:00:01.114, duration_ms=1114, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 15:00:54], mode=BUILD, duration=0:00:02.440, duration_ms=2440, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 15:12:20], mode=BUILD, duration=0:00:00.537, duration_ms=537, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 15:15:58], mode=BUILD, duration=0:00:00.529, duration_ms=529, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 15:16:01], mode=BUILD, duration=0:00:02.311, duration_ms=2311, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 15:17:06], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 15:17:08], mode=BUILD, duration=0:00:02.301, duration_ms=2301, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 15:17:18], mode=BUILD, duration=0:00:00.093, duration_ms=93, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=true}
+timestamp=[2025-05-27 15:17:22], mode=BUILD, duration=0:00:00.214, duration_ms=214, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 15:17:25], mode=BUILD, duration=0:00:02.250, duration_ms=2250, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 15:40:48], mode=BUILD, duration=0:00:00.475, duration_ms=475, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 15:48:26], mode=BUILD, duration=0:00:00.718, duration_ms=718, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 16:48:48], mode=BUILD, duration=0:00:00.719, duration_ms=719, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 16:48:50], mode=BUILD, duration=0:00:02.300, duration_ms=2300, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 16:49:00], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 16:49:02], mode=BUILD, duration=0:00:02.292, duration_ms=2292, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 16:51:28], mode=BUILD, duration=0:00:00.282, duration_ms=282, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 16:51:31], mode=BUILD, duration=0:00:02.369, duration_ms=2369, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 16:51:31], mode=BUILD, duration=0:00:00.230, duration_ms=230, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 16:53:39], mode=BUILD, duration=0:00:00.665, duration_ms=665, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 16:53:59], mode=BUILD, duration=0:00:00.533, duration_ms=533, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 17:05:27], mode=BUILD, duration=0:00:00.542, duration_ms=542, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 17:09:35], mode=BUILD, duration=0:00:00.233, duration_ms=233, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 17:09:38], mode=BUILD, duration=0:00:02.419, duration_ms=2419, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 17:11:42], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 17:11:46], mode=BUILD, duration=0:00:03.481, duration_ms=3481, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 17:24:17], mode=BUILD, duration=0:00:00.590, duration_ms=590, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 17:25:44], mode=BUILD, duration=0:00:00.595, duration_ms=595, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 17:26:17], mode=BUILD, duration=0:00:00.591, duration_ms=591, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 17:33:44], mode=BUILD, duration=0:00:00.543, duration_ms=543, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-27 17:36:42], mode=BUILD, duration=0:00:00.594, duration_ms=594, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:28:19], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 09:28:21], mode=BUILD, duration=0:00:02.106, duration_ms=2106, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:07:08], mode=WORKBENCH_START, duration=0:00:04.654, duration_ms=4654, data={}
+timestamp=[2025-05-28 16:07:09], mode=WORKBENCH_UI_INIT, duration=0:00:00.575, duration_ms=575, data={editors_count=6, platform_editors_count=2, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-28 16:07:09], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.168, duration_ms=168, data={}
+timestamp=[2025-05-28 16:09:08], mode=PLATFORM_GENERATION, duration=0:00:13.473, duration_ms=13473, data={name=system_wrapper}
+timestamp=[2025-05-28 16:09:10], mode=BUILD, duration=0:00:01.157, duration_ms=1157, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:09:17], mode=BUILD, duration=0:00:03.067, duration_ms=3067, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:09:38], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:09:42], mode=BUILD, duration=0:00:03.092, duration_ms=3092, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:11:42], mode=BUILD, duration=0:00:00.531, duration_ms=531, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:11:46], mode=BUILD, duration=0:00:03.107, duration_ms=3107, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:16:48], mode=WORKBENCH_START, duration=0:00:03.952, duration_ms=3952, data={}
+timestamp=[2025-05-28 16:16:48], mode=WORKBENCH_UI_INIT, duration=0:00:00.438, duration_ms=438, data={editors_count=4, platform_editors_count=1, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-28 16:16:48], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.089, duration_ms=89, data={}
+timestamp=[2025-05-28 16:23:51], mode=PLATFORM_GENERATION, duration=0:00:01.312, duration_ms=1312, data={name=system_wrapper}
+timestamp=[2025-05-28 16:23:52], mode=BUILD, duration=0:00:00.522, duration_ms=522, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:24:00], mode=BUILD, duration=0:00:00.526, duration_ms=526, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:27:38], mode=BUILD, duration=0:00:00.524, duration_ms=524, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:34:36], mode=BUILD, duration=0:00:00.530, duration_ms=530, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:37:13], mode=BUILD, duration=0:00:00.533, duration_ms=533, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 16:52:50], mode=BUILD, duration=0:00:00.529, duration_ms=529, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:18:16], mode=BUILD, duration=0:00:00.602, duration_ms=602, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:20:28], mode=BUILD, duration=0:00:00.528, duration_ms=528, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:25:57], mode=BUILD, duration=0:00:00.519, duration_ms=519, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:27:30], mode=BUILD, duration=0:00:00.530, duration_ms=530, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:31:08], mode=PLATFORM_GENERATION, duration=0:00:08.074, duration_ms=8074, data={name=system_wrapper}
+timestamp=[2025-05-28 17:31:08], mode=BUILD, duration=0:00:00.284, duration_ms=284, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:31:13], mode=PLATFORM_GENERATION, duration=0:00:04.337, duration_ms=4337, data={name=system_wrapper}
+timestamp=[2025-05-28 17:31:13], mode=BUILD, duration=0:00:00.286, duration_ms=286, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:32:38], mode=PLATFORM_GENERATION, duration=0:00:05.707, duration_ms=5707, data={name=system_wrapper}
+timestamp=[2025-05-28 17:32:39], mode=BUILD, duration=0:00:00.893, duration_ms=893, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:32:42], mode=BUILD, duration=0:00:02.242, duration_ms=2242, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:35:27], mode=BUILD, duration=0:00:00.532, duration_ms=532, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:35:29], mode=BUILD, duration=0:00:02.000, duration_ms=2000, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:36:35], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:36:39], mode=BUILD, duration=0:00:03.319, duration_ms=3319, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:42:07], mode=WORKBENCH_START, duration=0:00:04.416, duration_ms=4416, data={}
+timestamp=[2025-05-28 17:42:07], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.078, duration_ms=78, data={}
+timestamp=[2025-05-28 17:42:07], mode=WORKBENCH_UI_INIT, duration=0:00:00.580, duration_ms=580, data={editors_count=9, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-28 17:44:57], mode=BUILD, duration=0:00:00.569, duration_ms=569, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 17:48:06], mode=BUILD, duration=0:00:00.539, duration_ms=539, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-28 18:02:51], mode=BUILD, duration=0:00:00.656, duration_ms=656, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 08:58:56], mode=BUILD, duration=0:00:00.553, duration_ms=553, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:00:26], mode=BUILD, duration=0:00:00.491, duration_ms=491, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:02:05], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:02:42], mode=BUILD, duration=0:00:00.475, duration_ms=475, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:03:21], mode=BUILD, duration=0:00:00.238, duration_ms=238, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:04:08], mode=BUILD, duration=0:00:00.473, duration_ms=473, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:10:41], mode=BUILD, duration=0:00:00.317, duration_ms=317, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:11:48], mode=PLATFORM_GENERATION, duration=0:00:01.196, duration_ms=1196, data={name=system_wrapper}
+timestamp=[2025-05-29 09:11:49], mode=BUILD, duration=0:00:00.665, duration_ms=665, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:12:37], mode=BUILD, duration=0:00:00.643, duration_ms=643, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:13:22], mode=BUILD, duration=0:00:00.261, duration_ms=261, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:13:51], mode=BUILD, duration=0:00:00.299, duration_ms=299, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:14:11], mode=BUILD, duration=0:00:00.306, duration_ms=306, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:14:33], mode=BUILD, duration=0:00:00.506, duration_ms=506, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:16:27], mode=BUILD, duration=0:00:00.480, duration_ms=480, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:19:05], mode=BUILD, duration=0:00:00.479, duration_ms=479, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:20:08], mode=BUILD, duration=0:00:00.472, duration_ms=472, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:22:18], mode=BUILD, duration=0:00:00.276, duration_ms=276, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:22:34], mode=BUILD, duration=0:00:00.487, duration_ms=487, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:23:28], mode=BUILD, duration=0:00:00.480, duration_ms=480, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:24:59], mode=BUILD, duration=0:00:00.480, duration_ms=480, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:25:49], mode=BUILD, duration=0:00:00.480, duration_ms=480, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:27:01], mode=BUILD, duration=0:00:00.206, duration_ms=206, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:27:51], mode=BUILD, duration=0:00:00.505, duration_ms=505, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:42:36], mode=BUILD, duration=0:00:00.489, duration_ms=489, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:44:07], mode=BUILD, duration=0:00:06.189, duration_ms=6189, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:45:10], mode=BUILD, duration=0:00:01.865, duration_ms=1865, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 09:47:23], mode=BUILD, duration=0:00:01.823, duration_ms=1823, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 14:02:32], mode=WORKBENCH_START, duration=0:00:04.846, duration_ms=4846, data={}
+timestamp=[2025-05-29 14:02:33], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.105, duration_ms=105, data={}
+timestamp=[2025-05-29 14:02:33], mode=WORKBENCH_UI_INIT, duration=0:00:00.684, duration_ms=684, data={editors_count=11, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-29 14:04:38], mode=BUILD, duration=0:00:00.978, duration_ms=978, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 14:04:40], mode=BUILD, duration=0:00:00.211, duration_ms=211, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 14:04:43], mode=BUILD, duration=0:00:02.847, duration_ms=2847, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 15:40:16], mode=WORKBENCH_START, duration=0:00:04.895, duration_ms=4895, data={}
+timestamp=[2025-05-29 15:40:16], mode=WORKBENCH_UI_INIT, duration=0:00:00.405, duration_ms=405, data={editors_count=10, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-29 15:40:16], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.104, duration_ms=104, data={}
+timestamp=[2025-05-29 15:53:28], mode=BUILD, duration=0:00:00.790, duration_ms=790, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 15:54:36], mode=BUILD, duration=0:00:01.021, duration_ms=1021, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 15:54:56], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 15:55:55], mode=BUILD, duration=0:00:01.013, duration_ms=1013, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 15:57:25], mode=BUILD, duration=0:00:00.351, duration_ms=351, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 15:57:33], mode=BUILD, duration=0:00:00.531, duration_ms=531, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:00:21], mode=BUILD, duration=0:00:01.019, duration_ms=1019, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:02:32], mode=BUILD, duration=0:00:01.015, duration_ms=1015, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:02:40], mode=BUILD, duration=0:00:01.019, duration_ms=1019, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:02:47], mode=BUILD, duration=0:00:00.959, duration_ms=959, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:06:37], mode=BUILD, duration=0:00:00.226, duration_ms=226, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:06:40], mode=BUILD, duration=0:00:02.894, duration_ms=2894, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:12:33], mode=WORKBENCH_START, duration=0:00:04.162, duration_ms=4162, data={}
+timestamp=[2025-05-29 16:12:33], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.089, duration_ms=89, data={}
+timestamp=[2025-05-29 16:12:33], mode=WORKBENCH_UI_INIT, duration=0:00:00.585, duration_ms=585, data={editors_count=11, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-29 16:13:30], mode=BUILD, duration=0:00:00.362, duration_ms=362, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:13:40], mode=BUILD, duration=0:00:00.292, duration_ms=292, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:14:12], mode=BUILD, duration=0:00:00.526, duration_ms=526, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:17:32], mode=BUILD, duration=0:00:00.600, duration_ms=600, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:19:37], mode=BUILD, duration=0:00:00.607, duration_ms=607, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:19:41], mode=BUILD, duration=0:00:00.273, duration_ms=273, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:19:44], mode=BUILD, duration=0:00:02.907, duration_ms=2907, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:19:56], mode=BUILD, duration=0:00:00.236, duration_ms=236, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:19:59], mode=BUILD, duration=0:00:02.837, duration_ms=2837, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:20:18], mode=PLATFORM_GENERATION, duration=0:00:01.260, duration_ms=1260, data={name=system_wrapper}
+timestamp=[2025-05-29 16:20:19], mode=BUILD, duration=0:00:00.527, duration_ms=527, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:20:27], mode=BUILD, duration=0:00:00.523, duration_ms=523, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:20:30], mode=BUILD, duration=0:00:02.794, duration_ms=2794, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:21:29], mode=BUILD, duration=0:00:00.532, duration_ms=532, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:23:01], mode=BUILD, duration=0:00:00.280, duration_ms=280, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 16:23:04], mode=BUILD, duration=0:00:02.855, duration_ms=2855, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 17:38:00], mode=WORKBENCH_START, duration=0:00:04.548, duration_ms=4548, data={}
+timestamp=[2025-05-29 17:38:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.170, duration_ms=170, data={}
+timestamp=[2025-05-29 17:38:00], mode=WORKBENCH_UI_INIT, duration=0:00:00.652, duration_ms=652, data={editors_count=7, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-05-29 17:38:11], mode=BUILD, duration=0:00:00.252, duration_ms=252, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-05-29 17:38:14], mode=BUILD, duration=0:00:03.056, duration_ms=3056, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 15:18:21], mode=WORKBENCH_START, duration=0:00:05.550, duration_ms=5550, data={}
+timestamp=[2025-06-04 15:18:21], mode=WORKBENCH_UI_INIT, duration=0:00:00.471, duration_ms=471, data={editors_count=7, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-06-04 15:18:22], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.233, duration_ms=233, data={}
+timestamp=[2025-06-04 15:19:51], mode=BUILD, duration=0:00:01.999, duration_ms=1999, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 15:28:57], mode=PLATFORM_GENERATION, duration=0:04:48.907, duration_ms=288907, data={name=system_wrapper}
+timestamp=[2025-06-04 15:29:02], mode=BUILD, duration=0:00:04.099, duration_ms=4099, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 15:29:13], mode=BUILD, duration=0:00:09.341, duration_ms=9341, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 15:34:38], mode=BUILD, duration=0:00:01.852, duration_ms=1852, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 15:34:49], mode=BUILD, duration=0:00:09.190, duration_ms=9190, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 15:52:00], mode=PLATFORM_GENERATION, duration=0:04:36.376, duration_ms=276376, data={name=system_wrapper}
+timestamp=[2025-06-04 15:52:04], mode=BUILD, duration=0:00:04.163, duration_ms=4163, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 15:52:15], mode=BUILD, duration=0:00:09.518, duration_ms=9518, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 15:55:39], mode=BUILD, duration=0:00:01.855, duration_ms=1855, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:05:33], mode=PLATFORM_GENERATION, duration=0:05:50.642, duration_ms=350642, data={name=system_wrapper}
+timestamp=[2025-06-04 16:07:24], mode=PLATFORM_GENERATION, duration=0:01:50.657, duration_ms=110657, data={name=system_wrapper}
+timestamp=[2025-06-04 16:10:00], mode=PLATFORM_GENERATION, duration=0:02:22.519, duration_ms=142519, data={name=system_wrapper}
+timestamp=[2025-06-04 16:10:02], mode=BUILD, duration=0:00:01.050, duration_ms=1050, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:10:24], mode=PLATFORM_GENERATION, duration=0:00:01.462, duration_ms=1462, data={name=system_wrapper}
+timestamp=[2025-06-04 16:10:28], mode=BUILD, duration=0:00:03.961, duration_ms=3961, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:10:38], mode=BUILD, duration=0:00:08.978, duration_ms=8978, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:15:28], mode=BUILD, duration=0:00:01.939, duration_ms=1939, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:17:24], mode=BUILD, duration=0:00:01.731, duration_ms=1731, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:17:34], mode=BUILD, duration=0:00:09.321, duration_ms=9321, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:19:01], mode=BUILD, duration=0:00:00.649, duration_ms=649, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:19:12], mode=BUILD, duration=0:00:09.434, duration_ms=9434, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:32:52], mode=PLATFORM_GENERATION, duration=0:05:19.320, duration_ms=319320, data={name=system_wrapper}
+timestamp=[2025-06-04 16:32:57], mode=BUILD, duration=0:00:04.010, duration_ms=4010, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:33:07], mode=BUILD, duration=0:00:09.016, duration_ms=9016, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:39:50], mode=PLATFORM_GENERATION, duration=0:04:46.850, duration_ms=286850, data={name=system_wrapper}
+timestamp=[2025-06-04 16:39:54], mode=BUILD, duration=0:00:03.985, duration_ms=3985, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:40:04], mode=BUILD, duration=0:00:09.076, duration_ms=9076, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:44:09], mode=BUILD, duration=0:00:01.906, duration_ms=1906, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:45:35], mode=BUILD, duration=0:00:01.833, duration_ms=1833, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:45:45], mode=BUILD, duration=0:00:09.105, duration_ms=9105, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:46:19], mode=BUILD, duration=0:00:00.646, duration_ms=646, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:46:29], mode=BUILD, duration=0:00:08.946, duration_ms=8946, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:56:33], mode=PLATFORM_GENERATION, duration=0:05:04.967, duration_ms=304967, data={name=system_wrapper}
+timestamp=[2025-06-04 16:56:37], mode=BUILD, duration=0:00:03.995, duration_ms=3995, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 16:56:47], mode=BUILD, duration=0:00:08.934, duration_ms=8934, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-04 17:41:24], mode=WORKBENCH_START, duration=0:00:03.821, duration_ms=3821, data={}
+timestamp=[2025-06-04 17:41:24], mode=WORKBENCH_UI_INIT, duration=0:00:00.378, duration_ms=378, data={editors_count=5, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-06-04 17:41:24], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.084, duration_ms=84, data={}
+timestamp=[2025-06-17 09:44:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.171, duration_ms=171, data={}
+timestamp=[2025-06-17 09:44:50], mode=WORKBENCH_START, duration=0:00:05.357, duration_ms=5357, data={}
+timestamp=[2025-06-17 09:44:50], mode=WORKBENCH_UI_INIT, duration=0:00:00.534, duration_ms=534, data={editors_count=8, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-06-17 09:45:14], mode=PLATFORM_GENERATION, duration=0:00:19.633, duration_ms=19633, data={name=system_wrapper}
+timestamp=[2025-06-17 09:45:18], mode=BUILD, duration=0:00:03.386, duration_ms=3386, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-17 09:45:29], mode=BUILD, duration=0:00:09.917, duration_ms=9917, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-17 09:59:34], mode=PLATFORM_GENERATION, duration=0:00:01.626, duration_ms=1626, data={name=system_wrapper}
+timestamp=[2025-06-17 09:59:35], mode=BUILD, duration=0:00:00.561, duration_ms=561, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-06-17 09:59:46], mode=BUILD, duration=0:00:10.257, duration_ms=10257, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-06-18 11:07:35], mode=WORKBENCH_START, duration=0:00:04.358, duration_ms=4358, data={}
+timestamp=[2025-06-18 11:07:36], mode=WORKBENCH_UI_INIT, duration=0:00:00.423, duration_ms=423, data={editors_count=11, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-06-18 11:07:36], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.120, duration_ms=120, data={}
+timestamp=[2025-06-25 14:36:51], mode=WORKBENCH_START, duration=0:00:04.193, duration_ms=4193, data={}
+timestamp=[2025-06-25 14:36:51], mode=WORKBENCH_UI_INIT, duration=0:00:00.422, duration_ms=422, data={editors_count=11, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-06-25 14:36:52], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.133, duration_ms=133, data={}
+timestamp=[2025-07-11 10:46:11], mode=WORKBENCH_START, duration=0:00:06.029, duration_ms=6029, data={}
+timestamp=[2025-07-11 10:46:11], mode=WORKBENCH_UI_INIT, duration=0:00:00.392, duration_ms=392, data={editors_count=15, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-07-11 10:46:11], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.141, duration_ms=141, data={}
+timestamp=[2025-07-17 17:47:36], mode=WORKBENCH_START, duration=0:00:04.986, duration_ms=4986, data={}
+timestamp=[2025-07-17 17:47:37], mode=WORKBENCH_UI_INIT, duration=0:00:00.709, duration_ms=709, data={editors_count=15, platform_editors_count=7, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-07-17 17:47:37], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.178, duration_ms=178, data={}
+timestamp=[2025-07-18 09:39:02], mode=WORKBENCH_START, duration=0:00:05.194, duration_ms=5194, data={}
+timestamp=[2025-07-18 09:39:03], mode=WORKBENCH_UI_INIT, duration=0:00:00.488, duration_ms=488, data={editors_count=15, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-07-18 09:39:03], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.100, duration_ms=100, data={}
+timestamp=[2025-07-18 11:21:52], mode=WORKBENCH_START, duration=0:00:04.803, duration_ms=4803, data={}
+timestamp=[2025-07-18 11:21:52], mode=WORKBENCH_UI_INIT, duration=0:00:00.502, duration_ms=502, data={editors_count=15, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-07-18 11:21:53], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.104, duration_ms=104, data={}
+timestamp=[2025-07-18 14:00:22], mode=WORKBENCH_START, duration=0:00:05.374, duration_ms=5374, data={}
+timestamp=[2025-07-18 14:00:22], mode=WORKBENCH_UI_INIT, duration=0:00:00.568, duration_ms=568, data={editors_count=15, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-07-18 14:00:23], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.240, duration_ms=240, data={}
+timestamp=[2025-08-14 10:45:56], mode=WORKBENCH_START, duration=0:00:04.662, duration_ms=4662, data={}
+timestamp=[2025-08-14 10:45:57], mode=WORKBENCH_UI_INIT, duration=0:00:00.421, duration_ms=421, data={editors_count=15, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-08-14 10:45:57], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.130, duration_ms=130, data={}
+timestamp=[2025-08-14 10:51:42], mode=PLATFORM_GENERATION, duration=0:00:32.844, duration_ms=32844, data={name=system_wrapper}
+timestamp=[2025-08-14 10:51:48], mode=BUILD, duration=0:00:05.659, duration_ms=5659, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-08-14 10:52:08], mode=BUILD, duration=0:00:18.513, duration_ms=18513, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-08-22 11:05:40], mode=WORKBENCH_START, duration=0:00:04.627, duration_ms=4627, data={}
+timestamp=[2025-08-22 11:05:41], mode=WORKBENCH_UI_INIT, duration=0:00:00.473, duration_ms=473, data={editors_count=15, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-08-22 11:05:42], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.139, duration_ms=139, data={}
+timestamp=[2025-08-22 17:26:55], mode=WORKBENCH_START, duration=0:00:07.026, duration_ms=7026, data={}
+timestamp=[2025-08-22 17:26:55], mode=WORKBENCH_UI_INIT, duration=0:00:00.683, duration_ms=683, data={editors_count=15, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-08-22 17:27:05], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.112, duration_ms=112, data={}
+timestamp=[2025-08-22 17:31:49], mode=PLATFORM_GENERATION, duration=0:04:04.598, duration_ms=244598, data={name=system_wrapper}
+timestamp=[2025-09-04 09:43:55], mode=WORKBENCH_START, duration=0:00:04.766, duration_ms=4766, data={}
+timestamp=[2025-09-04 09:43:56], mode=WORKBENCH_UI_INIT, duration=0:00:00.469, duration_ms=469, data={editors_count=15, platform_editors_count=8, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-09-04 09:43:56], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.129, duration_ms=129, data={}
+timestamp=[2025-09-04 09:46:46], mode=PLATFORM_GENERATION, duration=0:00:36.762, duration_ms=36762, data={name=system_wrapper}
+timestamp=[2025-09-04 09:46:53], mode=BUILD, duration=0:00:06.015, duration_ms=6015, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-09-04 10:14:29], mode=BUILD, duration=0:00:04.335, duration_ms=4335, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-09-04 10:23:43], mode=PLATFORM_GENERATION, duration=0:06:44.630, duration_ms=404630, data={name=system_wrapper}
+timestamp=[2025-09-04 10:32:55], mode=PLATFORM_GENERATION, duration=0:08:33.754, duration_ms=513754, data={name=system_wrapper}
+timestamp=[2025-09-04 10:33:12], mode=PLATFORM_GENERATION, duration=0:00:11.578, duration_ms=11578, data={name=system_wrapper}
+timestamp=[2025-09-04 10:35:28], mode=PLATFORM_GENERATION, duration=0:02:14.367, duration_ms=134367, data={name=system_wrapper}
+timestamp=[2025-09-04 11:18:17], mode=PLATFORM_GENERATION, duration=0:22:53.276, duration_ms=1373276, data={name=system_wrapper}
+timestamp=[2025-09-04 11:18:42], mode=WORKBENCH_START, duration=0:00:04.409, duration_ms=4409, data={}
+timestamp=[2025-09-04 11:18:43], mode=WORKBENCH_UI_INIT, duration=0:00:00.638, duration_ms=638, data={editors_count=9, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-09-04 11:18:43], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.130, duration_ms=130, data={}
+timestamp=[2025-09-04 11:19:26], mode=PLATFORM_GENERATION, duration=0:00:38.592, duration_ms=38592, data={name=system_wrapper}
+timestamp=[2025-09-04 11:19:34], mode=BUILD, duration=0:00:07.478, duration_ms=7478, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-09-04 11:19:59], mode=BUILD, duration=0:00:20.598, duration_ms=20598, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-09-04 11:39:42], mode=BUILD, duration=0:00:03.998, duration_ms=3998, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-09-04 11:40:44], mode=BUILD, duration=0:00:00.805, duration_ms=805, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-09-04 11:41:07], mode=BUILD, duration=0:00:21.104, duration_ms=21104, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-09-05 17:54:43], mode=WORKBENCH_START, duration=0:00:04.561, duration_ms=4561, data={}
+timestamp=[2025-09-05 17:54:43], mode=WORKBENCH_UI_INIT, duration=0:00:00.423, duration_ms=423, data={editors_count=9, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-09-05 17:54:43], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.145, duration_ms=145, data={}
+timestamp=[2025-09-09 16:12:15], mode=WORKBENCH_START, duration=0:00:05.212, duration_ms=5212, data={}
+timestamp=[2025-09-09 16:12:16], mode=WORKBENCH_UI_INIT, duration=0:00:00.531, duration_ms=531, data={editors_count=8, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-09-09 16:12:16], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.216, duration_ms=216, data={}
+timestamp=[2025-09-09 17:15:49], mode=WORKBENCH_START, duration=0:00:03.898, duration_ms=3898, data={}
+timestamp=[2025-09-09 17:15:49], mode=WORKBENCH_UI_INIT, duration=0:00:00.501, duration_ms=501, data={editors_count=11, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-09-09 17:15:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.091, duration_ms=91, data={}
+timestamp=[2025-09-09 18:01:16], mode=WORKBENCH_START, duration=0:00:04.578, duration_ms=4578, data={}
+timestamp=[2025-09-09 18:01:16], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.111, duration_ms=111, data={}
+timestamp=[2025-09-09 18:01:17], mode=WORKBENCH_UI_INIT, duration=0:00:00.552, duration_ms=552, data={editors_count=13, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-09-30 09:22:42], mode=WORKBENCH_START, duration=0:00:04.410, duration_ms=4410, data={}
+timestamp=[2025-09-30 09:22:42], mode=WORKBENCH_UI_INIT, duration=0:00:00.364, duration_ms=364, data={editors_count=13, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-09-30 09:22:43], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.125, duration_ms=125, data={}
+timestamp=[2025-10-20 17:53:04], mode=WORKBENCH_START, duration=0:00:04.791, duration_ms=4791, data={}
+timestamp=[2025-10-20 17:53:05], mode=WORKBENCH_UI_INIT, duration=0:00:00.321, duration_ms=321, data={editors_count=5, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-10-20 17:53:05], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.154, duration_ms=154, data={}
+timestamp=[2025-10-21 15:58:04], mode=WORKBENCH_START, duration=0:00:05.074, duration_ms=5074, data={}
+timestamp=[2025-10-21 15:58:05], mode=WORKBENCH_UI_INIT, duration=0:00:00.405, duration_ms=405, data={editors_count=7, platform_editors_count=3, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-10-21 15:58:05], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.156, duration_ms=156, data={}
+timestamp=[2025-10-24 10:40:55], mode=WORKBENCH_START, duration=0:00:05.267, duration_ms=5267, data={}
+timestamp=[2025-10-24 10:40:56], mode=WORKBENCH_UI_INIT, duration=0:00:00.360, duration_ms=360, data={editors_count=8, platform_editors_count=4, projects_count=4, platform_projects_count=1, active_platform_editor=true, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-10-24 10:40:56], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.095, duration_ms=95, data={}
+timestamp=[2025-10-24 10:43:19], mode=PLATFORM_GENERATION, duration=0:00:14.690, duration_ms=14690, data={name=system_wrapper}
+timestamp=[2025-10-24 10:43:21], mode=BUILD, duration=0:00:01.279, duration_ms=1279, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-10-24 10:43:29], mode=BUILD, duration=0:00:04.924, duration_ms=4924, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-10-24 10:44:25], mode=BUILD, duration=0:00:00.293, duration_ms=293, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-10-24 10:44:29], mode=BUILD, duration=0:00:03.393, duration_ms=3393, data={name=Mini_ctrl_brd_zynq_system, configuration=Debug, clean_build=false}
+timestamp=[2025-10-24 19:12:09], mode=WORKBENCH_START, duration=0:00:04.312, duration_ms=4312, data={}
+timestamp=[2025-10-24 19:12:09], mode=WORKBENCH_UI_INIT, duration=0:00:00.293, duration_ms=293, data={editors_count=9, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-10-24 19:12:10], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.106, duration_ms=106, data={}
+timestamp=[2025-10-28 10:25:51], mode=WORKBENCH_START, duration=0:00:05.362, duration_ms=5362, data={}
+timestamp=[2025-10-28 10:25:51], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.133, duration_ms=133, data={}
+timestamp=[2025-10-28 10:25:51], mode=WORKBENCH_UI_INIT, duration=0:00:00.499, duration_ms=499, data={editors_count=9, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-10-29 15:00:31], mode=WORKBENCH_START, duration=0:00:05.284, duration_ms=5284, data={}
+timestamp=[2025-10-29 15:00:32], mode=WORKBENCH_UI_INIT, duration=0:00:00.487, duration_ms=487, data={editors_count=9, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-10-29 15:00:32], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.156, duration_ms=156, data={}
+timestamp=[2025-11-06 15:41:09], mode=WORKBENCH_START, duration=0:00:05.077, duration_ms=5077, data={}
+timestamp=[2025-11-06 15:41:10], mode=WORKBENCH_UI_INIT, duration=0:00:00.501, duration_ms=501, data={editors_count=9, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-11-06 15:41:10], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.170, duration_ms=170, data={}
+timestamp=[2025-11-06 15:50:29], mode=WORKBENCH_START, duration=0:00:04.359, duration_ms=4359, data={}
+timestamp=[2025-11-06 15:50:30], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.081, duration_ms=81, data={}
+timestamp=[2025-11-06 15:50:30], mode=WORKBENCH_UI_INIT, duration=0:00:00.469, duration_ms=469, data={editors_count=9, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-12-04 17:32:26], mode=WORKBENCH_START, duration=0:00:04.952, duration_ms=4952, data={}
+timestamp=[2025-12-04 17:32:27], mode=WORKBENCH_UI_INIT, duration=0:00:00.507, duration_ms=507, data={editors_count=9, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-12-04 17:32:27], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.165, duration_ms=165, data={}
+timestamp=[2025-12-04 18:12:53], mode=PLATFORM_GENERATION, duration=0:00:12.952, duration_ms=12952, data={name=system_wrapper}
+timestamp=[2025-12-04 18:12:56], mode=BUILD, duration=0:00:02.227, duration_ms=2227, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-12-04 18:20:19], mode=BUILD, duration=0:00:01.465, duration_ms=1465, data={name=Mini_ctrl_brd_zynq, configuration=Debug, clean_build=false}
+timestamp=[2025-12-08 10:41:00], mode=WORKBENCH_START, duration=0:00:04.711, duration_ms=4711, data={}
+timestamp=[2025-12-08 10:41:00], mode=WORKBENCH_UI_INIT, duration=0:00:00.410, duration_ms=410, data={editors_count=9, platform_editors_count=5, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Mini_ctrl_brd_zynq,Mini_ctrl_brd_zynq_system,RemoteSystemsTempFiles,system_wrapper}
+timestamp=[2025-12-08 10:41:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.135, duration_ms=135, data={}

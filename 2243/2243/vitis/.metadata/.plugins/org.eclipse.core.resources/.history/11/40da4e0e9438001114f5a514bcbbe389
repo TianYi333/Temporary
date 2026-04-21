@@ -1,0 +1,699 @@
+#ifndef __MMW_RADAR_CFG_H__
+#define __MMW_RADAR_CFG_H__
+
+#include "main.h"
+#include <stdint.h>
+#include <string.h>
+#include "PS_PL.h"
+#include "xwr22xx_metaImage.h"    // TI 固件数组
+
+
+// ========================= 主从机 设备掩码宏定义（核心补齐）=========================
+#define mmwl_TDA_DeviceMapCascadedMaster       0x01    // 主机掩码
+#define mmwl_TDA_DeviceMapCascadedSlave1       0x02    // 从机1
+#define mmwl_TDA_DeviceMapCascadedSlave2       0x04    // 从机2
+#define mmwl_TDA_DeviceMapCascadedSlave3       0x08    // 从机3
+#define mmwl_TDA_DeviceMapCascadedAll          0x0F    // 所有设备（主机+从机）
+
+// ========================= 全局变量声明 =========================
+extern uint8_t mmwl_TDA_SlavesEnabled[3];       // 从机使能标志
+extern uint8_t mmwl_bTDA_ARMDone;               // 硬件启动完成标志
+extern uint8_t mmwl_bSensorStarted;             // 传感器运行标志
+extern uint32_t gContStreamTime;                // 连续模式延时时间
+
+// ========================= 测试模式开关 =========================
+#define LinkAdvanceFrameTest       0
+#define LinkContModeTest           0
+#define LinkDynChirpTest           0
+#define LinkDynProfileTest         0
+#define LinkAdvChirpTest           0
+
+// ========================= 系统总控配置 =========================
+#define EnableFwDownload             1
+#define CalibEnable                   0
+#define CalibStoreRestore            1
+#define CascadeDeviceMap             15
+
+// ========================= 通信配置 =========================
+#define crcType                       1
+#define ackTimeout                    1000
+
+// ========================= 通道配置 =========================
+#define channelTx                     7
+#define channelRx                     15
+#define cascading                       0
+
+// ========================= ADC 配置 =========================
+#define adcBits                       2
+#define adcFormat                     1
+
+// ========================= DATA format 配置 =========================
+#define rxChanEn                     15
+#define adcBitsD                     2
+#define adcFmt                         1
+#define iqSwapSel                     0
+#define chInterleave                   0
+
+// ========================= Low power 配置 =========================
+#define anaCfg                         0
+#define lpAdcMode                     0
+
+// ========================= Data Path 配置 =========================
+#define intfSel                        0
+#define transferFmtPkt0               1
+#define transferFmtPkt1               0
+#define cqConfig                       2
+#define cq0TransSize                  132
+#define cq1TransSize                  132
+#define cq2TransSize                  72
+
+// ========================= LVDS 接口配置 =========================
+#define laneClk                        1
+#define dataRate                       1
+
+// ========================= HSI clock 配置 =========================
+#define hsiClk                         9
+
+// ========================= LANE 配置 =========================
+#define laneEn                         15
+
+// ========================= LVDS Lane 配置 =========================
+#define laneFmtMap                    0
+#define laneParamCfg                  1
+
+// ========================= CSI2 Lane 配置 =========================
+#define lanePosPolSel                218145
+
+// ========================= 滤波器配置 =========================
+#define filter_profileId               0
+#define coeffStartIdx                 0
+#define progFiltLen                   14
+#define progFiltFreqShift            100
+
+// ========================= Profile 0~3 =========================
+#define PROFILE_ID_0                    0
+#define PF_VCO_SELECT_0                 2
+#define START_FREQ_CONST_0              1439117143
+#define IDLE_TIME_CONST_0               1000
+#define ADC_START_TIME_CONST_0          600
+#define RAMP_END_TIME_0                 6000
+#define TX_OUT_POWER_BACKOFF_CODE_0     0
+#define TX_PHASE_SHIFTER_0              0
+#define FREQ_SLOPE_CONST_0              621
+#define TX_START_TIME_0                 0
+#define NUM_ADC_SAMPLES_0               256
+#define DIG_OUT_SAMPLE_RATE_0           10000
+#define HPF_CORNER_FREQ1_0              0
+#define HPF_CORNER_FREQ2_0              0
+#define RX_GAIN_0                       30
+
+#define PROFILE_ID_1                    1
+#define PF_VCO_SELECT_1                 2
+#define START_FREQ_CONST_1              1439117143
+#define IDLE_TIME_CONST_1               1000
+#define ADC_START_TIME_CONST_1          700
+#define RAMP_END_TIME_1                 6000
+#define TX_OUT_POWER_BACKOFF_CODE_1     0
+#define TX_PHASE_SHIFTER_1              0
+#define FREQ_SLOPE_CONST_1              621
+#define TX_START_TIME_1                 0
+#define NUM_ADC_SAMPLES_1               256
+#define DIG_OUT_SAMPLE_RATE_1           10000
+#define HPF_CORNER_FREQ1_1              0
+#define HPF_CORNER_FREQ2_1              0
+#define RX_GAIN_1                       30
+
+#define PROFILE_ID_2                    2
+#define PF_VCO_SELECT_2                 2
+#define START_FREQ_CONST_2              1439117143
+#define IDLE_TIME_CONST_2               1000
+#define ADC_START_TIME_CONST_2          800
+#define RAMP_END_TIME_2                 6000
+#define TX_OUT_POWER_BACKOFF_CODE_2     0
+#define TX_PHASE_SHIFTER_2              0
+#define FREQ_SLOPE_CONST_2              621
+#define TX_START_TIME_2                 0
+#define NUM_ADC_SAMPLES_2               256
+#define DIG_OUT_SAMPLE_RATE_2           10000
+#define HPF_CORNER_FREQ1_2              0
+#define HPF_CORNER_FREQ2_2              0
+#define RX_GAIN_2                       30
+
+#define PROFILE_ID_3                    3
+#define PF_VCO_SELECT_3                 2
+#define START_FREQ_CONST_3              1439117143
+#define IDLE_TIME_CONST_3               1000
+#define ADC_START_TIME_CONST_3          900
+#define RAMP_END_TIME_3                 6000
+#define TX_OUT_POWER_BACKOFF_CODE_3     0
+#define TX_PHASE_SHIFTER_3              0
+#define FREQ_SLOPE_CONST_3              621
+#define TX_START_TIME_3                 0
+#define NUM_ADC_SAMPLES_3               256
+#define DIG_OUT_SAMPLE_RATE_3           10000
+#define HPF_CORNER_FREQ1_3              0
+#define HPF_CORNER_FREQ2_3              0
+#define RX_GAIN_3                       30
+
+// ========================= Chirp 0~1 =========================
+#define CHIRP_START_IDX_0               0
+#define CHIRP_END_IDX_0                 63
+#define PROFILE_ID_CPCFG_0              0
+#define START_FREQ_VAR_0                0
+#define FREQ_SLOPE_VAR_0                0
+#define IDLE_TIME_VAR_0                 0
+#define ADC_START_TIME_VAR_0            0
+#define TX_ENABLE_0                     1
+
+#define CHIRP_START_IDX_1               64
+#define CHIRP_END_IDX_1                 127
+#define PROFILE_ID_CPCFG_1              0
+#define START_FREQ_VAR_1                0
+#define FREQ_SLOPE_VAR_1                0
+#define IDLE_TIME_VAR_1                 0
+#define ADC_START_TIME_VAR_1            0
+#define TX_ENABLE_1                     2
+
+// ========================= SubFrame 1~4 =========================
+#define FORCE_PROFILE_IDX_SF0           0
+#define CHIRP_START_IDX_AF_SF0          0
+#define NUM_OF_CHIRPS_SF0               1
+#define NUM_LOOPS_SF0                   8
+#define BURST_PERIODICITY_SF0           5000000
+#define CHIRP_START_IDX_OFFSET_SF0      0
+#define NUM_OF_BURST_SF0                1
+#define NUM_OF_BURST_LOOPS_SF0          1
+#define SUBFRAME_PERIODICITY_SF0        5000000
+#define NUM_ADC_SAMPLES_AF_SF0          256
+#define NUM_CHIRPS_IN_DATA_PACKET_SF0   1
+
+#define FORCE_PROFILE_IDX_SF1           0
+#define CHIRP_START_IDX_AF_SF1          0
+#define NUM_OF_CHIRPS_SF1               1
+#define NUM_LOOPS_SF1                   8
+#define BURST_PERIODICITY_SF1           5000000
+#define CHIRP_START_IDX_OFFSET_SF1      0
+#define NUM_OF_BURST_SF1                1
+#define NUM_OF_BURST_LOOPS_SF1          1
+#define SUBFRAME_PERIODICITY_SF1        5000000
+#define NUM_ADC_SAMPLES_AF_SF1          256
+#define NUM_CHIRPS_IN_DATA_PACKET_SF1   1
+
+#define FORCE_PROFILE_IDX_SF2           0
+#define CHIRP_START_IDX_AF_SF2          0
+#define NUM_OF_CHIRPS_SF2               1
+#define NUM_LOOPS_SF2                   8
+#define BURST_PERIODICITY_SF2           5000000
+#define CHIRP_START_IDX_OFFSET_SF2      0
+#define NUM_OF_BURST_SF2                1
+#define NUM_OF_BURST_LOOPS_SF2          1
+#define SUBFRAME_PERIODICITY_SF2        5000000
+#define NUM_ADC_SAMPLES_AF_SF2          256
+#define NUM_CHIRPS_IN_DATA_PACKET_SF2   1
+
+#define FORCE_PROFILE_IDX_SF3           0
+#define CHIRP_START_IDX_AF_SF3          0
+#define NUM_OF_CHIRPS_SF3               1
+#define NUM_LOOPS_SF3                   8
+#define BURST_PERIODICITY_SF3           5000000
+#define CHIRP_START_IDX_OFFSET_SF3      0
+#define NUM_OF_BURST_SF3                1
+#define NUM_OF_BURST_LOOPS_SF3          1
+#define SUBFRAME_PERIODICITY_SF3        5000000
+#define NUM_ADC_SAMPLES_AF_SF3          256
+#define NUM_CHIRPS_IN_DATA_PACKET_SF3   1
+
+// ========================= Continuous mode =========================
+#define CONT_MODE_RX_GAIN               30
+#define VCO_SELECT                      3388
+
+// ========================= Advanced chirp =========================
+#define ADV_CHIRP_PARAM_IDX             0
+#define ADV_CHIRP_RESET_MODE            0
+#define ADV_CHIRP_DELTA_RST_PERIOD      0
+#define ADV_CHIRP_DELTA_PARAM_UPD_PERIOD 0
+#define ADV_CHIRP_SF0_PARAM_DELTA       0
+#define ADV_CHIRP_SF1_PARAM_DELTA       0
+#define ADV_CHIRP_SF2_PARAM_DELTA       0
+#define ADV_CHIRP_SF3_PARAM_DELTA       0
+#define ADV_CHIRP_LUT_RST_PERIOD        4
+#define ADV_CHIRP_LUT_PARAM_UPD_PERIOD  1
+#define ADV_CHIRP_LUT_PAT_ADDR_OFFSET   0
+#define ADV_CHIRP_NUM_PATTERNS          4
+#define ADV_CHIRP_LUT_BURST_IDX_OFFSET  0
+#define ADV_CHIRP_LUT_SF_IDX_OFFSET     0
+#define ADV_CHIRP_LUT_PARAM_SIZE        0
+#define ADV_CHIRP_LUT_PARAM_SCALE       0
+#define ADV_CHIRP_MAX_TX_PHSH_DITHER    0
+
+// ========================= ADV CHIRP LUT =========================
+#define ADV_CHIRP_PROF_LUT_ADDR_OFF     0
+#define ADV_CHIRP_PROF_DATA1            0
+#define ADV_CHIRP_PROF_DATA2            1
+#define ADV_CHIRP_PROF_DATA3            2
+#define ADV_CHIRP_PROF_DATA4            3
+
+#define ADV_CHIRP_START_FREQ_LUT_ADDR_OFF  4
+#define ADV_CHIRP_START_FREQ_PARAM_SIZE  1
+#define ADV_CHIRP_START_FREQ_PARAM_SCALE 0
+#define ADV_CHIRP_START_FREQ_DATA1     -0.000001f
+#define ADV_CHIRP_START_FREQ_DATA2      0.000000f
+#define ADV_CHIRP_START_FREQ_DATA3      0.000001f
+#define ADV_CHIRP_START_FREQ_DATA4     -0.000001f
+
+#define ADV_CHIRP_SLOPE_LUT_ADDR_OFF    12
+#define ADV_CHIRP_SLOPE_DATA1          -0.050f
+#define ADV_CHIRP_SLOPE_DATA2           0.000f
+#define ADV_CHIRP_SLOPE_DATA3          -0.050f
+#define ADV_CHIRP_SLOPE_DATA4           0.050f
+
+#define ADV_CHIRP_IDLE_TIME_LUT_ADDR_OFF 16
+#define ADV_CHIRP_IDLE_TIME_PARAM_SIZE  0
+#define ADV_CHIRP_IDLE_TIME_PARAM_SCALE 0
+#define ADV_CHIRP_IDLE_TIME_DATA1       0.01f
+#define ADV_CHIRP_IDLE_TIME_DATA2       0.02f
+#define ADV_CHIRP_IDLE_TIME_DATA3       0.00f
+#define ADV_CHIRP_IDLE_TIME_DATA4       0.01f
+
+#define ADV_CHIRP_ADC_TIME_LUT_ADDR_OFF 24
+#define ADV_CHIRP_ADC_TIME_PARAM_SIZE   0
+#define ADV_CHIRP_ADC_TIME_PARAM_SCALE  0
+#define ADV_CHIRP_ADC_TIME_DATA1        0.02f
+#define ADV_CHIRP_ADC_TIME_DATA2        0.01f
+#define ADV_CHIRP_ADC_TIME_DATA3        0.00f
+#define ADV_CHIRP_ADC_TIME_DATA4        0.01f
+
+#define ADV_CHIRP_TX_EN_LUT_ADDR_OFF    32
+#define ADV_CHIRP_TX_EN_DATA1           7
+#define ADV_CHIRP_TX_EN_DATA2           3
+#define ADV_CHIRP_TX_EN_DATA3           1
+#define ADV_CHIRP_TX_EN_DATA4           2
+
+#define ADV_CHIRP_BPM_EN_LUT_ADDR_OFF   36
+#define ADV_CHIRP_BPM_EN_DATA1          7
+#define ADV_CHIRP_BPM_EN_DATA2          3
+#define ADV_CHIRP_BPM_EN_DATA3          1
+#define ADV_CHIRP_BPM_EN_DATA4          2
+
+#define ADV_CHIRP_TX0_PHSH_LUT_ADDR_OFF 40
+#define ADV_CHIRP_TX0_PHSH_DATA1        5.625f
+#define ADV_CHIRP_TX0_PHSH_DATA2        11.250f
+#define ADV_CHIRP_TX0_PHSH_DATA3        16.875f
+#define ADV_CHIRP_TX0_PHSH_DATA4        16.875f
+
+#define ADV_CHIRP_TX1_PHSH_LUT_ADDR_OFF 44
+#define ADV_CHIRP_TX1_PHSH_DATA1        0.000f
+#define ADV_CHIRP_TX1_PHSH_DATA2        5.625f
+#define ADV_CHIRP_TX1_PHSH_DATA3        0.000f
+#define ADV_CHIRP_TX1_PHSH_DATA4        5.625f
+
+#define ADV_CHIRP_TX2_PHSH_LUT_ADDR_OFF 48
+#define ADV_CHIRP_TX2_PHSH_DATA1        5.625f
+#define ADV_CHIRP_TX2_PHSH_DATA2        0.000f
+#define ADV_CHIRP_TX2_PHSH_DATA3        5.625f
+#define ADV_CHIRP_TX2_PHSH_DATA4        0.000f
+
+// ******************************************************************
+// ****************** 结构体定义 **********************
+// ******************************************************************
+typedef struct {
+    uint8_t  cfg_LinkAdvanceFrameTest;
+    uint8_t  cfg_LinkContModeTest;
+    uint8_t  cfg_LinkDynChirpTest;
+    uint8_t  cfg_LinkDynProfileTest;
+    uint8_t  cfg_LinkAdvChirpTest;
+} TestCfg_t;
+
+typedef struct {
+    uint8_t  cfg_EnableFwDownload;
+    uint8_t  cfg_CalibEnable;
+    uint8_t  cfg_CalibStoreRestore;
+    uint8_t  cfg_CascadeDeviceMap;
+} SysCfg_t;
+
+typedef struct {
+    uint8_t  cfg_crcType;
+    uint32_t cfg_ackTimeout;
+} CommCfg_t;
+
+typedef struct {
+    uint8_t cfg_channelTx;
+    uint8_t cfg_channelRx;
+    uint8_t cfg_cascading;
+} ChanCfg_t;
+
+typedef struct {
+    uint8_t cfg_adcBits;
+    uint8_t cfg_adcFormat;
+} AdcCfg_t;
+
+typedef struct {
+    uint8_t cfg_rxChanEn;
+    uint8_t cfg_adcBitsD;
+    uint8_t cfg_adcFmt;
+    uint8_t cfg_iqSwapSel;
+    uint8_t cfg_chInterleave;
+} DataFmtCfg_t;
+
+typedef struct {
+    uint8_t cfg_anaCfg;
+    uint8_t cfg_lpAdcMode;
+} LpCfg_t;
+
+typedef struct {
+    uint8_t  cfg_intfSel;
+    uint8_t  cfg_transferFmtPkt0;
+    uint8_t  cfg_transferFmtPkt1;
+    uint8_t  cfg_cqConfig;
+    uint16_t cfg_cq0TransSize;
+    uint16_t cfg_cq1TransSize;
+    uint16_t cfg_cq2TransSize;
+} DataPathCfg_t;
+
+typedef struct {
+    uint8_t cfg_laneClk;
+    uint8_t cfg_dataRate;
+} LvdsIfCfg_t;
+
+typedef struct {
+    uint8_t cfg_hsiClk;
+} HsiClkCfg_t;
+
+typedef struct {
+    uint8_t cfg_laneEn;
+} LaneEnCfg_t;
+
+typedef struct {
+    uint8_t cfg_laneFmtMap;
+    uint8_t cfg_laneParamCfg;
+} LvdsLaneCfg_t;
+
+typedef struct {
+    uint32_t cfg_lanePosPolSel;
+} Csi2LaneCfg_t;
+
+typedef struct {
+    uint8_t  cfg_filter_profileId;
+    uint8_t  cfg_coeffStartIdx;
+    uint8_t  cfg_progFiltLen;
+    uint16_t cfg_progFiltFreqShift;
+} FilterCfg_t;
+
+typedef struct {
+    uint8_t  cfg_profile_id;
+    uint8_t  cfg_pf_vco_select;
+    uint32_t cfg_start_freq_const;
+    uint32_t cfg_idle_time_const;
+    uint32_t cfg_adc_start_time_const;
+    uint32_t cfg_ramp_end_time;
+    uint8_t  cfg_tx_out_power_backoff_code;
+    uint8_t  cfg_tx_phase_shifter;
+    uint16_t cfg_freq_slope_const;
+    uint32_t cfg_tx_start_time;
+    uint16_t cfg_num_adc_samples;
+    uint32_t cfg_dig_out_sample_rate;
+    uint8_t  cfg_hpf_corner_freq1;
+    uint8_t  cfg_hpf_corner_freq2;
+    uint8_t  cfg_rx_gain;
+} ProfileCfg_t;
+
+typedef struct {
+    uint16_t cfg_chirp_start_idx;
+    uint16_t cfg_chirp_end_idx;
+    uint8_t  cfg_profile_id_cpcfg;
+    int32_t  cfg_start_freq_var;
+    int32_t  cfg_freq_slope_var;
+    int32_t  cfg_idle_time_var;
+    int32_t  cfg_adc_start_time_var;
+    uint8_t  cfg_tx_enable;
+} ChirpCfg_t;
+
+typedef struct {
+    uint8_t  cfg_force_profile_idx;
+    uint16_t cfg_chirp_start_idx_af;
+    uint16_t cfg_num_of_chirps;
+    uint32_t cfg_num_loops;
+    uint32_t cfg_burst_periodicity;
+    uint16_t cfg_chirp_start_idx_offset;
+    uint8_t  cfg_num_of_burst;
+    uint8_t  cfg_num_of_burst_loops;
+    uint32_t cfg_subframe_periodicity;
+    uint16_t cfg_num_adc_samples_af;
+    uint8_t  cfg_num_chirps_in_data_packet;
+} SubFrameCfg_t;
+
+typedef struct {
+    uint8_t  cfg_cont_mode_rx_gain;
+    uint16_t cfg_vco_select;
+} ContModeCfg_t;
+
+typedef struct {
+    uint8_t  cfg_adv_chirp_param_idx;
+    uint8_t  cfg_adv_chirp_reset_mode;
+    uint32_t cfg_adv_chirp_delta_rst_period;
+    uint32_t cfg_adv_chirp_delta_param_upd_period;
+    int32_t  cfg_adv_chirp_sf0_param_delta;
+    int32_t  cfg_adv_chirp_sf1_param_delta;
+    int32_t  cfg_adv_chirp_sf2_param_delta;
+    int32_t  cfg_adv_chirp_sf3_param_delta;
+    uint32_t cfg_adv_chirp_lut_rst_period;
+    uint32_t cfg_adv_chirp_lut_param_upd_period;
+    uint32_t cfg_adv_chirp_lut_pat_addr_offset;
+    uint8_t  cfg_adv_chirp_num_patterns;
+    uint32_t cfg_adv_chirp_lut_burst_idx_offset;
+    uint32_t cfg_adv_chirp_lut_sf_idx_offset;
+    uint8_t  cfg_adv_chirp_lut_param_size;
+    uint8_t  cfg_adv_chirp_lut_param_scale;
+    uint8_t  cfg_adv_chirp_max_tx_phsh_dither;
+} AdvChirpCfg_t;
+
+typedef struct {
+    uint32_t cfg_adv_chirp_prof_lut_addr_off;
+    uint8_t  cfg_adv_chirp_prof_data1;
+    uint8_t  cfg_adv_chirp_prof_data2;
+    uint8_t  cfg_adv_chirp_prof_data3;
+    uint8_t  cfg_adv_chirp_prof_data4;
+
+    uint32_t cfg_adv_chirp_start_freq_lut_addr_off;
+    uint8_t  cfg_adv_chirp_start_freq_param_size;
+    uint8_t  cfg_adv_chirp_start_freq_param_scale;
+    float    cfg_adv_chirp_start_freq_data1;
+    float    cfg_adv_chirp_start_freq_data2;
+    float    cfg_adv_chirp_start_freq_data3;
+    float    cfg_adv_chirp_start_freq_data4;
+
+    uint32_t cfg_adv_chirp_slope_lut_addr_off;
+    float    cfg_adv_chirp_slope_data1;
+    float    cfg_adv_chirp_slope_data2;
+    float    cfg_adv_chirp_slope_data3;
+    float    cfg_adv_chirp_slope_data4;
+
+    uint32_t cfg_adv_chirp_idle_time_lut_addr_off;
+    uint8_t  cfg_adv_chirp_idle_time_param_size;
+    uint8_t  cfg_adv_chirp_idle_time_param_scale;
+    float    cfg_adv_chirp_idle_time_data1;
+    float    cfg_adv_chirp_idle_time_data2;
+    float    cfg_adv_chirp_idle_time_data3;
+    float    cfg_adv_chirp_idle_time_data4;
+
+    uint32_t cfg_adv_chirp_adc_time_lut_addr_off;
+    uint8_t  cfg_adv_chirp_adc_time_param_size;
+    uint8_t  cfg_adv_chirp_adc_time_param_scale;
+    float    cfg_adv_chirp_adc_time_data1;
+    float    cfg_adv_chirp_adc_time_data2;
+    float    cfg_adv_chirp_adc_time_data3;
+    float    cfg_adv_chirp_adc_time_data4;
+
+    uint32_t cfg_adv_chirp_tx_en_lut_addr_off;
+    uint8_t  cfg_adv_chirp_tx_en_data1;
+    uint8_t  cfg_adv_chirp_tx_en_data2;
+    uint8_t  cfg_adv_chirp_tx_en_data3;
+    uint8_t  cfg_adv_chirp_tx_en_data4;
+
+    uint32_t cfg_adv_chirp_bpm_en_lut_addr_off;
+    uint8_t  cfg_adv_chirp_bpm_en_data1;
+    uint8_t  cfg_adv_chirp_bpm_en_data2;
+    uint8_t  cfg_adv_chirp_bpm_en_data3;
+    uint8_t  cfg_adv_chirp_bpm_en_data4;
+
+    uint32_t cfg_adv_chirp_tx0_phsh_lut_addr_off;
+    float    cfg_adv_chirp_tx0_phsh_data1;
+    float    cfg_adv_chirp_tx0_phsh_data2;
+    float    cfg_adv_chirp_tx0_phsh_data3;
+    float    cfg_adv_chirp_tx0_phsh_data4;
+
+    uint32_t cfg_adv_chirp_tx1_phsh_lut_addr_off;
+    float    cfg_adv_chirp_tx1_phsh_data1;
+    float    cfg_adv_chirp_tx1_phsh_data2;
+    float    cfg_adv_chirp_tx1_phsh_data3;
+    float    cfg_adv_chirp_tx1_phsh_data4;
+
+    uint32_t cfg_adv_chirp_tx2_phsh_lut_addr_off;
+    float    cfg_adv_chirp_tx2_phsh_data1;
+    float    cfg_adv_chirp_tx2_phsh_data2;
+    float    cfg_adv_chirp_tx2_phsh_data3;
+    float    cfg_adv_chirp_tx2_phsh_data4;
+} AdvChirpLUTCfg_t;
+
+// ******************************************************************
+// ****************** 全局变量 **********************
+// ******************************************************************
+extern TestCfg_t        g_test;
+extern SysCfg_t         g_sys;
+extern CommCfg_t        g_comm;
+extern ChanCfg_t        g_chan;
+extern AdcCfg_t         g_adc;
+extern DataFmtCfg_t     g_dataFmt;
+extern LpCfg_t          g_lp;
+extern DataPathCfg_t    g_dataPath;
+extern LvdsIfCfg_t      g_lvdsIf;
+extern HsiClkCfg_t      g_hsiClk;
+extern LaneEnCfg_t      g_laneEn;
+extern LvdsLaneCfg_t    g_lvdsLane;
+extern Csi2LaneCfg_t    g_csi2Lane;
+extern FilterCfg_t      g_filter;
+extern ProfileCfg_t     g_profile[4];
+extern ChirpCfg_t       g_chirp[2];
+extern SubFrameCfg_t    g_subFrame[4];
+extern ContModeCfg_t    g_contMode;
+extern AdvChirpCfg_t    g_advChirp;
+extern AdvChirpLUTCfg_t g_advLut;
+
+// ******************************************************************
+// ****************** 函数声明 **********************
+// ******************************************************************
+void MMW_InitAll(void);
+int MMWL_App(void);
+
+// 雷达命令字 ( MSGID)（完整）
+#define CMD_SET_SYS_CONFIG            0x01
+#define CMD_SET_COMM_CONFIG           0x02
+#define CMD_SET_CHANNEL_CONFIG        0x03
+#define CMD_SET_ADC_CONFIG            0x04
+#define CMD_SET_DATA_FORMAT           0x05
+#define CMD_SET_LOW_POWER             0x06
+#define CMD_SET_DATA_PATH             0x07
+#define CMD_SET_LVDS_INTERFACE        0x08
+#define CMD_SET_HSI_CLOCK             0x09
+#define CMD_SET_LANE_ENABLE           0x0A
+#define CMD_SET_LVDS_LANE_CONFIG      0x0B
+#define CMD_SET_CSI2_LANE_CONFIG      0x0C
+#define CMD_SET_FILTER_CONFIG         0x0D
+#define CMD_SET_PROFILE_CONFIG        0x10
+#define CMD_SET_CHIRP_CONFIG          0x11
+#define CMD_SET_SUBFRAME_CONFIG       0x12
+#define CMD_SET_CONT_MODE             0x13
+#define CMD_SET_ADV_CHIRP             0x20
+#define CMD_SET_ADV_CHIRP_LUT         0x21
+#define CMD_ENABLE_DYNAMIC_CHIRP      0x30
+#define CMD_ENABLE_DYNAMIC_PROFILE    0x31
+#define CMD_CONT_MODE_ENABLE          0x60
+#define CMD_CONT_MODE_DISABLE         0x61
+#define CMD_ARM_TDA                   0x70
+#define CMD_DISARM_TDA                0x71
+#define CMD_START_FRAME               0x80
+#define CMD_DYN_CONFIG                0x90
+#define CMD_DYN_ADV_CONFIG            0x91
+#define CMD_FRAME_START               0xA0
+#define CMD_SENSOR_START              0xA1
+
+// 方向 DIRECTION 定义  [3:0]
+#define DIR_INVALID                0x00U    // 0000 Invalid (无效)
+#define DIR_HOST_TO_BSS            0x01U    // 0001 Host → BSS (主机 -> 雷达BSS)
+#define DIR_BSS_TO_HOST            0x02U    // 0010 BSS → Host (雷达BSS -> 主机)
+#define DIR_HOST_TO_DSS            0x03U    // 0011 Host → DSS
+#define DIR_DSS_TO_HOST            0x04U    // 0100 DSS → Host
+#define DIR_HOST_TO_MASTER         0x05U    // 0101 Host → Master
+#define DIR_MASTER_TO_HOST         0x06U    // 0110 Master → Host
+#define DIR_BSS_TO_MASTER          0x07U    // 0111 BSS → Master
+#define DIR_MASTER_TO_BSS          0x08U    // 1000 Master → BSS
+#define DIR_BSS_TO_DSS             0x09U    // 1001 BSS → DSS
+#define DIR_DSS_TO_BSS             0x0AU    // 1010 DSS → BSS
+#define DIR_MASTER_TO_DSS          0x0BU    // 1011 Master → DSS
+#define DIR_DSS_TO_MASTER          0x0CU    // 1100 DSS → Master
+// 1101 (0x0D) 1110 (0x0E) 1111 (0x0F) 均为 RESERVED (保留)
+
+// 消息类型定义（文档图2.5、表2.2）
+#define MSGTYPE_COMMAND             0x00U         // 命令消息
+#define MSGTYPE_RESPONSE_ACK        0x01U         // ACK响应
+#define MSGTYPE_RESPONSE_NACK       0x02U         // NACK响应
+#define MSGTYPE_ASYNC_EVENT         0x03U         // 异步事件
+
+// 方向定义（文档表2.2）
+#define DIRECTION_HOST_TO_BSS       0x01U         // 主机→BSS子系统
+#define DIRECTION_HOST_TO_MASTER    0x05U         // 主机→Master子系统
+
+// 构建OPCODE（真正的16位OPCODE）
+#define MAKE_OPCODE(msgid)     (((msgid) << 6) | (MSGTYPE_COMMAND << 4) | DIR_HOST_TO_DEV)
+#define MAKE_ACK_OPCODE(msgid) (((msgid) << 6) | (MSGTYPE_RESPONSE_ACK << 4) | DIR_BSS_TO_HOST)
+
+
+// 主从机 设备掩码宏定义（完整版）
+#define mmwl_TDA_DeviceMapCascadedMaster       0x01    // 主机掩码
+#define mmwl_TDA_DeviceMapCascadedSlave1       0x02    // 从机1
+#define mmwl_TDA_DeviceMapCascadedSlave2       0x04    // 从机2
+#define mmwl_TDA_DeviceMapCascadedSlave3       0x08    // 从机3
+#define mmwl_TDA_DeviceMapCascadedSlaves       0x0E    // 所有从机(0x02|0x04|0x08)
+#define mmwl_TDA_DeviceMapCascadedAll          0x0F    // 主机+从机
+
+#define CMD_DEVICE_POWER_UP            0xB0  // 设备上电
+#define CMD_DEVICE_INIT1               0xB1  // 设备初始化1
+#define CMD_DEVICE_DEINIT          	   0xB2
+#define CMD_POWER_OFF              	   0xB3
+
+#define MMWL_DelayMs vTaskDelay
+
+#define MMWL_RET_OK             0
+#define MMWL_RET_ERR           -1
+
+//==================== 固件下载 / 版本判断 ====================
+#define FW_CHUNK_1ST_SIZE       224
+#define FW_CHUNK_NORMAL_SIZE    232
+#define CMD_GET_VERSION        	0x0011    // 版本查询（不与你现有命令冲突）
+#define CMD_FILE_DOWNLOAD      	0x0204    // 固件下载
+
+#define SBLK_ID_DEFAULT_CONFIG          0x0080    // 默认配置命令子块ID（你原来所有命令）
+#define SBLK_ID_VERSION_GET             0x0220    // 版本查询子块ID
+#define SBLK_ID_FILE_DOWNLOAD           0x4080    // 固件下载子块ID
+
+// 版本结构体（TI 标准对齐）
+typedef struct {
+    uint16_t maj;
+    uint16_t min;
+    uint16_t pat;
+    uint16_t bld;
+} MMWL_FwVer_t;
+
+// 固件下载命令包
+typedef struct {
+    uint32_t addr;
+    uint32_t len;
+} MMWL_FileDownload_t;
+
+// 固件分块包
+typedef struct {
+    uint32_t chunkIdx;
+    uint32_t chunkLen;
+    uint32_t rsv;
+    uint8_t  data[FW_CHUNK_NORMAL_SIZE];
+} MMWL_FileChunk_t;
+
+// 固件状态
+typedef enum
+{
+    FW_STATE_IDLE = 0,
+    FW_STATE_WAIT_VERSION,
+    FW_STATE_VERSION_OK,
+    FW_STATE_VERSION_ERR,
+} FW_State_e;
+
+extern FW_State_e g_fw_state;
+extern MMWL_FwVer_t g_chip_version;
+
+int MMWL_GetRadarFwVersion(void);
+int MMWL_CheckNeedDownload(void);
+int MMWL_DownloadFirmware(void);
+int MMWL_CheckAndDownloadFirmware(void);
+
+#endif
+

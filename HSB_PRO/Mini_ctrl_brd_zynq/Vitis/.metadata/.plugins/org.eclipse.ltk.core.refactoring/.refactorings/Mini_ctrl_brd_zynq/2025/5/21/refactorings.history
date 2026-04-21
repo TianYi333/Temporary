@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Mini_ctrl_brd_zynq/src/ emmc_rw.c&apos; to &apos;emmc_rw.c&apos;" description="Rename resource &apos; emmc_rw.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/ emmc_rw.c" name="emmc_rw.c" stamp="1747986775844" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Mini_ctrl_brd_zynq/src/ emmc_rw.h&apos; to &apos;emmc_rw.h&apos;" description="Rename resource &apos; emmc_rw.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/ emmc_rw.h" name="emmc_rw.h" stamp="1747986785234" updateReferences="true"/>
+</session>

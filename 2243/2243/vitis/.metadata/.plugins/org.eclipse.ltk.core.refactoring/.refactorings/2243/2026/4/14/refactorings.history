@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;2243/src/mmw_zynq_config.c&apos; to &apos;mmw_radar_cfg.c&apos;" description="Rename resource &apos;mmw_zynq_config.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/mmw_zynq_config.c" name="mmw_radar_cfg.c" stamp="1775202044386" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;2243/src/mmw_zynq_config.h&apos; to &apos;mmw_radar_cfg.h&apos;" description="Rename resource &apos;mmw_zynq_config.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/mmw_zynq_config.h" name="mmw_radar_cfg.h" stamp="1775202053915" updateReferences="true"/>
+</session>

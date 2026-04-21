@@ -1,0 +1,154 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1.1 (win64) Build 3286242 Wed Jul 28 13:10:47 MDT 2021
+| Date         : Fri Oct 24 10:37:54 2025
+| Host         : FXT333 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file system_wrapper_methodology_drc_routed.rpt -pb system_wrapper_methodology_drc_routed.pb -rpx system_wrapper_methodology_drc_routed.rpx
+| Design       : system_wrapper
+| Device       : xc7z020clg400-2
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 22
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert  | 1          |
+| TIMING-18 | Warning  | Missing input or output delay | 21         |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell system_i/Pro_FPGA_ctrl_0/U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_axi4_2_gmii/state_main[1]_i_1__4, with 2 or more inputs, drives asynchronous preset/clear pin(s) system_i/Pro_FPGA_ctrl_0/U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_VERSION_CHECK/FSM_onehot_state_tx_array_reg[0]/PRE,
+system_i/Pro_FPGA_ctrl_0/U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_VERSION_CHECK/FSM_onehot_state_tx_array_reg[1]/CLR,
+system_i/Pro_FPGA_ctrl_0/U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_VERSION_CHECK/FSM_onehot_state_tx_array_reg[2]/CLR,
+system_i/Pro_FPGA_ctrl_0/U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_VERSION_CHECK/FSM_onehot_state_tx_reg[0]/PRE,
+system_i/Pro_FPGA_ctrl_0/U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_VERSION_CHECK/FSM_onehot_state_tx_reg[1]/CLR,
+system_i/Pro_FPGA_ctrl_0/U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_VERSION_CHECK/FSM_onehot_state_tx_reg[2]/CLR,
+system_i/Pro_FPGA_ctrl_0/U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_VERSION_CHECK/state_rx_reg[0]/CLR,
+system_i/Pro_FPGA_ctrl_0/U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_VERSION_CHECK/state_rx_reg[1]/CLR
+system_i/Pro_FPGA_ctrl_0/U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_VERSION_CHECK/state_rx_reg[2]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on J_E17 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on J_F16 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on J_G14 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on J_G17 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on J_L14 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on J_N20 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An output delay is missing on J_D18 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on J_IN_0[0] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on J_IN_0[1] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on J_IN_0[2] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on J_IN_0[3] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on J_J15 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on J_M14 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on J_M17 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on J_N16 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on J_P20 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on J_T5 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
+An output delay is missing on J_U5 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#19 Warning
+Missing input or output delay  
+An output delay is missing on J_U7 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#20 Warning
+Missing input or output delay  
+An output delay is missing on J_V7 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#21 Warning
+Missing input or output delay  
+An output delay is missing on J_V8 relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+

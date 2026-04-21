@@ -1,0 +1,871 @@
+
+*** Running vivado
+    with args -log system_Pro_FPGA_ctrl_0_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_Pro_FPGA_ctrl_0_2.tcl
+
+
+
+****** Vivado v2021.1.1 (64-bit)
+  **** SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+  **** IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source system_Pro_FPGA_ctrl_0_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx2021/Vivado/2021.1/data/ip'.
+Command: synth_design -top system_Pro_FPGA_ctrl_0_2 -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 246928
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1282.395 ; gain = 0.000
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port rst is neither a static name nor a globally static expression [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_d_ram_ssd1309.vhd:170]
+
+*** Running vivado
+    with args -log system_Pro_FPGA_ctrl_0_2.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_Pro_FPGA_ctrl_0_2.tcl
+
+
+
+****** Vivado v2021.1.1 (64-bit)
+  **** SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+  **** IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source system_Pro_FPGA_ctrl_0_2.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx2021/Vivado/2021.1/data/ip'.
+Command: synth_design -top system_Pro_FPGA_ctrl_0_2 -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 248704
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1291.805 ; gain = 0.000
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port rst is neither a static name nor a globally static expression [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_d_ram_ssd1309.vhd:170]
+INFO: [Synth 8-638] synthesizing module 'system_Pro_FPGA_ctrl_0_2' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/synth/system_Pro_FPGA_ctrl_0_2.vhd:107]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'Pro_FPGA_ctrl_v1_0' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0.vhd:5' bound to instance 'U0' of component 'Pro_FPGA_ctrl_v1_0' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/synth/system_Pro_FPGA_ctrl_0_2.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'Pro_FPGA_ctrl_v1_0' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0.vhd:86]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'Pro_FPGA_ctrl_v1_0_S00_AXI' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0_S00_AXI.vhd:5' bound to instance 'Pro_FPGA_ctrl_v1_0_S00_AXI_inst' of component 'Pro_FPGA_ctrl_v1_0_S00_AXI' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'Pro_FPGA_ctrl_v1_0_S00_AXI' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0_S00_AXI.vhd:123]
+INFO: [Synth 8-226] default block is never used [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0_S00_AXI.vhd:778]
+INFO: [Synth 8-3491] module 'TOP' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:32' bound to instance 'inst_TOP' of component 'TOP' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0_S00_AXI.vhd:868]
+INFO: [Synth 8-638] synthesizing module 'TOP' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:117]
+	Parameter gmii_array_num bound to: 11 - type: integer 
+	Parameter CC01_regs_project bound to: 1349676832 - type: integer 
+	Parameter CC01_regs_year_month bound to: 539297062 - type: integer 
+	Parameter CC01_regs_sub_version bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'VERSION_CHECK' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/VERSION_CHECK.vhd:36' bound to instance 'inst_VERSION_CHECK' of component 'VERSION_CHECK' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:648]
+INFO: [Synth 8-638] synthesizing module 'VERSION_CHECK' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/VERSION_CHECK.vhd:58]
+WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/VERSION_CHECK.vhd:93]
+WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/VERSION_CHECK.vhd:130]
+WARNING: [Synth 8-614] signal 'rst' is read in the process but is not in the sensitivity list [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/VERSION_CHECK.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'VERSION_CHECK' (1#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/VERSION_CHECK.vhd:58]
+INFO: [Synth 8-3491] module 'axi4_2_gmii' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/axi4_2_gmii.vhd:35' bound to instance 'inst_axi4_2_gmii' of component 'axi4_2_gmii' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:668]
+INFO: [Synth 8-638] synthesizing module 'axi4_2_gmii' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/axi4_2_gmii.vhd:90]
+INFO: [Synth 8-256] done synthesizing module 'axi4_2_gmii' (2#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/axi4_2_gmii.vhd:90]
+INFO: [Synth 8-3491] module 'Biss_c' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/Biss_c.vhd:36' bound to instance 'inst_Biss_c' of component 'Biss_c' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:720]
+INFO: [Synth 8-638] synthesizing module 'Biss_c' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/Biss_c.vhd:57]
+INFO: [Synth 8-3491] module 'mult_gen_0' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/mult_gen_0_1/synth/mult_gen_0.vhd:59' bound to instance 'inst_mult_gen_0' of component 'mult_gen_0' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/Biss_c.vhd:124]
+INFO: [Synth 8-638] synthesizing module 'mult_gen_0' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/mult_gen_0_1/synth/mult_gen_0.vhd:68]
+WARNING: [Synth 8-5640] Port 'zero_detect' is missing in component declaration [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/mult_gen_0_1/synth/mult_gen_0.vhd:71]
+WARNING: [Synth 8-5640] Port 'pcasc' is missing in component declaration [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/mult_gen_0_1/synth/mult_gen_0.vhd:71]
+	Parameter C_VERBOSITY bound to: 0 - type: integer 
+	Parameter C_MODEL_TYPE bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 1 - type: integer 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_CE bound to: 0 - type: integer 
+	Parameter C_HAS_SCLR bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_A_WIDTH bound to: 17 - type: integer 
+	Parameter C_A_TYPE bound to: 0 - type: integer 
+	Parameter C_B_WIDTH bound to: 16 - type: integer 
+	Parameter C_B_TYPE bound to: 1 - type: integer 
+	Parameter C_OUT_HIGH bound to: 32 - type: integer 
+	Parameter C_OUT_LOW bound to: 17 - type: integer 
+	Parameter C_MULT_TYPE bound to: 1 - type: integer 
+	Parameter C_CE_OVERRIDES_SCLR bound to: 0 - type: integer 
+	Parameter C_CCM_IMP bound to: 0 - type: integer 
+	Parameter C_B_VALUE bound to: 10000001 - type: string 
+	Parameter C_HAS_ZERO_DETECT bound to: 0 - type: integer 
+	Parameter C_ROUND_OUTPUT bound to: 0 - type: integer 
+	Parameter C_ROUND_PT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'mult_gen_v12_0_17' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/mult_gen_0_1/hdl/mult_gen_v12_0_vh_rfs.vhd:21010' bound to instance 'U0' of component 'mult_gen_v12_0_17' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/mult_gen_0_1/synth/mult_gen_0.vhd:120]
+INFO: [Synth 8-256] done synthesizing module 'mult_gen_0' (8#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/mult_gen_0_1/synth/mult_gen_0.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'Biss_c' (9#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/Biss_c.vhd:57]
+INFO: [Synth 8-3491] module 'fun_J' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_J.vhd:36' bound to instance 'inst_fun_J' of component 'fun_J' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:757]
+INFO: [Synth 8-638] synthesizing module 'fun_J' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_J.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'fun_J' (10#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_J.vhd:52]
+INFO: [Synth 8-3491] module 'fun_ssd1309' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_ssd1309.vhd:41' bound to instance 'inst_fun_ssd1309' of component 'fun_ssd1309' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:772]
+INFO: [Synth 8-638] synthesizing module 'fun_ssd1309' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_ssd1309.vhd:78]
+INFO: [Synth 8-3491] module 'spi_gen' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/spi_gen.vhd:35' bound to instance 'inst_ssd1309_spi_gen' of component 'spi_gen' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_ssd1309.vhd:205]
+INFO: [Synth 8-638] synthesizing module 'spi_gen' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/spi_gen.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'spi_gen' (11#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/spi_gen.vhd:52]
+INFO: [Synth 8-3491] module 'fun_display_gy_25' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_display_gy_25.vhd:36' bound to instance 'inst_fun_display_gy_25' of component 'fun_display_gy_25' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_ssd1309.vhd:216]
+INFO: [Synth 8-638] synthesizing module 'fun_display_gy_25' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_display_gy_25.vhd:57]
+INFO: [Synth 8-3491] module 'fun_d_ram_ssd1309' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_d_ram_ssd1309.vhd:35' bound to instance 'inst_fun_d_ram_ssd1309' of component 'fun_d_ram_ssd1309' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_display_gy_25.vhd:734]
+INFO: [Synth 8-638] synthesizing module 'fun_d_ram_ssd1309' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_d_ram_ssd1309.vhd:53]
+INFO: [Synth 8-3491] module 'd_ram_ssd1309' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/d_ram_ssd1309.vhd:36' bound to instance 'inst_d_ram_ssd1309' of component 'd_ram_ssd1309' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_d_ram_ssd1309.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'd_ram_ssd1309' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/d_ram_ssd1309.vhd:49]
+INFO: [Synth 8-256] done synthesizing module 'd_ram_ssd1309' (12#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/d_ram_ssd1309.vhd:49]
+INFO: [Synth 8-3491] module 'blk_mem_gen_1' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/blk_mem_gen_1_1/synth/blk_mem_gen_1.vhd:59' bound to instance 'rom_angle_c' of component 'blk_mem_gen_1' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_d_ram_ssd1309.vhd:187]
+INFO: [Synth 8-638] synthesizing module 'blk_mem_gen_1' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/blk_mem_gen_1_1/synth/blk_mem_gen_1.vhd:67]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_ELABORATION_DIR bound to: ./ - type: string 
+	Parameter C_INTERFACE_TYPE bound to: 0 - type: integer 
+	Parameter C_AXI_TYPE bound to: 1 - type: integer 
+	Parameter C_AXI_SLAVE_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_BRAM_BLOCK bound to: 0 - type: integer 
+	Parameter C_ENABLE_32BIT_ADDRESS bound to: 0 - type: integer 
+	Parameter C_CTRL_ECC_ALGO bound to: NONE - type: string 
+	Parameter C_HAS_AXI_ID bound to: 0 - type: integer 
+	Parameter C_AXI_ID_WIDTH bound to: 4 - type: integer 
+	Parameter C_MEM_TYPE bound to: 3 - type: integer 
+	Parameter C_BYTE_SIZE bound to: 9 - type: integer 
+	Parameter C_ALGORITHM bound to: 1 - type: integer 
+	Parameter C_PRIM_TYPE bound to: 1 - type: integer 
+	Parameter C_LOAD_INIT_FILE bound to: 1 - type: integer 
+	Parameter C_INIT_FILE_NAME bound to: blk_mem_gen_1.mif - type: string 
+	Parameter C_INIT_FILE bound to: blk_mem_gen_1.mem - type: string 
+	Parameter C_USE_DEFAULT_DATA bound to: 0 - type: integer 
+	Parameter C_DEFAULT_DATA bound to: 0 - type: string 
+	Parameter C_HAS_RSTA bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_A bound to: CE - type: string 
+	Parameter C_RSTRAM_A bound to: 0 - type: integer 
+	Parameter C_INITA_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENA bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEA bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEA bound to: 0 - type: integer 
+	Parameter C_WEA_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_A bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_A bound to: 16 - type: integer 
+	Parameter C_READ_WIDTH_A bound to: 16 - type: integer 
+	Parameter C_WRITE_DEPTH_A bound to: 4096 - type: integer 
+	Parameter C_READ_DEPTH_A bound to: 4096 - type: integer 
+	Parameter C_ADDRA_WIDTH bound to: 12 - type: integer 
+	Parameter C_HAS_RSTB bound to: 0 - type: integer 
+	Parameter C_RST_PRIORITY_B bound to: CE - type: string 
+	Parameter C_RSTRAM_B bound to: 0 - type: integer 
+	Parameter C_INITB_VAL bound to: 0 - type: string 
+	Parameter C_HAS_ENB bound to: 0 - type: integer 
+	Parameter C_HAS_REGCEB bound to: 0 - type: integer 
+	Parameter C_USE_BYTE_WEB bound to: 0 - type: integer 
+	Parameter C_WEB_WIDTH bound to: 1 - type: integer 
+	Parameter C_WRITE_MODE_B bound to: WRITE_FIRST - type: string 
+	Parameter C_WRITE_WIDTH_B bound to: 16 - type: integer 
+	Parameter C_READ_WIDTH_B bound to: 16 - type: integer 
+	Parameter C_WRITE_DEPTH_B bound to: 4096 - type: integer 
+	Parameter C_READ_DEPTH_B bound to: 4096 - type: integer 
+	Parameter C_ADDRB_WIDTH bound to: 12 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_A bound to: 1 - type: integer 
+	Parameter C_HAS_MEM_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_MUX_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_MUX_PIPELINE_STAGES bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_INPUT_REGS_A bound to: 0 - type: integer 
+	Parameter C_HAS_SOFTECC_OUTPUT_REGS_B bound to: 0 - type: integer 
+	Parameter C_USE_SOFTECC bound to: 0 - type: integer 
+	Parameter C_USE_ECC bound to: 0 - type: integer 
+	Parameter C_EN_ECC_PIPE bound to: 0 - type: integer 
+	Parameter C_READ_LATENCY_A bound to: 1 - type: integer 
+	Parameter C_READ_LATENCY_B bound to: 1 - type: integer 
+	Parameter C_HAS_INJECTERR bound to: 0 - type: integer 
+	Parameter C_SIM_COLLISION_CHECK bound to: ALL - type: string 
+	Parameter C_COMMON_CLK bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_COLL bound to: 0 - type: integer 
+	Parameter C_EN_SLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_USE_URAM bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRA_CHG bound to: 0 - type: integer 
+	Parameter C_EN_RDADDRB_CHG bound to: 0 - type: integer 
+	Parameter C_EN_DEEPSLEEP_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SHUTDOWN_PIN bound to: 0 - type: integer 
+	Parameter C_EN_SAFETY_CKT bound to: 0 - type: integer 
+	Parameter C_DISABLE_WARN_BHV_RANGE bound to: 0 - type: integer 
+	Parameter C_COUNT_36K_BRAM bound to: 2 - type: string 
+	Parameter C_COUNT_18K_BRAM bound to: 0 - type: string 
+	Parameter C_EST_POWER_SUMMARY bound to: Estimated Power for IP     :     4.652799 mW - type: string 
+INFO: [Synth 8-3491] module 'blk_mem_gen_v8_4_4' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/blk_mem_gen_1_1/hdl/blk_mem_gen_v8_4_vhsyn_rfs.vhd:195321' bound to instance 'U0' of component 'blk_mem_gen_v8_4_4' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/blk_mem_gen_1_1/synth/blk_mem_gen_1.vhd:230]
+INFO: [Synth 8-256] done synthesizing module 'blk_mem_gen_1' (21#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/blk_mem_gen_1_1/synth/blk_mem_gen_1.vhd:67]
+INFO: [Synth 8-256] done synthesizing module 'fun_d_ram_ssd1309' (22#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_d_ram_ssd1309.vhd:53]
+INFO: [Synth 8-3491] module 'fun_dec_2_rom_addr' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_dec_2_rom_addr.vhd:36' bound to instance 'inst_fun_dec_2_rom_addr' of component 'fun_dec_2_rom_addr' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_display_gy_25.vhd:751]
+INFO: [Synth 8-638] synthesizing module 'fun_dec_2_rom_addr' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_dec_2_rom_addr.vhd:51]
+INFO: [Synth 8-3491] module 'fun_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec.vhd:36' bound to instance 'inst_fun_hex_2_dec' of component 'fun_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_dec_2_rom_addr.vhd:203]
+INFO: [Synth 8-638] synthesizing module 'fun_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec.vhd:47]
+INFO: [Synth 8-3491] module 'div_gen_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:59' bound to instance 'inst_div_gen_hex_2_dec_0' of component 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec.vhd:141]
+INFO: [Synth 8-638] synthesizing module 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:71]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_LATENCY bound to: 18 - type: integer 
+	Parameter ALGORITHM_TYPE bound to: 1 - type: integer 
+	Parameter DIVISOR_WIDTH bound to: 16 - type: integer 
+	Parameter DIVIDEND_WIDTH bound to: 16 - type: integer 
+	Parameter SIGNED_B bound to: 0 - type: integer 
+	Parameter DIVCLK_SEL bound to: 1 - type: integer 
+	Parameter FRACTIONAL_B bound to: 0 - type: integer 
+	Parameter FRACTIONAL_WIDTH bound to: 16 - type: integer 
+	Parameter C_HAS_DIV_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVISOR_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVISOR_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_DIVISOR_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXIS_DIVISOR_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVIDEND_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_S_AXIS_DIVIDEND_TLAST bound to: 0 - type: integer 
+	Parameter C_S_AXIS_DIVIDEND_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_S_AXIS_DIVIDEND_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_DOUT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXIS_DOUT_TUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'div_gen_v5_1_18' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/hdl/div_gen_v5_1_vh_rfs.vhd:13859' bound to instance 'U0' of component 'div_gen_v5_1_18' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'div_gen_hex_2_dec' (32#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:71]
+INFO: [Synth 8-3491] module 'div_gen_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:59' bound to instance 'inst_div_gen_hex_2_dec_1' of component 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec.vhd:161]
+INFO: [Synth 8-3491] module 'div_gen_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:59' bound to instance 'inst_div_gen_hex_2_dec_2' of component 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec.vhd:181]
+INFO: [Synth 8-3491] module 'div_gen_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:59' bound to instance 'inst_div_gen_hex_2_dec_3' of component 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec.vhd:201]
+INFO: [Synth 8-3491] module 'div_gen_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:59' bound to instance 'inst_div_gen_hex_2_dec_4' of component 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec.vhd:221]
+INFO: [Synth 8-256] done synthesizing module 'fun_hex_2_dec' (33#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec.vhd:47]
+INFO: [Synth 8-256] done synthesizing module 'fun_dec_2_rom_addr' (34#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_dec_2_rom_addr.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'fun_display_gy_25' (35#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_display_gy_25.vhd:57]
+INFO: [Synth 8-3491] module 'fun_display_am2302' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_display_am2302.vhd:36' bound to instance 'inst_fun_display_am2302' of component 'fun_display_am2302' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_ssd1309.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'fun_display_am2302' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_display_am2302.vhd:56]
+INFO: [Synth 8-3491] module 'fun_d_ram_ssd1309' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_d_ram_ssd1309.vhd:35' bound to instance 'inst_fun_d_ram_ssd1309' of component 'fun_d_ram_ssd1309' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_display_am2302.vhd:499]
+INFO: [Synth 8-3491] module 'fun_dec_2_rom_addr_1' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_dec_2_rom_addr_1.vhd:36' bound to instance 'inst_fun_dec_2_rom_addr_1' of component 'fun_dec_2_rom_addr_1' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_display_am2302.vhd:516]
+INFO: [Synth 8-638] synthesizing module 'fun_dec_2_rom_addr_1' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_dec_2_rom_addr_1.vhd:50]
+INFO: [Synth 8-3491] module 'fun_hex_2_dec_1' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec_1.vhd:36' bound to instance 'inst_fun_hex_2_dec_1' of component 'fun_hex_2_dec_1' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_dec_2_rom_addr_1.vhd:201]
+INFO: [Synth 8-638] synthesizing module 'fun_hex_2_dec_1' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec_1.vhd:46]
+INFO: [Synth 8-3491] module 'div_gen_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:59' bound to instance 'inst_div_gen_hex_2_dec_0' of component 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec_1.vhd:140]
+INFO: [Synth 8-3491] module 'div_gen_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:59' bound to instance 'inst_div_gen_hex_2_dec_1' of component 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec_1.vhd:160]
+INFO: [Synth 8-3491] module 'div_gen_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:59' bound to instance 'inst_div_gen_hex_2_dec_2' of component 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec_1.vhd:180]
+INFO: [Synth 8-3491] module 'div_gen_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:59' bound to instance 'inst_div_gen_hex_2_dec_3' of component 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec_1.vhd:200]
+INFO: [Synth 8-3491] module 'div_gen_hex_2_dec' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/div_gen_hex_2_dec_1/synth/div_gen_hex_2_dec.vhd:59' bound to instance 'inst_div_gen_hex_2_dec_4' of component 'div_gen_hex_2_dec' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec_1.vhd:220]
+INFO: [Synth 8-256] done synthesizing module 'fun_hex_2_dec_1' (36#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_hex_2_dec_1.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'fun_dec_2_rom_addr_1' (37#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_dec_2_rom_addr_1.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'fun_display_am2302' (38#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_display_am2302.vhd:56]
+INFO: [Synth 8-256] done synthesizing module 'fun_ssd1309' (39#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_ssd1309.vhd:78]
+INFO: [Synth 8-3491] module 'fun_AM2302' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_AM2302.vhd:36' bound to instance 'inst_fun_AM2302' of component 'fun_AM2302' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:804]
+INFO: [Synth 8-638] synthesizing module 'fun_AM2302' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_AM2302.vhd:77]
+INFO: [Synth 8-226] default block is never used [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_AM2302.vhd:122]
+INFO: [Synth 8-3491] module 'fun_am2302_check' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_am2302_check.vhd:46' bound to instance 'inst_fun_am2302_check_1' of component 'fun_am2302_check' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_AM2302.vhd:196]
+INFO: [Synth 8-638] synthesizing module 'fun_am2302_check' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_am2302_check.vhd:88]
+INFO: [Synth 8-256] done synthesizing module 'fun_am2302_check' (40#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_am2302_check.vhd:88]
+INFO: [Synth 8-3491] module 'fun_am2302_check' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_am2302_check.vhd:46' bound to instance 'inst_fun_am2302_check_2' of component 'fun_am2302_check' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_AM2302.vhd:210]
+INFO: [Synth 8-3491] module 'fun_am2302_check' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_am2302_check.vhd:46' bound to instance 'inst_fun_am2302_check_3' of component 'fun_am2302_check' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_AM2302.vhd:224]
+INFO: [Synth 8-256] done synthesizing module 'fun_AM2302' (41#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_AM2302.vhd:77]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'inst_am2302_1_io' to cell 'IOBUF' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:837]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'inst_am2302_2_io' to cell 'IOBUF' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:849]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'inst_am2302_3_io' to cell 'IOBUF' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:861]
+INFO: [Synth 8-3491] module 'led_ctrl' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/led_ctrl.vhd:36' bound to instance 'inst_led_ctrl' of component 'led_ctrl' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:876]
+INFO: [Synth 8-638] synthesizing module 'led_ctrl' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/led_ctrl.vhd:61]
+INFO: [Synth 8-256] done synthesizing module 'led_ctrl' (42#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/led_ctrl.vhd:61]
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-113] binding component instance 'triger_inst' to cell 'IBUF' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:894]
+INFO: [Synth 8-3491] module 'fun_servo' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_servo.vhd:48' bound to instance 'inst_fun_servo' of component 'fun_servo' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:954]
+INFO: [Synth 8-638] synthesizing module 'fun_servo' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_servo.vhd:74]
+INFO: [Synth 8-226] default block is never used [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_servo.vhd:194]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'inst_uart_io' to cell 'IOBUF' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_servo.vhd:334]
+INFO: [Synth 8-3491] module 'UART' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/UART.vhd:10' bound to instance 'inst_servo_UART' of component 'UART' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_servo.vhd:349]
+INFO: [Synth 8-638] synthesizing module 'UART' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/UART.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'UART' (43#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/UART.vhd:24]
+INFO: [Synth 8-3491] module 'servo_tx' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/servo_tx.vhd:43' bound to instance 'inst_servo_tx' of component 'servo_tx' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_servo.vhd:362]
+INFO: [Synth 8-638] synthesizing module 'servo_tx' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/servo_tx.vhd:61]
+	Parameter ALMOST_EMPTY_OFFSET bound to: 16'b0000000010000000 
+	Parameter ALMOST_FULL_OFFSET bound to: 16'b0000000010000000 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter DEVICE bound to: 7SERIES - type: string 
+	Parameter FIFO_SIZE bound to: 18Kb - type: string 
+INFO: [Synth 8-3491] module 'FIFO_SYNC_MACRO' declared at 'E:/Xilinx2021/Vivado/2021.1/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhd:36' bound to instance 'FIFO_SYNC_MACRO_inst' of component 'FIFO_SYNC_MACRO' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/servo_tx.vhd:90]
+INFO: [Synth 8-638] synthesizing module 'unimacro_FIFO_SYNC_MACRO' [E:/Xilinx2021/Vivado/2021.1/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhd:69]
+	Parameter ALMOST_EMPTY_OFFSET bound to: 16'b0000000010000000 
+	Parameter ALMOST_FULL_OFFSET bound to: 16'b0000000010000000 
+	Parameter DATA_WIDTH bound to: 9 - type: integer 
+	Parameter DO_REG bound to: 0 - type: integer 
+	Parameter EN_SYN bound to: 1 - type: bool 
+	Parameter FIFO_MODE bound to: FIFO18 - type: string 
+	Parameter FIRST_WORD_FALL_THROUGH bound to: 0 - type: bool 
+	Parameter INIT bound to: 36'b000000000000000000000000000000000000 
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+	Parameter SRVAL bound to: 36'b000000000000000000000000000000000000 
+INFO: [Synth 8-113] binding component instance 'fifo_18_bl' to cell 'FIFO18E1' [E:/Xilinx2021/Vivado/2021.1/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhd:771]
+INFO: [Synth 8-256] done synthesizing module 'unimacro_FIFO_SYNC_MACRO' (44#1) [E:/Xilinx2021/Vivado/2021.1/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'servo_tx' (45#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/servo_tx.vhd:61]
+INFO: [Synth 8-3491] module 'servo_rx' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/servo_rx.vhd:44' bound to instance 'inst_servo_rx' of component 'servo_rx' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_servo.vhd:378]
+INFO: [Synth 8-638] synthesizing module 'servo_rx' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/servo_rx.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'servo_rx' (46#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/servo_rx.vhd:63]
+INFO: [Synth 8-256] done synthesizing module 'fun_servo' (47#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/fun_servo.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'TOP' (48#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/src/TOP.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'Pro_FPGA_ctrl_v1_0_S00_AXI' (49#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0_S00_AXI.vhd:123]
+INFO: [Synth 8-256] done synthesizing module 'Pro_FPGA_ctrl_v1_0' (50#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/fcf5/hdl/Pro_FPGA_ctrl_v1_0.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'system_Pro_FPGA_ctrl_0_2' (51#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/synth/system_Pro_FPGA_ctrl_0_2.vhd:107]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1508.613 ; gain = 216.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1508.613 ; gain = 216.809
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1508.613 ; gain = 216.809
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.427 . Memory (MB): peak = 1508.613 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5789 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/system_Pro_FPGA_ctrl_0_2_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/system_Pro_FPGA_ctrl_0_2_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1549.898 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.401 . Memory (MB): peak = 1568.324 ; gain = 18.426
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_Biss_c/inst_mult_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_gy_25/inst_fun_d_ram_ssd1309/rom_angle_c. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_am2302/inst_fun_d_ram_ssd1309/rom_angle_c. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_gy_25/inst_fun_dec_2_rom_addr/inst_fun_hex_2_dec/inst_div_gen_hex_2_dec_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_am2302/inst_fun_dec_2_rom_addr_1/inst_fun_hex_2_dec_1/inst_div_gen_hex_2_dec_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_am2302/inst_fun_dec_2_rom_addr_1/inst_fun_hex_2_dec_1/inst_div_gen_hex_2_dec_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_am2302/inst_fun_dec_2_rom_addr_1/inst_fun_hex_2_dec_1/inst_div_gen_hex_2_dec_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_am2302/inst_fun_dec_2_rom_addr_1/inst_fun_hex_2_dec_1/inst_div_gen_hex_2_dec_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_am2302/inst_fun_dec_2_rom_addr_1/inst_fun_hex_2_dec_1/inst_div_gen_hex_2_dec_4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_gy_25/inst_fun_dec_2_rom_addr/inst_fun_hex_2_dec/inst_div_gen_hex_2_dec_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_gy_25/inst_fun_dec_2_rom_addr/inst_fun_hex_2_dec/inst_div_gen_hex_2_dec_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_gy_25/inst_fun_dec_2_rom_addr/inst_fun_hex_2_dec/inst_div_gen_hex_2_dec_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Pro_FPGA_ctrl_v1_0_S00_AXI_inst/inst_TOP/inst_fun_ssd1309/inst_fun_display_gy_25/inst_fun_dec_2_rom_addr/inst_fun_hex_2_dec/inst_div_gen_hex_2_dec_4. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_tx_array_reg' in module 'VERSION_CHECK'
+INFO: [Synth 8-802] inferred FSM for state register 'state_tx_reg' in module 'VERSION_CHECK'
+INFO: [Synth 8-802] inferred FSM for state register 'case_01_reg' in module 'led_ctrl'
+INFO: [Synth 8-802] inferred FSM for state register 'state_cmd_case_reg' in module 'TOP'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                             0000
+                 iSTATE0 |                              010 |                             0001
+                 iSTATE1 |                              100 |                             1111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_tx_array_reg' using encoding 'one-hot' in module 'VERSION_CHECK'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                             0000
+                 iSTATE0 |                              010 |                             0001
+                 iSTATE1 |                              100 |                             1111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_tx_reg' using encoding 'one-hot' in module 'VERSION_CHECK'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                                0 |                             0000
+                 iSTATE0 |                                1 |                             0001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'case_01_reg' using encoding 'sequential' in module 'led_ctrl'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE6 |                              000 |                             0000
+                iSTATE11 |                              001 |                             0101
+                iSTATE10 |                              010 |                             0110
+                 iSTATE7 |                              011 |                             0111
+                 iSTATE8 |                              100 |                             1001
+                 iSTATE4 |                              101 |                             1010
+                 iSTATE2 |                              110 |                             1100
+                 iSTATE0 |                              111 |                             0100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_cmd_case_reg' using encoding 'sequential' in module 'TOP'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ssd1309_ram_reg[102][63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ssd1309_ram_reg[103][63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ssd1309_ram_reg[104][63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ssd1309_ram_reg[105][63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ssd1309_ram_reg[106][63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\ssd1309_ram_reg[107][63] )
+INFO: [Synth 8-5544] ROM "dec_rom_addr_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dec_rom_addr_out_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dec_rom_addr_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dec_rom_addr_out_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "array_rom_addr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "array_c_addr[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "array_c_addr[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "array_c_addr[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "signed_or_not" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "hex_data_in" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "hex_data_in_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "integer_num" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "angle_imag[1][data_length]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "angle_imag[1][row]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "fun_d_ram_ssd1309_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "angle_imag[1][line]" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-7129] Port aclken in module div_gen_v5_1_18_viv__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module div_gen_v5_1_18_viv__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tuser[0] in module div_gen_v5_1_18_viv__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tlast in module div_gen_v5_1_18_viv__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tuser[0] in module div_gen_v5_1_18_viv__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tlast in module div_gen_v5_1_18_viv__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dout_tready in module div_gen_v5_1_18_viv__5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module div_gen_v5_1_18_viv__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module div_gen_v5_1_18_viv__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tuser[0] in module div_gen_v5_1_18_viv__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tlast in module div_gen_v5_1_18_viv__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tuser[0] in module div_gen_v5_1_18_viv__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tlast in module div_gen_v5_1_18_viv__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dout_tready in module div_gen_v5_1_18_viv__4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module div_gen_v5_1_18_viv__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module div_gen_v5_1_18_viv__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tuser[0] in module div_gen_v5_1_18_viv__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tlast in module div_gen_v5_1_18_viv__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tuser[0] in module div_gen_v5_1_18_viv__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tlast in module div_gen_v5_1_18_viv__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dout_tready in module div_gen_v5_1_18_viv__3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module div_gen_v5_1_18_viv__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module div_gen_v5_1_18_viv__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tuser[0] in module div_gen_v5_1_18_viv__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tlast in module div_gen_v5_1_18_viv__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tuser[0] in module div_gen_v5_1_18_viv__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tlast in module div_gen_v5_1_18_viv__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dout_tready in module div_gen_v5_1_18_viv__2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module div_gen_v5_1_18_viv__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module div_gen_v5_1_18_viv__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tuser[0] in module div_gen_v5_1_18_viv__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tlast in module div_gen_v5_1_18_viv__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tuser[0] in module div_gen_v5_1_18_viv__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tlast in module div_gen_v5_1_18_viv__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dout_tready in module div_gen_v5_1_18_viv__1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port display_flag[3] in module fun_dec_2_rom_addr is either unconnected or has no load
+WARNING: [Synth 8-7129] Port display_flag[2] in module fun_dec_2_rom_addr is either unconnected or has no load
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_fun_dec_2_rom_addr/\hex_data_in1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_fun_dec_2_rom_addr/\hex_data_in1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_fun_dec_2_rom_addr/\hex_data_in1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_fun_dec_2_rom_addr/\hex_data_in1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_fun_dec_2_rom_addr/\hex_data_in1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_fun_dec_2_rom_addr/\hex_data_in1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_fun_dec_2_rom_addr/\hex_data_in1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_fun_dec_2_rom_addr/\hex_data_in1_reg[7] )
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[0]' (FDE) to 'integer_num_reg[1]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[3]' (FDE) to 'integer_num_reg[4]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[4]' (FDE) to 'integer_num_reg[5]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[5]' (FDE) to 'integer_num_reg[6]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[6]' (FDE) to 'integer_num_reg[7]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[7]' (FDE) to 'integer_num_reg[8]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[8]' (FDE) to 'integer_num_reg[9]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[9]' (FDE) to 'integer_num_reg[10]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[10]' (FDE) to 'integer_num_reg[11]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[11]' (FDE) to 'integer_num_reg[12]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[12]' (FDE) to 'integer_num_reg[13]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[13]' (FDE) to 'integer_num_reg[14]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[14]' (FDE) to 'integer_num_reg[15]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[15]' (FDE) to 'integer_num_reg[16]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[16]' (FDE) to 'integer_num_reg[17]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[17]' (FDE) to 'integer_num_reg[18]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[18]' (FDE) to 'integer_num_reg[19]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[19]' (FDE) to 'integer_num_reg[20]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[20]' (FDE) to 'integer_num_reg[21]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[21]' (FDE) to 'integer_num_reg[22]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[22]' (FDE) to 'integer_num_reg[23]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[23]' (FDE) to 'integer_num_reg[24]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[24]' (FDE) to 'integer_num_reg[25]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[25]' (FDE) to 'integer_num_reg[26]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[26]' (FDE) to 'integer_num_reg[27]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[27]' (FDE) to 'integer_num_reg[28]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[28]' (FDE) to 'integer_num_reg[29]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[29]' (FDE) to 'integer_num_reg[30]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[30]' (FDE) to 'integer_num_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\integer_num_reg[31] )
+INFO: [Synth 8-3886] merging instance 'c_length_reg[0]' (FDE) to 'c_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'c_length_reg[1]' (FDE) to 'c_length_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_length_reg[2] )
+INFO: [Synth 8-5544] ROM "dec_rom_addr_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dec_rom_addr_out_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dec_rom_addr_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "dec_rom_addr_out_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "array_rom_addr" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "array_c_addr[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "array_c_addr[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "array_c_addr[0]" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "hex_data_in" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "hex_data_in_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "integer_num" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "display_flag" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "angle_imag[1][data_length]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "angle_imag[1][row]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "fun_d_ram_ssd1309_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "angle_imag[1][line]" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-7129] Port aclken in module div_gen_v5_1_18_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module div_gen_v5_1_18_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tuser[0] in module div_gen_v5_1_18_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tlast in module div_gen_v5_1_18_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tuser[0] in module div_gen_v5_1_18_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tlast in module div_gen_v5_1_18_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dout_tready in module div_gen_v5_1_18_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module div_gen_v5_1_18_viv__9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module div_gen_v5_1_18_viv__9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tuser[0] in module div_gen_v5_1_18_viv__9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tlast in module div_gen_v5_1_18_viv__9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tuser[0] in module div_gen_v5_1_18_viv__9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tlast in module div_gen_v5_1_18_viv__9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dout_tready in module div_gen_v5_1_18_viv__9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module div_gen_v5_1_18_viv__8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module div_gen_v5_1_18_viv__8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tuser[0] in module div_gen_v5_1_18_viv__8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tlast in module div_gen_v5_1_18_viv__8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tuser[0] in module div_gen_v5_1_18_viv__8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tlast in module div_gen_v5_1_18_viv__8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dout_tready in module div_gen_v5_1_18_viv__8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module div_gen_v5_1_18_viv__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module div_gen_v5_1_18_viv__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tuser[0] in module div_gen_v5_1_18_viv__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tlast in module div_gen_v5_1_18_viv__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tuser[0] in module div_gen_v5_1_18_viv__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tlast in module div_gen_v5_1_18_viv__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dout_tready in module div_gen_v5_1_18_viv__7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclken in module div_gen_v5_1_18_viv__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aresetn in module div_gen_v5_1_18_viv__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tuser[0] in module div_gen_v5_1_18_viv__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_divisor_tlast in module div_gen_v5_1_18_viv__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tuser[0] in module div_gen_v5_1_18_viv__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_axis_dividend_tlast in module div_gen_v5_1_18_viv__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port m_axis_dout_tready in module div_gen_v5_1_18_viv__6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port display_flag[3] in module fun_dec_2_rom_addr_1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port display_flag[2] in module fun_dec_2_rom_addr_1 is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[3]' (FDE) to 'integer_num_reg[4]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[4]' (FDE) to 'integer_num_reg[5]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[5]' (FDE) to 'integer_num_reg[6]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[6]' (FDE) to 'integer_num_reg[7]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[7]' (FDE) to 'integer_num_reg[8]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[8]' (FDE) to 'integer_num_reg[9]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[9]' (FDE) to 'integer_num_reg[10]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[10]' (FDE) to 'integer_num_reg[11]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[11]' (FDE) to 'integer_num_reg[12]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[12]' (FDE) to 'integer_num_reg[13]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[13]' (FDE) to 'integer_num_reg[14]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[14]' (FDE) to 'integer_num_reg[15]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[15]' (FDE) to 'integer_num_reg[16]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[16]' (FDE) to 'integer_num_reg[17]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[17]' (FDE) to 'integer_num_reg[18]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[18]' (FDE) to 'integer_num_reg[19]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[19]' (FDE) to 'integer_num_reg[20]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[20]' (FDE) to 'integer_num_reg[21]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[21]' (FDE) to 'integer_num_reg[22]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[22]' (FDE) to 'integer_num_reg[23]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[23]' (FDE) to 'integer_num_reg[24]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[24]' (FDE) to 'integer_num_reg[25]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[25]' (FDE) to 'integer_num_reg[26]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[26]' (FDE) to 'integer_num_reg[27]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[27]' (FDE) to 'integer_num_reg[28]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[28]' (FDE) to 'integer_num_reg[29]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[29]' (FDE) to 'integer_num_reg[30]'
+INFO: [Synth 8-3886] merging instance 'integer_num_reg[30]' (FDE) to 'integer_num_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\integer_num_reg[31] )
+INFO: [Synth 8-3886] merging instance 'c_length_reg[0]' (FDE) to 'c_length_reg[1]'
+INFO: [Synth 8-3886] merging instance 'c_length_reg[1]' (FDE) to 'c_length_reg[2]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\c_length_reg[2] )
+DSP Report: Generating DSP gDSP.gDSP_only.iDSP/inferred_dsp.use_p_reg.p_reg_reg, operation Mode is: (A2*B2)'.
+DSP Report: register gDSP.gDSP_only.iDSP/inferred_dsp.reg_inputs.b_reg_reg is absorbed into DSP gDSP.gDSP_only.iDSP/inferred_dsp.use_p_reg.p_reg_reg.
+DSP Report: register gDSP.gDSP_only.iDSP/inferred_dsp.reg_inputs.a_reg_reg is absorbed into DSP gDSP.gDSP_only.iDSP/inferred_dsp.use_p_reg.p_reg_reg.
+DSP Report: register gDSP.gDSP_only.iDSP/inferred_dsp.use_p_reg.p_reg_reg is absorbed into DSP gDSP.gDSP_only.iDSP/inferred_dsp.use_p_reg.p_reg_reg.
+DSP Report: register gDSP.gDSP_only.iDSP/inferred_dsp.reg_mult.m_reg_reg is absorbed into DSP gDSP.gDSP_only.iDSP/inferred_dsp.use_p_reg.p_reg_reg.
+DSP Report: operator gDSP.gDSP_only.iDSP/multOp is absorbed into DSP gDSP.gDSP_only.iDSP/inferred_dsp.use_p_reg.p_reg_reg.
+INFO: [Synth 8-5544] ROM "period_cnt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "am2302_humi" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "am2302_temp1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_data_ctrl" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "period_cnt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "am2302_humi" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "am2302_temp1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_data_ctrl" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "period_cnt" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "am2302_humi" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "am2302_temp1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_data_ctrl" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tx_data_valid" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "tx_data_last" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-7129] Port rx_data_valid in module fun_AM2302 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[7] in module fun_AM2302 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[6] in module fun_AM2302 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[5] in module fun_AM2302 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[4] in module fun_AM2302 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[3] in module fun_AM2302 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[2] in module fun_AM2302 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[1] in module fun_AM2302 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[0] in module fun_AM2302 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module fun_J is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module mult_gen_v12_0_17_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module mult_gen_v12_0_17_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module Biss_c is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_valid in module Biss_c is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[7] in module Biss_c is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[6] in module Biss_c is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[5] in module Biss_c is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[4] in module Biss_c is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[3] in module Biss_c is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[2] in module Biss_c is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[1] in module Biss_c is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[0] in module Biss_c is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module axi4_2_gmii is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tx_cmd_valid in module axi4_2_gmii is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[7] in module VERSION_CHECK is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rx_data_data[6] in module VERSION_CHECK is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[11][0]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[8][0]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[8][1]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[7][0]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][1]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[6][0]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[5][0]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[3][0]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][1]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[2][0]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][1]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[1][0]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][1]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[0][0]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][1]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[11][1]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][2]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[8][1]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[8][2]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[7][1]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][2]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[6][1]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][2]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[5][1]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][2]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[3][1]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][2]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[2][1]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][2]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[1][1]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][2]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[0][1]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][2]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[11][2]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][3]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[8][2]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[8][3]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[7][2]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][5]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[6][2]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][5]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[5][2]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][5]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[3][2]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][3]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[2][2]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][5]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[1][2]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][3]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[0][2]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][3]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[11][3]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[8][3]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[8][4]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[7][3]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[6][3]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[5][3]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[3][3]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[2][3]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[7][5]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[1][3]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[0][3]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][4]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[11][4]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][5]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[8][4]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[8][5]'
+INFO: [Synth 8-3886] merging instance 'inst_VERSION_CHECK/tx_array_temp_reg[7][4]' (FDE) to 'inst_VERSION_CHECK/tx_array_temp_reg[11][5]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_VERSION_CHECK/\tx_array_temp_reg[0][7] )
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_Biss_c/\tx_data_data_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_fun_J/\tx_data_data_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_cmd_reg[12] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\tx_cmd_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_led_ctrl/\state_cmd_check_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_axi4_2_gmii/\state_tx_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_led_ctrl/\case_03_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst_axi4_2_gmii/\state_rx_reg[3] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:54 ; elapsed = 00:01:04 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:10 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:12 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:06 ; elapsed = 00:01:18 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'inst_fun_servoi_22716' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'inst_fun_AM2302i_23946' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'inst_fun_AM2302i_23990' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'inst_fun_AM2302i_24034' to logic
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:10 ; elapsed = 00:01:23 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:10 ; elapsed = 00:01:23 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:14 ; elapsed = 00:01:26 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:14 ; elapsed = 00:01:27 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:23 ; elapsed = 00:01:35 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   483|
+|2     |DSP48E1  |     1|
+|3     |FIFO18E1 |     1|
+|4     |LUT1     |   752|
+|5     |LUT2     |  1662|
+|6     |LUT3     |  4004|
+|7     |LUT4     |  3422|
+|8     |LUT5     |  4435|
+|9     |LUT6     | 15235|
+|10    |MUXCY    |  2890|
+|11    |MUXF7    |  2348|
+|12    |MUXF8    |  1099|
+|13    |RAM16X1S |    24|
+|14    |RAM32M   |     2|
+|15    |RAM32X1D |     4|
+|16    |RAMB36E1 |     4|
+|18    |SRL16E   |    10|
+|19    |XORCY    |  2890|
+|20    |FDCE     |     7|
+|21    |FDPE     |     2|
+|22    |FDRE     | 30666|
+|23    |FDSE     |    35|
+|24    |IOBUF    |     4|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:23 ; elapsed = 00:01:36 . Memory (MB): peak = 1568.324 ; gain = 276.520
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 4 critical warnings and 106 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:30 . Memory (MB): peak = 1568.324 ; gain = 216.809
+Synthesis Optimization Complete : Time (s): cpu = 00:01:23 ; elapsed = 00:01:36 . Memory (MB): peak = 1568.324 ; gain = 276.520
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.339 . Memory (MB): peak = 1568.324 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 9750 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1608.461 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 884 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 850 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+  RAM16X1S => RAM32X1S (RAMS32): 24 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+Synth Design complete, checksum: a330c17a
+INFO: [Common 17-83] Releasing license: Synthesis
+313 Infos, 106 Warnings, 4 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:44 . Memory (MB): peak = 1608.461 ; gain = 316.656
+INFO: [Common 17-1381] The checkpoint 'D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/system_Pro_FPGA_ctrl_0_2_synth_1/system_Pro_FPGA_ctrl_0_2.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1608.461 ; gain = 0.000
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Coretcl 2-1174] Renamed 1631 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/system_Pro_FPGA_ctrl_0_2_synth_1/system_Pro_FPGA_ctrl_0_2.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1608.461 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file system_Pro_FPGA_ctrl_0_2_utilization_synth.rpt -pb system_Pro_FPGA_ctrl_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 24 10:26:23 2025...

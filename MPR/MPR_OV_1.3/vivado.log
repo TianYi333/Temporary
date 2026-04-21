@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Tue Mar 17 17:10:51 2026
+# Process ID: 77648
+# Current directory: D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent75844 D:\ASUS-PC\Desktop\temporary\MPR_OV_1.3\MPR_OV_1.3.xpr
+# Log file: D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3/vivado.log
+# Journal file: D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3/MPR_OV_1.3.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ASUS-PC/Desktop/temporary/test/MPR_OV_1.1/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx2021/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 1282.992 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3/MPR_OV_1.3.srcs/sources_1/bd/system/system.bd}
+Reading block design file <D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3/MPR_OV_1.3.srcs/sources_1/bd/system/system.bd>...
+Adding component instance block -- alientek.com:user:ov5640_capture_data:1.0 - ov5640_capture_data_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- www.alientek.com:user:rgb2lcd:1.0 - rgb2lcd_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:v_vid_in_axi4s:4.0 - v_vid_in_axi4s_0
+Adding component instance block -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - axi_mem_intercon
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:axi_vdma:6.3 - axi_vdma_0
+Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:v_axi4s_vid_out:4.0 - v_axi4s_vid_out_0
+Adding component instance block -- xilinx.com:ip:v_tc:6.2 - v_tc_0
+Successfully read diagram <system> from block design file <D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3/MPR_OV_1.3.srcs/sources_1/bd/system/system.bd>
+WARNING: [IP_Flow 19-474] Invalid Parameter 'Component_Name'
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 17 17:11:38 2026...

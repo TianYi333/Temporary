@@ -1,0 +1,23 @@
+#ifndef SRC_TTC_TIMER_INTR_H_
+#define SRC_TTC_TIMER_INTR_H_
+
+#include "main.h"
+#include "xparameters.h"
+#include "xil_exception.h"
+#include "xttcps.h"
+
+#define TTC_DEVICE_ID 		XPAR_XTTCPS_0_DEVICE_ID// TTC0模块
+#define TTC_INTR_ID    		XPAR_XTTCPS_0_INTR// TTC0中断ID
+#define CPU_CLK_FREQ_HZ    XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ  // CPU时钟频率
+#define TIMER_INTERVAL_US	1 // 定时器间隔为1μs
+
+
+void TimerIntrHandler(void *CallBackRef);
+int TTC_Init(void);
+void Timer_Start(void);
+void Timer_Stop(void);
+uint32_t Timer_GetUs(void);
+void Timer_Reset(void);
+int Interrupt_Init(void);
+
+#endif /* SRC_TTC_TIMER_INTR_H_ */

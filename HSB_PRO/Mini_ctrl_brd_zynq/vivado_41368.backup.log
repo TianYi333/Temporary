@@ -1,0 +1,164 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Sep  4 10:05:21 2025
+# Process ID: 41368
+# Current directory: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17180 D:\ASUS-PC\Desktop\temporary\Mini_ctrl_brd_zynq\Mini_ctrl_brd_zynq.xpr
+# Log file: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/vivado.log
+# Journal file: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.xpr
+INFO: [Project 1-313] Project file moved from 'D:/ASUS-PC/Desktop/temporary/test/Vivado2021/2025.5.28-1/Mini_ctrl_brd_zynq' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx2021/Vivado/2021.1/data/ip'.
+update_compile_order -fileset sources_1
+open_bd_design {D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd}
+Reading block design file <D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd>...
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+WARNING: [BD 41-176] The physical port 'M_AXI_GP0_aximm_wr_socket' specified in the portmap, is not found on the block! 
+WARNING: [BD 41-176] The physical port 'M_AXI_GP0_aximm_rd_socket' specified in the portmap, is not found on the block! 
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_125M
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:user:Pro_FPGA_ctrl:1.0 - Pro_FPGA_ctrl_0
+Successfully read diagram <system> from block design file <D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd>
+ipx::edit_ip_in_project -upgrade true -name Pro_FPGA_ctrl_v1_0_project -directory D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.tmp/Pro_FPGA_ctrl_v1_0_project d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo/Pro_FPGA_ctrl_1.0/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'd:/asus-pc/desktop/temporary/mini_ctrl_brd_zynq/mini_ctrl_brd_zynq.tmp/pro_fpga_ctrl_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx2021/Vivado/2021.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 1470.590 ; gain = 37.098
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo/Pro_FPGA_ctrl_1.0/component.xml' ignored by IP packager.
+set_property core_revision 10 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv xilinx.com:user:Pro_FPGA_ctrl:1.0 [get_ips  system_Pro_FPGA_ctrl_0_2] -log ip_upgrade.log
+Upgrading 'D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/system_Pro_FPGA_ctrl_0_2_synth_1
+
+INFO: [IP_Flow 19-3422] Upgraded system_Pro_FPGA_ctrl_0_2 (Pro_FPGA_ctrl_v1.0 1.0) from revision 9 to revision 10
+Wrote  : <D:\ASUS-PC\Desktop\temporary\Mini_ctrl_brd_zynq\Mini_ctrl_brd_zynq.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips system_Pro_FPGA_ctrl_0_2] -no_script -sync -force -quiet
+generate_target all [get_files  D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd]
+Wrote  : <D:\ASUS-PC\Desktop\temporary\Mini_ctrl_brd_zynq\Mini_ctrl_brd_zynq.srcs\sources_1\bd\system\system.bd> 
+VHDL Output written to : d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/synth/system.vhd
+VHDL Output written to : d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/sim/system.vhd
+VHDL Output written to : d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/hdl/system_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block Pro_FPGA_ctrl_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/synth/system.hwdef
+catch { config_ip_cache -export [get_ips -all system_Pro_FPGA_ctrl_0_2] }
+catch { config_ip_cache -export [get_ips -all system_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = 96959c4ad6d9bceb; cache size = 91.509 MB.
+export_ip_user_files -of_objects [get_files D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd]
+launch_runs system_Pro_FPGA_ctrl_0_2_synth_1 -jobs 28
+[Thu Sep  4 10:08:40 2025] Launched system_Pro_FPGA_ctrl_0_2_synth_1...
+Run output will be captured here: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/system_Pro_FPGA_ctrl_0_2_synth_1/runme.log
+export_simulation -of_objects [get_files D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd] -directory D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.ip_user_files/sim_scripts -ip_user_files_dir D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.ip_user_files -ipstatic_source_dir D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.cache/compile_simlib/modelsim} {questa=D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.cache/compile_simlib/questa} {riviera=D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.cache/compile_simlib/riviera} {activehdl=D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+validate_bd_design -force
+generate_target all [get_files  D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd]
+INFO: [BD 41-1662] The design 'system.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : <D:\ASUS-PC\Desktop\temporary\Mini_ctrl_brd_zynq\Mini_ctrl_brd_zynq.srcs\sources_1\bd\system\system.bd> 
+Wrote  : <D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ui/bd_c954508f.ui> 
+VHDL Output written to : d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/synth/system.vhd
+VHDL Output written to : d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/sim/system.vhd
+VHDL Output written to : d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/hdl/system_wrapper.vhd
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/hw_handoff/system.hwh
+Generated Block Design Tcl file d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/hw_handoff/system_bd.tcl
+Generated Hardware Definition File d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.gen/sources_1/bd/system/synth/system.hwdef
+catch { config_ip_cache -export [get_ips -all system_Pro_FPGA_ctrl_0_2] }
+catch { config_ip_cache -export [get_ips -all system_auto_pc_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP system_auto_pc_0, cache-ID = 96959c4ad6d9bceb; cache size = 91.509 MB.
+export_ip_user_files -of_objects [get_files D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd]
+launch_runs system_Pro_FPGA_ctrl_0_2_synth_1 -jobs 28
+[Thu Sep  4 10:09:12 2025] Launched system_Pro_FPGA_ctrl_0_2_synth_1...
+Run output will be captured here: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/system_Pro_FPGA_ctrl_0_2_synth_1/runme.log
+export_simulation -of_objects [get_files D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd] -directory D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.ip_user_files/sim_scripts -ip_user_files_dir D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.ip_user_files -ipstatic_source_dir D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.cache/compile_simlib/modelsim} {questa=D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.cache/compile_simlib/questa} {riviera=D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.cache/compile_simlib/riviera} {activehdl=D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+make_wrapper -files [get_files D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/system.bd] -top
+report_ip_status -name ip_status 
+INFO: [Vivado 12-8217] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream/PDI before doing hardware export.
+write_hw_platform -fixed -include_bit -force -file D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Vitis/system_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Vitis/system_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (E:/Xilinx2021/Vivado/2021.1/data/embeddedsw) loading 0 seconds
+INFO: [Vivado 12-12464] The Hardware Platform can be used for Hardware
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Vitis/system_wrapper.xsa
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 28
+[Thu Sep  4 10:35:23 2025] Launched synth_1...
+Run output will be captured here: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/synth_1/runme.log
+[Thu Sep  4 10:35:23 2025] Launched impl_1...
+Run output will be captured here: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.199 . Memory (MB): peak = 1941.172 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4792 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2810.773 ; gain = 59.379
+Restored from archive | CPU: 2.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2810.773 ; gain = 59.379
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2810.773 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 34 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 4 instances
+  RAM16X1S => RAM32X1S (RAMS32): 24 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+open_run: Time (s): cpu = 00:00:20 ; elapsed = 00:00:14 . Memory (MB): peak = 2979.316 ; gain = 1100.547
+open_report: Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 3119.375 ; gain = 137.625
+close_design
+write_hw_platform -fixed -include_bit -force -file D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Vitis/system_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Vitis/system_wrapper.xsa ...
+INFO: [Vivado 12-12464] The Hardware Platform can be used for Hardware
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Vitis/system_wrapper.xsa
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  5 17:54:18 2025...

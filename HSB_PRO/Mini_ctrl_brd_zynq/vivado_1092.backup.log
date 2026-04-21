@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Jun 17 10:28:35 2025
+# Process ID: 1092
+# Current directory: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent65064 D:\ASUS-PC\Desktop\temporary\Mini_ctrl_brd_zynq\Mini_ctrl_brd_zynq.xpr
+# Log file: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/vivado.log
+# Journal file: D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.xpr
+INFO: [Project 1-313] Project file moved from 'D:/ASUS-PC/Desktop/temporary/test/Vivado2021/2025.5.28-1/Mini_ctrl_brd_zynq' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-593] The IP 'AM2302_v1.0', version 1.0, is no longer found in the user IP repository d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo. It will not be included in the IP Catalog. (It used to be found at d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo/AM2302_1.0.)
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx2021/Vivado/2021.1/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 17 11:56:45 2025...

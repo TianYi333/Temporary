@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.1.1 (64-bit)
+# SW Build 3286242 on Wed Jul 28 13:10:47 MDT 2021
+# IP Build 3279568 on Wed Jul 28 16:48:48 MDT 2021
+# Start of session at: Mon Mar  2 11:21:51 2026
+# Process ID: 40020
+# Current directory: D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent39024 D:\ASUS-PC\Desktop\temporary\MPR_OV_1.3\MPR_OV_1.3.xpr
+# Log file: D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3/vivado.log
+# Journal file: D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3/MPR_OV_1.3.xpr
+open_bd_design {D:/ASUS-PC/Desktop/temporary/MPR_OV_1.3/MPR_OV_1.3.srcs/sources_1/bd/system/system.bd}
+update_compile_order -fileset sources_1

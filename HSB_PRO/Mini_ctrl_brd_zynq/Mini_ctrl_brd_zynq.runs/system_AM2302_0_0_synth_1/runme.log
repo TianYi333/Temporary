@@ -1,0 +1,493 @@
+
+*** Running vivado
+    with args -log system_AM2302_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_AM2302_0_0.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source system_AM2302_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo/AM2302_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/APP/Vivado-Xilinx/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top system_AM2302_0_0 -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15648 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 470.273 ; gain = 97.621
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'system_AM2302_0_0' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ip/system_AM2302_0_0/synth/system_AM2302_0_0.vhd:88]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'AM2302_v1_0' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0.vhd:5' bound to instance 'U0' of component 'AM2302_v1_0' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ip/system_AM2302_0_0/synth/system_AM2302_0_0.vhd:160]
+INFO: [Synth 8-638] synthesizing module 'AM2302_v1_0' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0.vhd:54]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'AM2302_v1_0_S00_AXI' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0_S00_AXI.vhd:5' bound to instance 'AM2302_v1_0_S00_AXI_inst' of component 'AM2302_v1_0_S00_AXI' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'AM2302_v1_0_S00_AXI' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0_S00_AXI.vhd:92]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'fun_am2302_check' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/fun_am2302_check.vhd:40' bound to instance 'fun_am2302_check_1' of component 'fun_am2302_check' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0_S00_AXI.vhd:471]
+INFO: [Synth 8-638] synthesizing module 'fun_am2302_check' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/fun_am2302_check.vhd:71]
+	Parameter period_2s bound to: 32'b00000111011100110101100101000000 
+	Parameter period_1ms bound to: 32'b00000000000000001100001101010000 
+	Parameter period_5us bound to: 8'b00000101 
+	Parameter period_20us bound to: 8'b00010100 
+	Parameter period_22us bound to: 8'b00010110 
+	Parameter period_30us bound to: 8'b00011110 
+	Parameter period_48us bound to: 8'b00110000 
+	Parameter period_55us bound to: 8'b00110111 
+	Parameter period_65us bound to: 8'b01000001 
+	Parameter period_70us bound to: 8'b01000110 
+	Parameter period_75us bound to: 8'b01001011 
+	Parameter period_85us bound to: 8'b01010101 
+	Parameter period_90us bound to: 8'b01011010 
+	Parameter us_num bound to: 8'b00110010 
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-113] binding component instance 'inst_am2302_io' to cell 'IOBUF' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/fun_am2302_check.vhd:95]
+INFO: [Synth 8-256] done synthesizing module 'fun_am2302_check' (1#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/fun_am2302_check.vhd:71]
+INFO: [Synth 8-3491] module 'fun_am2302_check' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/fun_am2302_check.vhd:40' bound to instance 'fun_am2302_check_2' of component 'fun_am2302_check' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0_S00_AXI.vhd:482]
+INFO: [Synth 8-3491] module 'fun_am2302_check' declared at 'd:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/fun_am2302_check.vhd:40' bound to instance 'fun_am2302_check_3' of component 'fun_am2302_check' [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0_S00_AXI.vhd:493]
+WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0_S00_AXI.vhd:192]
+INFO: [Synth 8-256] done synthesizing module 'AM2302_v1_0_S00_AXI' (2#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0_S00_AXI.vhd:92]
+INFO: [Synth 8-256] done synthesizing module 'AM2302_v1_0' (3#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ipshared/7a0b/hdl/AM2302_v1_0.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'system_AM2302_0_0' (4#1) [d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.srcs/sources_1/bd/system/ip/system_AM2302_0_0/synth/system_AM2302_0_0.vhd:88]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[5]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[4]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[3]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[2]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[1]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[0]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[31]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[30]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[29]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[28]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[27]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[26]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[25]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[24]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[23]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[22]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[21]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[20]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[19]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[18]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[17]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[16]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[15]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[14]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[13]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[12]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[11]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[10]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[9]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[8]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[7]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[6]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[5]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[4]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[3]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[2]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[1]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[0]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 527.430 ; gain = 154.777
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 527.430 ; gain = 154.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 527.430 ; gain = 154.777
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 871.332 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 3 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 871.332 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 874.527 ; gain = 3.195
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 874.527 ; gain = 501.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 874.527 ; gain = 501.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 874.527 ; gain = 501.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "rx_index" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 874.527 ; gain = 501.875
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 6     
+	   2 Input      8 Bit       Adders := 6     
+	   4 Input      8 Bit       Adders := 3     
+	   2 Input      4 Bit       Adders := 3     
++---Registers : 
+	               40 Bit    Registers := 3     
+	               32 Bit    Registers := 7     
+	               16 Bit    Registers := 12    
+	                8 Bit    Registers := 6     
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 6     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 24    
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 15    
+	  13 Input     40 Bit        Muxes := 3     
+	  13 Input     32 Bit        Muxes := 6     
+	   2 Input     32 Bit        Muxes := 6     
+	   2 Input     16 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 15    
+	   8 Input      4 Bit        Muxes := 3     
+	  13 Input      4 Bit        Muxes := 3     
+	  13 Input      3 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 17    
+	  13 Input      1 Bit        Muxes := 30    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fun_am2302_check 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 2     
+	   4 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               40 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	               16 Bit    Registers := 4     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input     40 Bit        Muxes := 5     
+	  13 Input     40 Bit        Muxes := 1     
+	  13 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 5     
+	   8 Input      4 Bit        Muxes := 1     
+	  13 Input      4 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	  13 Input      1 Bit        Muxes := 10    
+Module AM2302_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "fun_am2302_check_1/rx_index" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "fun_am2302_check_2/rx_index" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "fun_am2302_check_3/rx_index" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[5]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[4]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[3]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[2]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[1]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWADDR[0]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[31]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[30]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[29]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[28]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[27]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[26]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[25]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[24]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[23]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[22]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[21]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[20]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[19]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[18]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[17]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[16]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[15]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[14]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[13]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[12]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[11]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[10]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[9]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[8]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[7]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[6]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[5]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[4]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[3]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[2]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[1]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WDATA[0]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design AM2302_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-3886] merging instance 'U0/AM2302_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'U0/AM2302_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/AM2302_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'U0/AM2302_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'U0/AM2302_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/AM2302_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 874.527 ; gain = 501.875
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 881.656 ; gain = 509.004
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 882.949 ; gain = 510.297
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 921.266 ; gain = 548.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance '\U0/i_0 ' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance '\U0/i_2 ' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance '\U0/i_4 ' to logic
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 921.266 ; gain = 548.613
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 921.266 ; gain = 548.613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 921.266 ; gain = 548.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 921.266 ; gain = 548.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 921.266 ; gain = 548.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 921.266 ; gain = 548.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |   102|
+|2     |LUT1   |   154|
+|3     |LUT2   |   182|
+|4     |LUT3   |   115|
+|5     |LUT4   |    97|
+|6     |LUT5   |    96|
+|7     |LUT6   |   324|
+|8     |FDRE   |   670|
+|9     |FDSE   |    17|
+|10    |IOBUF  |     3|
++------+-------+------+
+
+Report Instance Areas: 
++------+-----------------------------+--------------------+------+
+|      |Instance                     |Module              |Cells |
++------+-----------------------------+--------------------+------+
+|1     |top                          |                    |  1760|
+|2     |  U0                         |AM2302_v1_0         |  1760|
+|3     |    AM2302_v1_0_S00_AXI_inst |AM2302_v1_0_S00_AXI |  1751|
+|4     |      fun_am2302_check_1     |fun_am2302_check    |   591|
+|5     |      fun_am2302_check_2     |fun_am2302_check_0  |   556|
+|6     |      fun_am2302_check_3     |fun_am2302_check_1  |   553|
++------+-----------------------------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 921.266 ; gain = 548.613
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 3 critical warnings and 48 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 921.266 ; gain = 201.516
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 921.266 ; gain = 548.613
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 105 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.266 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 3 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 3 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 99 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 921.266 ; gain = 560.094
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.266 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/system_AM2302_0_0_synth_1/system_AM2302_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP system_AM2302_0_0, cache-ID = f49798e4ba19af9e
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 921.266 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Mini_ctrl_brd_zynq.runs/system_AM2302_0_0_synth_1/system_AM2302_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_AM2302_0_0_utilization_synth.rpt -pb system_AM2302_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May 15 14:54:04 2025...

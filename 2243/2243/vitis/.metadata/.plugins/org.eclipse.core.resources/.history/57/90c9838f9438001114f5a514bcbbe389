@@ -1,0 +1,113 @@
+#ifndef _PS_PL_H_
+#define _PS_PL_H_
+
+#include "main.h"
+#include "ps_pl_axi4.h"
+#include "mmw_radar_cfg.h"
+
+// AXI命令接口寄存器映射
+#define AXI_CMD_BASE_ADDR        XPAR_PS_PL_AXI4_0_S00_AXI_BASEADDR
+
+#define AXI_CMD_ADDR_0        	PS_PL_AXI4_S00_AXI_SLV_REG0_OFFSET
+#define AXI_CMD_ADDR_1        	PS_PL_AXI4_S00_AXI_SLV_REG1_OFFSET
+#define AXI_CMD_ADDR_2        	PS_PL_AXI4_S00_AXI_SLV_REG2_OFFSET
+#define AXI_CMD_ADDR_3        	PS_PL_AXI4_S00_AXI_SLV_REG3_OFFSET
+#define AXI_CMD_ADDR_4        	PS_PL_AXI4_S00_AXI_SLV_REG4_OFFSET
+#define AXI_CMD_ADDR_5        	PS_PL_AXI4_S00_AXI_SLV_REG5_OFFSET
+#define AXI_CMD_ADDR_6        	PS_PL_AXI4_S00_AXI_SLV_REG6_OFFSET
+#define AXI_CMD_ADDR_7        	PS_PL_AXI4_S00_AXI_SLV_REG7_OFFSET
+#define AXI_CMD_ADDR_8        	PS_PL_AXI4_S00_AXI_SLV_REG8_OFFSET
+#define AXI_CMD_ADDR_9        	PS_PL_AXI4_S00_AXI_SLV_REG9_OFFSET
+#define AXI_CMD_ADDR_10        	PS_PL_AXI4_S00_AXI_SLV_REG10_OFFSET
+#define AXI_CMD_ADDR_11        	PS_PL_AXI4_S00_AXI_SLV_REG11_OFFSET
+#define AXI_CMD_ADDR_12        	PS_PL_AXI4_S00_AXI_SLV_REG12_OFFSET
+#define AXI_CMD_ADDR_13        	PS_PL_AXI4_S00_AXI_SLV_REG13_OFFSET
+#define AXI_CMD_ADDR_14        	PS_PL_AXI4_S00_AXI_SLV_REG14_OFFSET
+#define AXI_CMD_ADDR_15        	PS_PL_AXI4_S00_AXI_SLV_REG15_OFFSET
+#define AXI_CMD_ADDR_16        	PS_PL_AXI4_S00_AXI_SLV_REG16_OFFSET
+#define AXI_CMD_ADDR_17        	PS_PL_AXI4_S00_AXI_SLV_REG17_OFFSET
+#define AXI_CMD_ADDR_18        	PS_PL_AXI4_S00_AXI_SLV_REG18_OFFSET
+#define AXI_CMD_ADDR_19        	PS_PL_AXI4_S00_AXI_SLV_REG19_OFFSET
+#define AXI_CMD_ADDR_20        	PS_PL_AXI4_S00_AXI_SLV_REG20_OFFSET
+#define AXI_CMD_ADDR_21        	PS_PL_AXI4_S00_AXI_SLV_REG21_OFFSET
+#define AXI_CMD_ADDR_22        	PS_PL_AXI4_S00_AXI_SLV_REG22_OFFSET
+#define AXI_CMD_ADDR_23        	PS_PL_AXI4_S00_AXI_SLV_REG23_OFFSET
+#define AXI_CMD_ADDR_24        	PS_PL_AXI4_S00_AXI_SLV_REG24_OFFSET
+#define AXI_CMD_ADDR_25        	PS_PL_AXI4_S00_AXI_SLV_REG25_OFFSET
+#define AXI_CMD_ADDR_26        	PS_PL_AXI4_S00_AXI_SLV_REG26_OFFSET
+#define AXI_CMD_ADDR_27        	PS_PL_AXI4_S00_AXI_SLV_REG27_OFFSET
+#define AXI_CMD_ADDR_28        	PS_PL_AXI4_S00_AXI_SLV_REG28_OFFSET
+#define AXI_CMD_ADDR_29        	PS_PL_AXI4_S00_AXI_SLV_REG29_OFFSET
+#define AXI_CMD_ADDR_30        	PS_PL_AXI4_S00_AXI_SLV_REG30_OFFSET
+#define AXI_CMD_ADDR_31        	PS_PL_AXI4_S00_AXI_SLV_REG31_OFFSET
+
+
+
+// 协议宏定义（严格遵循文档）
+#define PROTOCOL_SYNC_HOST_TO_RADAR  	0x43211234UL  	// 主机→雷达同步字（文档表2.1）
+#define PROTOCOL_HEADER_LEN         	12U           	// MSGHDR长度（文档2.3.2）
+#define PROTOCOL_MAX_DATA_LEN       	240U          	// 最大数据长度（总长度≤252，文档9节）
+#define PROTOCOL_MAX_FRAME_LEN     		252U  			// 一帧最大长度
+#define PROTOCOL_CRC_LEN            	4U            	// CRC-32（文档推荐，表2.7）
+#define PROTOCOL_VERSION            	0x01U         	// 协议版本（4位，文档表2.4）
+#define PROTOCOL_SEQ_NUM_INIT       	0x00U         	// 初始序列号
+
+//自定义消息头
+#define Custom_Message_Header 	0xBA01 //自定义消息头
+
+// 协议结构体（小端模式）
+// 消息头结构（文档图2.4）
+typedef struct
+{
+    uint16_t opcode;        // 操作码（MSGID+MSGTYPE+DIRECTION）
+    uint16_t msg_len;       // 消息总长度（含头+数据+CRC，不含SYNC）
+    uint16_t flags;         // 控制标志
+    uint16_t rem_chunks;    // 剩余分片数（不分片为0）
+    uint16_t nsbc;          // 子块数量（单块为1）
+    uint16_t chksum;        // 消息头校验和
+} __attribute__((packed)) RadarMsgHeader_t;
+
+// 数据子块结构（文档图2.9）
+typedef struct
+{
+    uint16_t sblk_id;       // 子块ID（文档5节子块定义）
+    uint16_t sblk_len;      // 子块长度（含ID+长度+数据）
+    uint8_t  sblk_data[];   // 子块数据（变长）
+} __attribute__((packed)) RadarSubBlock_t;
+
+
+// 帧消息结构体（给队列使用）
+typedef struct {
+    uint8_t data[2 + 4 + PROTOCOL_MAX_FRAME_LEN];
+    uint16_t len;
+} AxiLiteFrame_t;
+
+
+// 版本子块（响应）
+typedef struct {
+    uint8_t  type;       // 0=MSS,1=BSS,2=RF,3=DFP
+    uint8_t  major;
+    uint8_t  minor;
+    uint8_t  patch;
+    uint32_t build;
+    char     date[12];   // "MM DD YYYY HH:MM"
+} RadarVersion_t;
+
+// 全局保存版本
+extern RadarVersion_t g_radar_ver;
+
+
+void PL_AXI_Lite_PS_function(void);
+void PS_AXI_Lite_PL_function(void);
+int MMWL_SendCmd(uint16_t cmd, const void* data, uint16_t len, uint16_t sblk_id);
+int MMWL_ParseVersionFromRxBuf(uint8_t *Rx_Axi_buf);
+
+
+
+
+
+#endif /*__PS-PL_H_ */
+
+
+
+

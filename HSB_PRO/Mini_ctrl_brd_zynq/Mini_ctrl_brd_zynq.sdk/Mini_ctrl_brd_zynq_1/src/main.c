@@ -1,0 +1,548 @@
+/*
+ * Copyright (C) 2018 Xilinx, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ * 3. The name of the author may not be used to endorse or promote products
+ *    derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+ * SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+ * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+ * OF SUCH DAMAGE.
+ *
+ */
+
+#include "main.h"
+
+extern volatile int dhcp_timoutcntr;
+err_t dhcp_start(struct netif *netif);
+#define DEFAULT_IP_ADDRESS "192.168.1.10"
+#define DEFAULT_IP_MASK "255.255.255.0"
+#define DEFAULT_GW_ADDRESS "192.168.1.1"
+static int complete_nw_thread;
+static sys_thread_t main_thread_handle;
+void start_application();
+#define THREAD_STACKSIZE 1024
+struct netif server_netif;
+
+XGpioPs gpiops_inst; //PS 端 GPIO 驱动实例
+XGpioPs_Config *gpiops_cfg_ptr; //PS 端 GPIO 配置信息
+
+/******************************任务函数定义******************************/
+void network_thread(void *p);
+void main_thread(void *p);
+void Lwip_Receive_thread(void *p);/* 以太网数据接收处理任务 */
+void Realy_Control_thread(void *p);/* 继电器控制任务 */
+void Screen_Display_thread(void *p);/* 屏显任务 */
+void Temperature_And_Humidity_Reading_thread(void *p);/* 温湿度读取任务 */
+void LED_thread(void *p);/* LED任务 */
+void Steering_Gear_Control_thread(void *p);/* 舵机控制任务 */
+void Angle_Sensor_Recv_thread(void *p);/* 角度传感器接收任务 */
+void Angle_Sensor_processing_thread(void *p);/* 角度传感器数据处理任务 */
+void Turntable_Control_thread(void *p);/* 转台控制任务 */
+void PL_BRAM_PS_thread(void *p);/* PL端与PS端通信任务 */
+
+/******************************消息队列******************************/
+QueueHandle_t Lwip_Receive_Queue =NULL;/* 以太网数据接收队列 */
+QueueHandle_t Lwip_Send_Queue =NULL;/* 以太网数据发送队列 */
+QueueHandle_t Angle_processing_Queue =NULL;/* 角度传感器数据队列 */
+QueueHandle_t Temp_Humi_display_Queue =NULL;/* 温湿度数据显示队列 */
+QueueHandle_t Temp_Humi_send_Queue =NULL;/* 温湿度数据发送队列 */
+SemaphoreHandle_t xBusMutex;    // 总线访问互斥锁
+
+
+
+
+static void print_ip(char *msg, ip_addr_t *ip)
+{
+	xil_printf(msg);
+	xil_printf("%d.%d.%d.%d\n\r", ip4_addr1(ip), ip4_addr2(ip),
+				ip4_addr3(ip), ip4_addr4(ip));
+}
+
+static void assign_default_ip(ip_addr_t *ip, ip_addr_t *mask, ip_addr_t *gw)
+{
+	int err;
+
+	xil_printf("Configuring default IP %s \r\n", DEFAULT_IP_ADDRESS);
+
+	err = inet_aton(DEFAULT_IP_ADDRESS, ip);
+	if(!err)
+		xil_printf("Invalid default IP address: %d\r\n", err);
+
+	err = inet_aton(DEFAULT_IP_MASK, mask);
+	if(!err)
+		xil_printf("Invalid default IP MASK: %d\r\n", err);
+
+	err = inet_aton(DEFAULT_GW_ADDRESS, gw);
+	if(!err)
+		xil_printf("Invalid default gateway address: %d\r\n", err);
+
+	print_ip("Board IP:       ", ip);
+	print_ip("Netmask :       ", mask);
+	print_ip("Gateway :       ", gw);
+}
+
+
+int main()
+{
+	//根据器件 ID 查找配置信息
+	gpiops_cfg_ptr = XGpioPs_LookupConfig(GPIOPS_ID);
+	//初始化器件驱动
+	XGpioPs_CfgInitialize(&gpiops_inst, gpiops_cfg_ptr, gpiops_cfg_ptr->BaseAddr);
+
+	main_thread_handle = sys_thread_new("main_thread", main_thread, 0,
+		THREAD_STACKSIZE,
+		DEFAULT_THREAD_PRIO);
+
+	sys_thread_new("Lwip_Receive_thread", Lwip_Receive_thread, 0,
+		512,
+		DEFAULT_THREAD_PRIO);
+
+	sys_thread_new("Realy_Control_thread", Realy_Control_thread, 0,
+		256,
+		DEFAULT_THREAD_PRIO);
+
+	sys_thread_new("Screen_Display_thread", Screen_Display_thread, 0,
+		256,
+		DEFAULT_THREAD_PRIO);
+
+	sys_thread_new("Temperature_And_Humidity_Reading_thread", Temperature_And_Humidity_Reading_thread, 0,
+		256*4,
+		DEFAULT_THREAD_PRIO);
+
+	sys_thread_new("LED_thread", LED_thread, 0,
+		256,
+		DEFAULT_THREAD_PRIO);
+
+	sys_thread_new("Steering_Gear_Control_thread", Steering_Gear_Control_thread, 0,
+		256,
+		DEFAULT_THREAD_PRIO);
+//因串口不接时会频繁进入中断，则将此任务暂时屏蔽
+//	sys_thread_new("Angle_Sensor_Recv_thread", Angle_Sensor_Recv_thread, 0,
+//		256,
+//		DEFAULT_THREAD_PRIO);
+
+	sys_thread_new("Angle_Sensor_processing_thread", Angle_Sensor_processing_thread, 0,
+		256,
+		DEFAULT_THREAD_PRIO);
+
+	sys_thread_new("Turntable_Control_thread", Turntable_Control_thread, 0,
+		256,
+		DEFAULT_THREAD_PRIO);
+
+	sys_thread_new("PL_BRAM_PS_thread", PL_BRAM_PS_thread, 0,
+		256*2,
+		DEFAULT_THREAD_PRIO);
+
+
+
+	xBusMutex = xSemaphoreCreateMutex();
+	Lwip_Receive_Queue = xQueueCreate(5,20);//网口接收数据暂订为101字节
+	Lwip_Send_Queue = xQueueCreate(5,20);//网口发送数据暂订为20字节
+	Angle_processing_Queue = xQueueCreate(5,11);//网口发送数据暂订为20字节
+	Temp_Humi_display_Queue = xQueueCreate(5,4);//网口发送数据暂订为20字节
+	Temp_Humi_send_Queue = xQueueCreate(5,4);//网口发送数据暂订为20字节
+	vTaskStartScheduler();
+	while(1);
+	return 0;
+}
+
+
+void main_thread(void *p)
+{
+#if ((LWIP_IPV6==0) && (LWIP_DHCP==1))
+	int mscnt = 0;
+#endif
+	/* initialize lwIP before calling sys_thread_new */
+	lwip_init();
+
+	/* any thread using lwIP should be created using sys_thread_new */
+	sys_thread_new("nw_thread", network_thread, NULL,
+			THREAD_STACKSIZE, DEFAULT_THREAD_PRIO);
+
+	/* Suspend Task until auto-negotiation is completed */
+	if (!complete_nw_thread)
+		vTaskSuspend(NULL);
+
+	while (1) {
+		vTaskDelay(DHCP_FINE_TIMER_MSECS / portTICK_RATE_MS);
+		if (server_netif.ip_addr.addr) {
+			xil_printf("DHCP request success\r\n");
+			break;
+		}
+		mscnt += DHCP_FINE_TIMER_MSECS;
+		if (mscnt >= 10000) {
+			xil_printf("ERROR: DHCP request timed out\r\n");
+			assign_default_ip(&(server_netif.ip_addr),
+						&(server_netif.netmask),
+						&(server_netif.gw));
+			break;
+		}
+	}
+
+	xil_printf("\r\n");
+
+	/* start the application*/
+	start_application();
+
+	vTaskDelete(NULL);
+	return;
+}
+
+void network_thread(void *p)
+{
+#if ((LWIP_IPV6==0) && (LWIP_DHCP==1))
+	int mscnt = 0;
+#endif
+
+	/* the mac address of the board. this should be unique per board */
+	u8_t mac_ethernet_address[] = { 0x00, 0x0a, 0x35, 0x00, 0x01, 0x02 };
+
+	xil_printf("\n\r\n\r");
+	xil_printf("-----lwIP Socket Mode TCP Server Application------\r\n");
+
+	/* Add network interface to the netif_list, and set it as default */
+	if (!xemac_add(&server_netif, NULL, NULL, NULL, mac_ethernet_address,
+		PLATFORM_EMAC_BASEADDR)) {
+		xil_printf("Error adding N/W interface\r\n");
+		return;
+	}
+	netif_set_default(&server_netif);
+
+	/* specify that the network if is up */
+	netif_set_up(&server_netif);
+
+	/* start packet receive thread - required for lwIP operation */
+	sys_thread_new("xemacif_input_thread",
+			(void(*)(void*))xemacif_input_thread, &server_netif,
+			THREAD_STACKSIZE, DEFAULT_THREAD_PRIO);
+
+	complete_nw_thread = 1;
+
+	/* Resume the main thread; auto-negotiation is completed */
+	vTaskResume(main_thread_handle);
+
+#if ((LWIP_IPV6==0) && (LWIP_DHCP==1))
+	dhcp_start(&server_netif);
+	while (1) {
+		vTaskDelay(DHCP_FINE_TIMER_MSECS / portTICK_RATE_MS);
+		dhcp_fine_tmr();
+		mscnt += DHCP_FINE_TIMER_MSECS;
+		if (mscnt >= DHCP_COARSE_TIMER_SECS*1000) {
+			dhcp_coarse_tmr();
+			mscnt = 0;
+		}
+	}
+#else
+	vTaskDelete(NULL);
+#endif
+}
+
+
+void Lwip_Receive_thread(void *p)/* 以太网数据接收处理任务 */
+{
+	uint8_t timeout_count = 0;//超时计数
+	while(1)
+	{
+		vTaskDelay(1);
+		if(xQueueReceive(Lwip_Receive_Queue,Lwip_Receive_buf,1000) == pdFAIL)
+		{
+			timeout_count++;
+			if(timeout_count>=30)
+			{
+				timeout_count=0;
+				//strcpy(Lwip_Send_buf, "NO data");
+				//xQueueSend(Lwip_Send_Queue,Lwip_Send_buf,0);
+			}
+			continue;
+		}
+		else
+		{
+			timeout_count = 0;
+			Lwip_Receive_function();
+		}
+
+	}
+	vTaskDelete( NULL );
+}
+
+
+void Realy_Control_thread(void *p)/* 继电器控制任务 */
+{
+	//EMIO配置为输出
+	XGpioPs_SetDirectionPin(&gpiops_inst, J_IN1,1);
+    XGpioPs_SetDirectionPin(&gpiops_inst, J_IN2,1);
+    XGpioPs_SetDirectionPin(&gpiops_inst, J_IN3,1);
+    XGpioPs_SetDirectionPin(&gpiops_inst, J_IN4,1);
+    //使能EMIO输出
+    XGpioPs_SetOutputEnablePin(&gpiops_inst, J_IN1,1);
+    XGpioPs_SetOutputEnablePin(&gpiops_inst, J_IN2,1);
+    XGpioPs_SetOutputEnablePin(&gpiops_inst, J_IN3,1);
+    XGpioPs_SetOutputEnablePin(&gpiops_inst, J_IN4,1);
+	while(1)
+	{
+		XGpioPs_WritePin(&gpiops_inst, J_IN1, 0);//EMIO的第0位输出0
+		XGpioPs_WritePin(&gpiops_inst, J_IN2, 1);//EMIO的第1位输出1
+		XGpioPs_WritePin(&gpiops_inst, J_IN3, 0);//EMIO的第2位输出0
+		XGpioPs_WritePin(&gpiops_inst, J_IN4, 1);//EMIO的第3位输出1
+		printf("EMIO 1!\n");
+		vTaskDelay(10000);
+		XGpioPs_WritePin(&gpiops_inst, J_IN1, 1);//EMIO的第0位输出1
+		XGpioPs_WritePin(&gpiops_inst, J_IN2, 0);//EMIO的第1位输出0
+		XGpioPs_WritePin(&gpiops_inst, J_IN3, 1);//EMIO的第2位输出0
+		XGpioPs_WritePin(&gpiops_inst, J_IN4, 0);//EMIO的第3位输出1
+		printf("EMIO 2!\n");
+		vTaskDelay(10000);
+
+	}
+}
+
+
+void Screen_Display_thread(void *p)/* 屏显任务 */
+{
+	uint8_t T_H_buf[4]={0};
+	float temp_data;
+	float humi_data;
+	char temp_str[20];
+	char humi_str[20];
+	// 初始化SPI和SSD1309
+	SPI_Init();
+	SSD1309_Init();
+	SSD1309_Clear();
+	SSD1309_Update();
+	// 字显示（显示"温度"字）
+	SSD1309_DrawHZ16x16_2(0, 0, HZ_FONT_16x16[2], 0);
+	SSD1309_DrawHZ16x16_2(16, 0, HZ_FONT_16x16[5], 0);
+	SSD1309_DrawString8x16_2(32, 0, ":", 0);
+	// 字显示（显示"湿度"字）
+	SSD1309_DrawHZ16x16_2(0, 16, HZ_FONT_16x16[3], 0);
+	SSD1309_DrawHZ16x16_2(16, 16, HZ_FONT_16x16[5], 0);
+	SSD1309_DrawString8x16_2(32, 2, ":", 0);
+	// 字显示（显示"角度"字）
+	SSD1309_DrawHZ16x16_2(0, 32, HZ_FONT_16x16[4], 0);
+	SSD1309_DrawHZ16x16_2(16, 32, HZ_FONT_16x16[5], 0);
+	SSD1309_DrawString8x16_2(32, 4, ":", 0);
+	SSD1309_DrawString8x16_2(40, 4, "X:", 0);
+	SSD1309_DrawString8x16_2(88, 4, "Y:", 0);
+	SSD1309_DrawString8x16_2(40, 6, "Z:", 0);
+	SSD1309_Update();
+	while(1)
+	{
+		if(xQueueReceive(Temp_Humi_display_Queue,T_H_buf,1000)== pdPASS)
+		{
+			temp_data=T_H_buf[1]<<8|T_H_buf[0];
+			humi_data=T_H_buf[3]<<8|T_H_buf[2];
+			sprintf(temp_str, "%.2f", temp_data/10);
+			sprintf(humi_str, "%.2f", humi_data/10);
+			SSD1309_DrawString8x16_2(40, 0, temp_str, 0);
+			if((T_H_buf[1]&0X80)==1)
+			{
+				SSD1309_DrawHZ16x16_2(88, 0, HZ_FONT_16x16[11], 0);
+			}
+			else
+			{
+				SSD1309_DrawHZ16x16_2(80, 0, HZ_FONT_16x16[11], 0);
+			}
+			SSD1309_DrawString8x16_2(40, 2, humi_str, 0);
+			SSD1309_DrawString8x16_2(80, 2, "%RH", 0);
+		}
+		SSD1309_DrawString8x16_2(56, 4, "abc", 0);
+		SSD1309_DrawString8x16_2(104, 4, "abc", 0);
+		SSD1309_DrawString8x16_2(56, 6, "abc", 0);
+		SSD1309_Update();
+		vTaskDelay(2000);
+		SSD1309_ClearArea(40, 0, 88, 32);
+		SSD1309_ClearArea(56, 32, 24, 32);
+		SSD1309_ClearArea(104, 32, 24, 16);
+//		vTaskDelay(2000);
+	}
+}
+
+
+void Temperature_And_Humidity_Reading_thread(void *p)/* 温湿度读取任务 */
+{
+	int status_r;
+	int16_t am2302_temp;
+	uint16_t work_cnt_now,work_cnt_last,am2302_humi;
+	uint8_t status;
+	uint8_t T_H_array[4]={0};
+	while(1)
+	{
+    	vTaskDelay(1000);  // 遵守传感器采样间隔
+    	status_r=AM2302_mReadReg(XPAR_AM2302_0_S00_AXI_BASEADDR, AM2302_S00_AXI_SLV_REG0_OFFSET);
+    	if(status_r>0)
+    	{
+    		work_cnt_now=status_r>>16&0xffff;
+    		xil_printf("work_cnt_now %d\t\n",work_cnt_now);
+    		status=status_r&0xff;
+    		//-- status
+    		//-- 0  : 正常
+    		//-- 1  : 没有检测到低电平
+    		//-- 2  : 响应低电平不在75us--85us范围内
+    		//-- 3  : 响应高电平不在75us--85us范围内
+    		//-- 4  : 信号低电平不在48us--55us范围内
+    		//-- 5  : 信号高电平不在22us--30us或68us--75us范围内
+    		//-- 6  : sum check error
+    		xil_printf("status %d\t\n",status);
+    		if((work_cnt_now==work_cnt_last)||(work_cnt_now!=0))
+    		{
+    			am2302_temp=AM2302_mReadReg(XPAR_AM2302_0_S00_AXI_BASEADDR, AM2302_S00_AXI_SLV_REG1_OFFSET)&0xffff;
+    			am2302_humi=AM2302_mReadReg(XPAR_AM2302_0_S00_AXI_BASEADDR, AM2302_S00_AXI_SLV_REG2_OFFSET)&0xffff;
+    			T_H_array[0]=am2302_temp&0xff;
+    			T_H_array[1]=(am2302_temp>>8)&0xff;
+    			T_H_array[2]=am2302_humi&0xff;
+    			T_H_array[3]=(am2302_humi>>8)&0xff;
+    			xQueueSend(Temp_Humi_display_Queue,T_H_array,0);
+    			xQueueSend(Temp_Humi_send_Queue,T_H_array,0);
+    			memset(&T_H_array[0] ,0, 4);
+    			xil_printf("temperature %d\t\n",am2302_temp);
+    			xil_printf("humidity %d\t\n",am2302_humi);
+    		}
+    		work_cnt_last=work_cnt_now;
+    	}
+	}
+}
+
+
+void LED_thread(void *p)/* LED任务 */
+{
+	BREATH_LED_IP_mWriteReg(LED_IP_0_BASEADDR,LED_IP_0_REG1,0x80000019);//修改呼吸灯频率0-1000
+	BREATH_LED_IP_mWriteReg(LED_IP_1_BASEADDR,LED_IP_1_REG1,0x80000019);//修改呼吸灯频率0-1000
+	BREATH_LED_IP_mWriteReg (LED_IP_0_BASEADDR, LED_IP_0_REG0, 1);//使能呼吸灯
+	BREATH_LED_IP_mWriteReg (LED_IP_1_BASEADDR, LED_IP_1_REG0, 1);//使能呼吸灯
+	while(1)
+	{
+		printf("LED_thread!\n");
+		vTaskDelay(10000);
+	}
+}
+
+void Steering_Gear_Control_thread(void *p)/* 舵机控制任务 */
+{
+	while(1)
+	{
+
+		vTaskDelay(1);
+	}
+}
+
+void Angle_Sensor_Recv_thread(void *p)/* 角度传感器任务 */
+{
+    // 初始化系统
+    if (UART_Init() != XST_SUCCESS || uart_Interrupt_Init() != XST_SUCCESS) {
+        xil_printf("FATAL: System init failed\n");
+
+    }
+	uint8_t tx_uart1_buf[3]={0xFF,0xAA,0X52};
+    uint8_t Rx_uart1_buf[11];
+    uint8_t msg_recv[9];
+    uint8_t sum;
+    XUartPs_Send(&UartCtrl, (u8*)tx_uart1_buf, sizeof(tx_uart1_buf));//角度初始化
+
+	while(1)
+	{
+		if (data_ready) {
+			memcpy(&Rx_uart1_buf[0], &rx_buffer[0], rx_head);
+			memset(&rx_buffer[0] ,0, rx_head);
+			rx_head=0;
+			data_ready = 0;  // 清除标志
+		}
+		if (Rx_uart1_buf[0] == 0x55)
+		{
+			sum=Rx_uart1_buf[0]+Rx_uart1_buf[1]+Rx_uart1_buf[2]+Rx_uart1_buf[3]+Rx_uart1_buf[4]\
+					+Rx_uart1_buf[5]+Rx_uart1_buf[6]+Rx_uart1_buf[7]+Rx_uart1_buf[8]+Rx_uart1_buf[9];
+		    if(Rx_uart1_buf[10] != sum)
+		    {
+		    	//数据错误
+		        memset(&Rx_uart1_buf[0] ,0, 11);
+		        continue;
+		    }
+		    memcpy(msg_recv, &Rx_uart1_buf[1], 9);
+		    xQueueSend(Angle_processing_Queue,msg_recv,0);
+		}
+		memset(&Rx_uart1_buf[0] ,0, 11);
+		vTaskDelay(5);
+	}
+}
+
+void Angle_Sensor_processing_thread(void *p)/* 角度传感器数据处理任务 */
+{
+    uint8_t Angle_data[9];
+    float Ax,Ay,Az,T,Wx,Wy,Wz,Roll,Pitch,Yaw;
+	while(1)
+	{
+		if(xQueueReceive(Angle_processing_Queue,Angle_data,1000) == pdFAIL)
+		{
+			switch(Angle_data[0])
+			{
+			 	 case 0x51:	//加速度
+			 		Ax=((Angle_data[1]<<8)|Angle_data[2])/32768*16*9.8;
+			 		Ay=((Angle_data[3]<<8)|Angle_data[4])/32768*16*9.8;
+			 		Az=((Angle_data[5]<<8)|Angle_data[6])/32768*16*9.8;
+			 		T=((Angle_data[7]<<8)|Angle_data[8])/340+363.53;
+			 		break;
+
+			 	 case 0x52:	//角速度
+			 		Wx=((Angle_data[1]<<8)|Angle_data[2])/32768*2000;
+			 		Wy=((Angle_data[3]<<8)|Angle_data[4])/32768*2000;
+			 		Wz=((Angle_data[5]<<8)|Angle_data[6])/32768*2000;
+			 		T=((Angle_data[7]<<8)|Angle_data[8])/340+363.53;
+			 		break;
+
+			 	 case 0x53:	//角度
+			 		Roll=((Angle_data[1]<<8)|Angle_data[2])/32768*180;
+			 		Pitch=((Angle_data[3]<<8)|Angle_data[4])/32768*180;
+			 		Yaw=((Angle_data[5]<<8)|Angle_data[6])/32768*180;
+				 	T=((Angle_data[7]<<8)|Angle_data[8])/340+363.53;
+			 		break;
+
+			 	default:
+			 		break;
+			}
+		}
+	}
+}
+
+void Turntable_Control_thread(void *p)/* 转台控制任务 */
+{
+	TTC_Init();
+	Interrupt_Init();
+	while(1)
+	{
+		vTaskDelay(10);
+	}
+}
+
+void PL_BRAM_PS_thread(void *p)/* PL端与PS端通信任务 */
+{
+    // 初始化中断控制
+    if (IntrInitFuntion() != XST_SUCCESS) {
+        xil_printf("Initialization Failed!\r\n");
+    }
+	while(1)
+	{
+		xil_printf("Please enter data to read and write BRAM\n") ;
+		scanf("%1024s", ch_data); //用户输入字符串
+		ch_data_len = strlen(ch_data); //计算字符串的长度
+		xil_printf("ch_data_len %d\n",ch_data_len) ;
+		str_wr_bram(); //将用户输入的字符串写入 BRAM 中
+//		str_rd_bram(); //从 BRAM 中读出数据
+		vTaskDelay(10);
+	}
+}
+

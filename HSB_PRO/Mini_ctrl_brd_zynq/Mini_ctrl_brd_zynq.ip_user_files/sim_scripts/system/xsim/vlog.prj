@@ -1,0 +1,13 @@
+verilog xil_defaultlib --include "E:/Xilinx2021/Vivado/2021.1/data/xilinx_vip/include" --include "../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/f42d/hdl" \
+"../../../bd/system/ip/system_processing_system7_0_0/sim/system_processing_system7_0_0.v" \
+
+verilog blk_mem_gen_v8_4_4 --include "E:/Xilinx2021/Vivado/2021.1/data/xilinx_vip/include" --include "../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/f42d/hdl" \
+"../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/blk_mem_gen_1_1/simulation/blk_mem_gen_v8_4.v" \
+
+verilog xil_defaultlib --include "E:/Xilinx2021/Vivado/2021.1/data/xilinx_vip/include" --include "../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/ec67/hdl" --include "../../../../Mini_ctrl_brd_zynq.gen/sources_1/bd/system/ipshared/f42d/hdl" \
+"../../../bd/system/ip/system_Pro_FPGA_ctrl_0_2/src/blk_mem_gen_1_1/sim/blk_mem_gen_1.v" \
+"../../../bd/system/ip/system_auto_pc_0/sim/system_auto_pc_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

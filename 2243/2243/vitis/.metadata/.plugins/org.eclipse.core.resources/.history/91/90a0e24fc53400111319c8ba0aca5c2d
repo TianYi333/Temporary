@@ -1,0 +1,571 @@
+#include "PS_PL.h"
+
+RadarVersion_t g_radar_ver;
+
+uint32_t Tx_Data_0=1,Tx_Data_0_last;
+
+const uint32_t tx_reg_addrs[] = {
+	AXI_CMD_ADDR_0,
+    AXI_CMD_ADDR_1,
+    AXI_CMD_ADDR_2,
+    AXI_CMD_ADDR_3,
+    AXI_CMD_ADDR_4,
+    AXI_CMD_ADDR_5,
+    AXI_CMD_ADDR_6,
+    AXI_CMD_ADDR_7,
+    AXI_CMD_ADDR_8,
+    AXI_CMD_ADDR_9,
+    AXI_CMD_ADDR_10,
+    AXI_CMD_ADDR_11,
+    AXI_CMD_ADDR_12,
+    AXI_CMD_ADDR_13,
+    AXI_CMD_ADDR_14,
+    AXI_CMD_ADDR_15
+};
+
+const uint32_t rx_reg_addrs[] = {
+	AXI_CMD_ADDR_16,
+	AXI_CMD_ADDR_17,
+	AXI_CMD_ADDR_18,
+	AXI_CMD_ADDR_19,
+	AXI_CMD_ADDR_20,
+	AXI_CMD_ADDR_21,
+	AXI_CMD_ADDR_22,
+	AXI_CMD_ADDR_23,
+	AXI_CMD_ADDR_24,
+	AXI_CMD_ADDR_25,
+	AXI_CMD_ADDR_26,
+	AXI_CMD_ADDR_27,
+	AXI_CMD_ADDR_28,
+	AXI_CMD_ADDR_29,
+	AXI_CMD_ADDR_30,
+	AXI_CMD_ADDR_31
+};
+
+
+void PS_AXI_Lite_PL_function(void)/* PS端发送到PL端任务*/
+{
+	uint32_t Tx_Data;
+	AxiLiteFrame_t msg={0};
+	Tx_Data_0_last=Tx_Data_0;
+	uint8_t custom_seq = 0x00;     // 芯片序号
+    while(1)
+    {
+    	memset(&msg, 0, sizeof(AxiLiteFrame_t));
+        if(xQueueReceive(PS_AXI_TO_PL_Queue, &msg, portMAX_DELAY))
+        {
+        	if(msg.data[0] == 0xBA && msg.data[1] == 0x01)
+        	{
+				uint16_t total_len  = msg.len;           // 整包有效数据总长度
+				uint16_t data_offset = 0;                // 数据偏移
+				uint16_t chunk_idx   = 0;                // 分片序号
+
+				printf("===== 开始下发帧 | 总长度：%d 字节 | 自定义序号：%02X =====\n", total_len, custom_seq);
+
+				// 第一步：先发【BA01头包】60字节
+				uint8_t first_pkt[60] = {0};
+				first_pkt[0] = 0xBA;
+				first_pkt[1] = 0x01;
+				first_pkt[2] = custom_seq;                          // 自定义序号
+				first_pkt[3] = (total_len >> 8) & 0xFF;             // 总长度高字节
+				first_pkt[4] = total_len & 0xFF;                    // 总长度低字节
+
+				// 发送 BA01 头包（60字节）
+				for(int i=0; i<15; i++)
+				{
+					int idx = i*4;
+					Tx_Data  = (uint32_t)first_pkt[idx+0] << 24;
+					Tx_Data |= (uint32_t)first_pkt[idx+1] << 16;
+					Tx_Data |= (uint32_t)first_pkt[idx+2] << 8;
+					Tx_Data |= (uint32_t)first_pkt[idx+3];
+
+					PS_PL_AXI4_mWriteReg(AXI_CMD_BASE_ADDR, tx_reg_addrs[i+1], Tx_Data);
+				}
+				// 触发PL
+				Tx_Data_0 = (Tx_Data_0 >= 0xFFFFFFFE) ? 1 : Tx_Data_0+1;
+				PS_PL_AXI4_mWriteReg(AXI_CMD_BASE_ADDR, tx_reg_addrs[0], Tx_Data_0);
+				vTaskDelay(1);
+				printf("→ BA01头包下发完成\n");
+
+				// 第二步：循环发送【BA02数据分片】每包60字节
+				while(data_offset < total_len)
+				{
+					uint8_t data_pkt[60] = {0};
+					uint16_t copy_len = total_len - data_offset;
+
+					// 每包最多55字节有效数据
+					if(copy_len > 55) copy_len = 55;
+
+					// 组包：BA02 + 自定义序号 + 分片序号 + 55字节数据
+					data_pkt[0] = 0xBA;
+					data_pkt[1] = 0x02;
+					data_pkt[2] = custom_seq;                          // 自定义序号
+					data_pkt[3] = (chunk_idx >> 8) & 0xFF;            // 分片序号高字节
+					data_pkt[4] = chunk_idx & 0xFF;                   // 分片序号低字节
+
+					// 复制55字节有效数据到 pkt[5 ~ 59]
+					memcpy(&data_pkt[5], &msg.data[data_offset], copy_len);
+
+					// 发送这60字节
+					for(int i=0; i<15; i++)
+					{
+						int idx = i*4;
+						Tx_Data  = (uint32_t)data_pkt[idx+0] << 24;
+						Tx_Data |= (uint32_t)data_pkt[idx+1] << 16;
+						Tx_Data |= (uint32_t)data_pkt[idx+2] << 8;
+						Tx_Data |= (uint32_t)data_pkt[idx+3];
+
+						PS_PL_AXI4_mWriteReg(AXI_CMD_BASE_ADDR, tx_reg_addrs[i+1], Tx_Data);
+					}
+
+					// 触发PL
+					Tx_Data_0 = (Tx_Data_0 >= 0xFFFFFFFE) ? 1 : Tx_Data_0+1;
+					PS_PL_AXI4_mWriteReg(AXI_CMD_BASE_ADDR, tx_reg_addrs[0], Tx_Data_0);
+					vTaskDelay(1);
+
+					printf("→ BA02分片%d | 偏移:%d | 本次数据:%d字节\n", chunk_idx, data_offset, copy_len);
+
+					data_offset += copy_len;
+					chunk_idx++;
+				}
+				printf("===== 整包发送完成！共 %d 个分片 =====\n\n", chunk_idx);
+        	}
+        	else if(msg.data[0] == 0xBA && msg.data[1] == 0x05)
+        	{
+
+        	}
+        	else if(msg.data[0] == 0xBB && msg.data[1] == 0x01)
+        	{
+
+        	}
+        	else if(msg.data[0] == 0xCC && msg.data[1] == 0x01)
+        	{
+
+        	}
+        }
+    }
+}
+
+
+
+void PL_AXI_Lite_PS_function(void)/* PL端发送到PS端任务*/
+{
+	uint32_t Rx_Data_16,Rx_Data;
+	uint8_t Rx_Axi_buf[60]={0};
+	uint8_t Tx_Lwip_buf[60]={0};
+	uint8_t n=0;
+
+	while(1)
+	{
+		vTaskDelay(1);
+		if(Tx_Data_0_last!=Tx_Data_0)
+		{
+			Rx_Data_16=PS_PL_AXI4_mReadReg(AXI_CMD_BASE_ADDR, rx_reg_addrs[0]);
+			n=0;
+			while(n<100&&(Rx_Data_16!=Tx_Data_0))//等待100ms
+			{
+				n++;
+				Rx_Data_16=PS_PL_AXI4_mReadReg(AXI_CMD_BASE_ADDR, rx_reg_addrs[0]);
+				vTaskDelay(1);
+			}
+			if(n>=100)
+			{
+				Tx_Lwip_buf[0]=0xAA;//头
+				Tx_Lwip_buf[1]=0x07;
+				Tx_Lwip_buf[2]=0xAA;
+				Tx_Lwip_buf[3]=0xff;
+				Tx_Lwip_buf[4]=0x00;//功能码-响应超时
+				Tx_Lwip_buf[5]=0x00;
+				Tx_Lwip_buf[6]=0x00;
+				Tx_Lwip_buf[7]=0x00;
+				Tx_Lwip_buf[8]=0xBB;//尾
+				xil_printf("Error No response received\r\n");
+			}
+			else if((Rx_Data_16==Tx_Data_0)&&(Rx_Data_16>0))
+			{
+				for (int i = 0; i < 15; i++) {
+				    //读取当前寄存器32位数据
+				    Rx_Data = PS_PL_AXI4_mReadReg(AXI_CMD_BASE_ADDR, rx_reg_addrs[i+1]);
+
+				    // 计算数组起始下标：每个寄存器占4字节
+				    int buf_idx = i * 4;
+
+				    // 拆分高字节 ~ 低字节存入数组
+				    Rx_Axi_buf[buf_idx + 0] = (Rx_Data >> 24) & 0xFF;
+				    Rx_Axi_buf[buf_idx + 1] = (Rx_Data >> 16) & 0xFF;
+				    Rx_Axi_buf[buf_idx + 2] = (Rx_Data >>  8) & 0xFF;
+				    Rx_Axi_buf[buf_idx + 3] = (Rx_Data >>  0) & 0xFF;
+				    memcpy(Tx_Lwip_buf,Rx_Axi_buf,60);
+
+				    if(Rx_Axi_buf[0] == 0xBA && Rx_Axi_buf[1] == 0x01)
+				    {
+
+
+
+
+				    }
+				    else if(Rx_Axi_buf[0] == 0xBA && Rx_Axi_buf[1] == 0x02)
+				    {
+
+
+
+
+				    }
+				    else if(Rx_Axi_buf[0] == 0xBA && Rx_Axi_buf[1] == 0x03)
+				    {
+
+
+
+
+				    }
+				    else if(Rx_Axi_buf[0] == 0xBA && Rx_Axi_buf[1] == 0x04)
+				    {
+
+
+
+
+				    }
+				    else if(Rx_Axi_buf[0] == 0xBA && Rx_Axi_buf[1] == 0x05)
+				    {
+
+
+
+
+				    }
+				    else if(Rx_Axi_buf[0] == 0xBB && Rx_Axi_buf[1] == 0x01)
+				    {
+
+
+
+
+				    }
+				    else if(Rx_Axi_buf[0] == 0xCC && Rx_Axi_buf[1] == 0x01)
+				    {
+
+
+
+
+				    }
+				}
+			}
+			Tx_Data_0_last=Tx_Data_0;
+			xQueueSend(Lwip_Send_Queue,Tx_Lwip_buf,200);
+			memset(Rx_Axi_buf,0,60);
+			memset(Tx_Lwip_buf,0,60);
+		}
+	}
+}
+
+// 全局序列号（每次发送自增，重传不变）
+static uint8_t g_protocol_seq_num = PROTOCOL_SEQ_NUM_INIT;
+
+
+// 工具函数（CRC32计算，文档表2.7）
+static uint32_t crc32_calculate(const uint8_t* data, uint32_t len)
+{
+    const uint32_t crc_poly = 0xEDB88320UL; // CRC-32多项式（文档表2.7）
+    uint32_t crc = 0xFFFFFFFFUL;
+
+    for (uint32_t i = 0; i < len; i++)
+    {
+        crc ^= data[i];
+        for (uint32_t j = 0; j < 8; j++)
+        {
+            crc = (crc >> 1) ^ ((crc & 0x01UL) ? crc_poly : 0UL);
+        }
+    }
+    return ~crc;
+}
+
+
+// 消息头校验和计算（文档2.3.2）
+static uint16_t msg_header_checksum(const RadarMsgHeader_t* header)
+{
+    const uint8_t* data = (const uint8_t*)header;  // 用 uint8_t 绝对安全
+    uint32_t sum = 0UL;
+
+    // 共 10 字节 = 5 个 uint16_t
+    for (int i = 0; i < 10; i += 2)
+    {
+        // 手动组合 2 字节 → 16位（小端模式，和TI协议一致）
+        uint16_t val = (uint16_t)data[i] | ((uint16_t)data[i+1] << 8);
+        sum += val;
+
+        if (sum > 0xFFFFUL)
+        {
+            sum = (sum & 0xFFFFUL) + 1UL;
+        }
+    }
+
+    return (uint16_t)~sum; // 一补码
+}
+
+
+// 命令→OPCODE转换（映射文档消息ID）
+static uint16_t cmd_to_opcode(uint8_t cmd)
+{
+    uint16_t msg_id = 0U;
+    // 映射我们的命令字到TI官方MSGID
+    switch(cmd)
+    {
+        case CMD_SET_SYS_CONFIG:        msg_id = OPCODE_AWR_RF_STATIC_CONF_SET_MSG;  break;
+        case CMD_SET_PROFILE_CONFIG:    msg_id = OPCODE_AWR_RF_DYNAMIC_CONF_SET_MSG; break;
+        case CMD_START_FRAME:           msg_id = OPCODE_AWR_RF_FRAME_TRIG_MSG;       break;
+        case CMD_DEVICE_POWER_UP:       msg_id = OPCODE_AWR_DEV_RFPOWERUP_MSG;       break;
+        case CMD_DEVICE_INIT1:          msg_id = OPCODE_AWR_DEV_CONF_SET_MSG;        break;
+        // 其他命令映射可扩展
+        default:                        msg_id = 0x00U;                              break;
+    }
+
+    // OPCODE格式：[15:6]MSGID + [5:4]MSGTYPE + [3:0]DIRECTION（文档图2.5）
+    return (msg_id << 6) | (MSGTYPE_COMMAND << 4) | DIRECTION_HOST_TO_BSS;
+}
+
+
+//  MMWL_SendCmd
+int MMWL_SendCmd(uint16_t cmd, const void* data, uint16_t len, uint16_t sblk_id)
+{
+    // 入参检查
+	// 数据为空但长度 > 0，非法
+    if (data == NULL && len > 0) return -1;
+
+    // 计算总长度
+    // 子块总长度 = 子块头 + 用户数据
+    const uint16_t subblk_len = sizeof(RadarSubBlock_t) + len; // 子块总长度
+    // 整帧（除同步字外）总长度 = 头 + 子块 + CRC
+    const uint16_t msg_total_len = PROTOCOL_HEADER_LEN + subblk_len + PROTOCOL_CRC_LEN;
+
+    // 分片逻辑：如果整帧 >252，必须分片发送
+    if (msg_total_len > PROTOCOL_MAX_FRAME_LEN)
+    {
+        // 每一片能携带的最大数据长度
+		const uint16_t max_per_chunk = PROTOCOL_MAX_FRAME_LEN
+										 - PROTOCOL_HEADER_LEN
+										 - PROTOCOL_CRC_LEN
+										 - sizeof(RadarSubBlock_t);
+        uint16_t offset = 0;
+        uint16_t remain = len;
+        uint8_t  chunk_idx = 0;
+
+        // 计算总分片数
+        uint8_t total_chunks = (len + max_per_chunk - 1) / max_per_chunk;
+
+        // 循环分片发送
+        while (remain > 0)
+        {
+            uint16_t send_len = (remain > max_per_chunk) ? max_per_chunk : remain;
+
+            AxiLiteFrame_t frameMsg;
+            memset(&frameMsg, 0, sizeof(frameMsg));
+            uint8_t *frame_ptr = frameMsg.data;
+
+            // ===================== 在这里添加 2 字节自定义头 =====================
+            *frame_ptr++ = (Custom_Message_Header >> 8) & 0xFF;  // 高字节 BA
+            *frame_ptr++ = Custom_Message_Header & 0xFF;         // 低字节 01
+
+            // 同步字
+            *(uint32_t*)frame_ptr = PROTOCOL_SYNC_HOST_TO_RADAR;
+            frame_ptr += 4;
+
+            // 头
+            RadarMsgHeader_t *header = (RadarMsgHeader_t*)frame_ptr;
+            header->opcode = cmd_to_opcode(cmd);
+            header->msg_len = PROTOCOL_HEADER_LEN + (sizeof(RadarSubBlock_t) + send_len) + PROTOCOL_CRC_LEN;
+            header->rem_chunks = total_chunks - chunk_idx - 1; // 剩余片数（关键！）
+            header->nsbc = 1;
+
+            // flags
+            uint16_t flags = 0U;
+			flags |= (g_protocol_seq_num & 0x0FU) << 12;
+			flags |= (0x01U) << 8;
+			flags |= (PROTOCOL_VERSION & 0x0FU) << 4;
+			flags |= (0x00U) << 2;
+			flags |= (0x00U) << 0;
+			header->flags = flags;
+			header->chksum = msg_header_checksum(header);
+			frame_ptr += PROTOCOL_HEADER_LEN;
+
+            // 子块
+            RadarSubBlock_t *sub = (RadarSubBlock_t*)frame_ptr;
+            sub->sblk_id = sblk_id;
+            sub->sblk_len = sizeof(RadarSubBlock_t) + send_len;
+            memcpy(sub->sblk_data, (const uint8_t*)data + offset, send_len);
+            frame_ptr += sub->sblk_len;
+
+            // CRC（跳过自定义头+同步字）
+            uint32_t crc = crc32_calculate(frameMsg.data + 2 + 4, PROTOCOL_HEADER_LEN + sub->sblk_len);
+            *(uint32_t*)frame_ptr = crc;
+
+            // 实际发送长度
+            frameMsg.len = 4 + header->msg_len + 2;
+            // 底层发送
+            xQueueSend(PS_AXI_TO_PL_Queue, &frameMsg, portMAX_DELAY);
+
+            // ===================== 分片帧调试打印=====================
+            //uint32_t 类型 → 必须用 %08lX
+            //uint16_t 类型 → 打印用 %04X
+            //uint8_t  类型 → 打印用 %02X
+            printf("=========================================\n");
+            printf("TI 雷达协议【分片帧】发送成功\n");
+            printf("分片序号  	: %d/%d\n" , chunk_idx + 1, total_chunks);
+            printf("剩余分片  	: %d\n"    , header->rem_chunks);
+            printf("同步字    	: %08lX\n", *(uint32_t*)frameMsg.data);
+            printf("OPCODE 	: 0x%04X\n", header->opcode);
+            printf("消息总长度	: %d 字节\n", header->msg_len);
+            printf("Flags  	: 0x%04X\n", header->flags);
+            printf("子块数量  	: %d\n"    , header->nsbc);
+            printf("头部校验  	: 0x%04X\n", header->chksum);
+            printf("CRC32 	: %08lX\n", crc);
+            printf("=========================================\n\n");
+
+            // 更新偏移
+            offset += send_len;
+            remain -= send_len;
+            chunk_idx++;
+        }
+
+        g_protocol_seq_num = (g_protocol_seq_num + 1) & 0xF;
+        return 0;
+    }
+    // 不需要分片
+    // 分配帧缓冲区（SYNC+头+子块+CRC）
+    // 总缓冲区 = 同步字(4) + 消息(头+数据+CRC)
+    AxiLiteFrame_t frameMsg;
+    // 清空缓冲区
+    memset(&frameMsg, 0, sizeof(frameMsg));
+    // 指针用于组帧
+    uint8_t* frame_ptr = frameMsg.data;
+
+    // 写入自定义2字节头 0xBA01
+    *frame_ptr++ = (Custom_Message_Header >> 8) & 0xFF;
+    *frame_ptr++ = Custom_Message_Header & 0xFF;
+
+    // 小端模式写入 4 字节同步字 (文档 2.3.1)
+    *(uint32_t*)frame_ptr = PROTOCOL_SYNC_HOST_TO_RADAR;
+    frame_ptr += 4;// 指针后移 4 字节
+
+    // 填充消息头（RadarMsgHeader_t）
+    RadarMsgHeader_t* header = (RadarMsgHeader_t*)frame_ptr;
+    // 操作码：命令字 → 设备协议 OPCODE
+    header->opcode = cmd_to_opcode(cmd);          // 转换为TI官方OPCODE
+    // 消息总长度（不含同步字）
+    header->msg_len = msg_total_len;              // 消息总长度
+    // 不分片，固定为 0
+    header->rem_chunks = 0x0000U;                // 不分片
+    // 单个子块，固定为 1
+    header->nsbc = 0x0001U;                      // 1个子块
+
+    // 组FLAGS（文档表2.4）
+    uint16_t flags = 0U;
+    flags |= (g_protocol_seq_num & 0x0FU) << 12; // [15:12]序列号 4 位
+    flags |= (0x01U) << 8;                       // [9:8]CRC类型（00=16位，01=32位）
+    flags |= (PROTOCOL_VERSION & 0x0FU) << 4;    // [7:4]协议版本
+    flags |= (0x00U) << 2;                       // [3:2]ACK请求（00=需要ACK）
+    flags |= (0x00U) << 0;                       // [1:0]重试标志（00=新消息）
+    header->flags = flags;
+
+    // 计算消息头校验和
+    header->chksum = msg_header_checksum(header);
+    // 指针移动到数据区
+    frame_ptr += PROTOCOL_HEADER_LEN;
+
+    // 组数据子块（文档图2.9）
+    RadarSubBlock_t* subblk = (RadarSubBlock_t*)frame_ptr;
+    subblk->sblk_id = sblk_id;                   // 子块ID：根据实际配置类型修改（示例：通道配置子块，文档5.2.1）
+    subblk->sblk_len = subblk_len;               // 子块总长度
+    // 子块数据，复制用户配置数据
+    if (data != NULL && len > 0)
+        memcpy(subblk->sblk_data, data, len);
+    // 指针移动到 CRC 位置
+    frame_ptr += subblk_len;
+
+    // 计算并填写 CRC32（覆盖头+子块，文档2.3.4）
+    uint32_t crc = crc32_calculate((uint8_t*)header, PROTOCOL_HEADER_LEN + subblk_len);
+    *(uint32_t*)frame_ptr = crc;
+
+    frameMsg.len = 4 + msg_total_len + 2;
+
+    // 调用底层发送接口
+    xQueueSend(PS_AXI_TO_PL_Queue, &frameMsg, portMAX_DELAY);
+
+    // ===================== 调试打印 =====================
+    printf("=========================================\n");
+    printf("TI 雷达协议帧发送成功\n");
+    printf("同步字    	: 0x%08lX\n", *(uint32_t*)frameMsg.data);  // 已修复
+    printf("OPCODE  : 0x%04X\n", header->opcode);
+    printf("消息总长度	: %d 字节\n", header->msg_len);
+    printf("Flags  	: 0x%04X\n", header->flags);
+    printf("子块数量	: %d\n"    , header->nsbc);
+    printf("头部校验  	: 0x%04X\n", header->chksum);
+    printf("CRC32  	: 0x%08lX\n", crc);
+    printf("=========================================\n\n");
+
+    // 序列号自增（重传时不变，需扩展重传逻辑）
+    g_protocol_seq_num = (g_protocol_seq_num + 1) & 0x0FU;
+
+    return 0;
+}
+
+
+// 功能：解析雷达版本回复（适配：前5字节自定义头）
+// 返回：0=成功，负数=失败
+int MMWL_ParseVersionFromRxBuf(uint8_t *Rx_Axi_buf)
+{
+    // ===================== 1. 跳过 5 字节自定义协议=====================
+    const uint8_t *p_proto = Rx_Axi_buf + 5;
+
+    // ===================== 2. 提取 TI 协议同步字=====================
+    uint32_t sync = *(uint32_t*)p_ti_data;
+    if (sync != PROTOCOL_SYNC_HOST_TO_RADAR)
+    {
+        printf("[版本解析] 同步字错误！\n");
+        return -1;
+    }
+
+    // ===================== 3. 指向消息头（同步字后 4 字节）=====================
+    const RadarMsgHeader_t *p_header = (RadarMsgHeader_t*)(p_ti_data + 4);
+
+    // ===================== 4. 判断是否是 版本查询的回复 =====================
+    // 下发：CMD_GET_VERSION = 0x0011
+    // 返回：opcode = 0x0011（和下发一致，TI 标准回复）
+    if (p_header->opcode != CMD_GET_VERSION)
+    {
+        return -2; // 不是版本回复
+    }
+
+    // ===================== 5. 指向 子块 =====================
+    const uint8_t *p_subblk = p_proto  + 4 + PROTOCOL_HEADER_LEN;
+    const RadarSubBlock_t  *p_sub    = (RadarSubBlock_t*)p_subblk;
+
+    // 判断子块ID是否 = 版本查询 0x0220
+    if (p_sub->sblk_id != SBLK_ID_VERSION_GET)
+    {
+        return -3;
+    }
+
+    // ===================== 6. 解析版本数据（官方格式）=====================
+
+    const MMWL_FwVer_t *p_ver = (VersionData_t*)p_sub->sblk_data;
+
+    // 保存到全局变量
+    g_chip_version.maj = p_ver->maj;
+    g_chip_version.min = p_ver->min;
+    g_chip_version.pat = p_ver->pat;
+    g_chip_version.bld = p_ver->bld;
+
+    // ===================== 7. 打印 =====================
+    printf("=========================================\n");
+    printf("【雷达版本解析成功】\n");
+    printf("版本：%d.%d.%d.%d\n",
+           g_chip_version.maj,
+           g_chip_version.min,
+           g_chip_version.pat,
+           g_chip_version.bld);
+    printf("=========================================\n");
+
+    // 释放信号量，让 MMWL_App 继续运行
+    xSemaphoreGive(g_version_sem);
+
+    return 0;
+}
+

@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Mar 19 09:08:25 2026
+# Process ID: 15816
+# Current directory: D:/HSC/HSC
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9092 D:\HSC\HSC\HSC.xpr
+# Log file: D:/HSC/HSC/vivado.log
+# Journal file: D:/HSC/HSC\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/HSC/HSC/HSC.xpr
+INFO: [Project 1-313] Project file moved from 'D:/ASUS-PC/Desktop/temporary/HSC' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/HSC/HSC/ip_repo/ps_pl_axi4_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.1/data/ip'.
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Mar 19 09:11:15 2026...

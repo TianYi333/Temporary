@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="org.eclipse.cdt.utils.ui.controls.FileListControl" value="D:\ASUS-PC\Desktop\temporary\MPR_OV_1.3\vitis\MPR_OV_13\src"/>
+	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item key="askReindex.detail" value="0"/>
+	</section>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="Lwip_Server_Send_count_Queue"/>
+			<item value="Lwip_Server_Send_host_computer_Queue"/>
+			<item value="XUartPs_Send"/>
+			<item value="EMMC_MAX_TARGETS"/>
+			<item value="MAX_TARGETS"/>
+			<item value="Float_Data_Address"/>
+		</list>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item key="size.width" value="814"/>
+		<item key="size.height" value="180"/>
+	</section>
+</section>

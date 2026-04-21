@@ -1,0 +1,81 @@
+#ifndef SRC_MAIN_H_
+#define SRC_MAIN_H_
+
+#include <sleep.h>
+#include "netif/xadapter.h"
+#include "platform_config.h"
+#include "xil_printf.h"
+#include "lwip/init.h"
+#include "lwip/inet.h"
+#include "xgpiops.h"
+#include "lwip/dhcp.h"
+#include "xtime_l.h"
+#include "xuartps.h"        // Xilinx UART驱动库
+#include "xil_printf.h"     // 调试输出库
+#include "xparameters.h"
+#include "xscutimer.h"
+#include "xscugic.h"
+#include "pl_bram_rd.h"
+#include "xbram.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "ssd1309_spi.h"
+#include "font_8x8.h"
+#include "am2302.h"
+#include "Angle_Sensor.h"
+#include "bram.h"
+#include "led.h"
+#include "Lwip_Receive.h"
+#include "TTC_timer_intr.h"
+#include "AM2302.h"
+
+#define SysTick_Frequency   222222222  //SysTick时钟频率222MHz
+extern void Lwip_Receive_thread(void *p);/* 以太网数据接收处理任务 */
+extern QueueHandle_t Lwip_Receive_Queue;/* 以太网数据接收队列 */
+extern QueueHandle_t Lwip_Send_Queue;/* 以太网数据接收队列 */
+extern QueueHandle_t Angle_processing_Queue;/* 角度传感器数据队列 */
+
+#define GPIOPS_ID 			XPAR_XGPIOPS_0_DEVICE_ID//PS 端 GPIO 器件 ID
+#define INTC_DEVICE_ID 		XPAR_SCUGIC_SINGLE_DEVICE_ID //中断 ID
+#define J_IN3 54 //连接到 EMIO0
+#define J_IN2 55 //连接到 EMIO1
+#define J_IN1 56 //连接到 EMIO2
+#define J_IN4 57 //连接到 EMIO3
+#define P19 58 //连接到 EMIO4
+#define N16 59 //连接到 EMIO5
+#define X_CS 60 //连接到 EMIO6
+#define X_DC 61 //连接到 EMIO7
+#define X_RES 62 //连接到 EMIO8
+#define X_SDA 63 //连接到 EMIO9
+#define X_SCL 64 //连接到 EMIO10
+#define R_SIGNAL 65 //连接到 EMIO11
+#define DIR_R_SIGNAL 66 //连接到 EMIO12
+#define L20 67 //连接到 EMIO13
+#define A20 68 //连接到 EMIO14
+#define MA_RX 69 //连接到 EMIO15
+#define MA_TX 70 //连接到 EMIO16
+#define SLO_RX 71 //连接到 EMIO17
+#define SLO_TX 72 //连接到 EMIO18
+#define AM2302_1_SDA 73 //连接到 EMIO19
+#define AM2302_2_SDA 74 //连接到 EMIO20
+#define AM2302_3_SDA 75 //连接到 EMIO21
+#define DIR_AM2302_1 76 //连接到 EMIO22
+#define DIR_AM2302_2 77 //连接到 EMIO23
+#define DIR_AM2302_3 78 //连接到 EMIO24
+#define TRIGER_OUT_3V3 79 //连接到 EMIO25
+#define T1 80 //连接到 EMIO26
+#define T2 81 //连接到 EMIO27
+#define R1 82 //连接到 EMIO28
+#define R2 83 //连接到 EMIO29
+#define DIR_T 84 //连接到 EMIO30
+#define DIR_R 85 //连接到 EMIO31
+#define GY_25_TX 86 //连接到 EMIO32
+#define GY_25_RX 87 //连接到 EMIO33
+
+extern XGpioPs gpiops_inst; //PS 端 GPIO 驱动实例
+extern XGpioPs_Config *gpiops_cfg_ptr; //PS 端 GPIO 配置信息
+
+extern XScuGic xInterruptController;// 引用FreeRTOS已初始化的中断控制器
+
+#endif /* SRC_MAIN_H_ */

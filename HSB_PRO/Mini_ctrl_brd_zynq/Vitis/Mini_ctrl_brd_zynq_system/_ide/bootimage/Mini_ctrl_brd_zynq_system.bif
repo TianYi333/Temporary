@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Vitis/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf
+	D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Vitis/Mini_ctrl_brd_zynq/_ide/bitstream/system_wrapper.bit
+	D:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/Vitis/Mini_ctrl_brd_zynq/Debug/Mini_ctrl_brd_zynq.elf
+}

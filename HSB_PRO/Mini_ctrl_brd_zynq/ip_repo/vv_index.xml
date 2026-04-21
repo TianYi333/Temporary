@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<Index Version="1" Minor="0">
+	<Repository value="d:/ASUS-PC/Desktop/temporary/Mini_ctrl_brd_zynq/ip_repo">
+	</Repository>
+	<IP>
+		<VLNV value="xilinx.com:user:AM2302:1.0">
+		</VLNV>
+		<DisplayName value="AM2302_v1.0">
+		</DisplayName>
+		<Description value="AM2302">
+		</Description>
+		<CoreRevision value="2">
+		</CoreRevision>
+		<ComponentPath value="AM2302_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="zynq">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="AXI_Peripheral">
+			</Taxonomy>
+		</Taxonomies>
+		<Interfaces>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:breath_led_ip:1.0">
+		</VLNV>
+		<DisplayName value="breath_led_ip_v1.0">
+		</DisplayName>
+		<Description value="My new AXI IP">
+		</Description>
+		<CoreRevision value="2">
+		</CoreRevision>
+		<ComponentPath value="breath_led_ip_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="zynq">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="AXI_Peripheral">
+			</Taxonomy>
+		</Taxonomies>
+		<Interfaces>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:pl_bram_rd:1.0">
+		</VLNV>
+		<DisplayName value="pl_bram_rd_v1.0">
+		</DisplayName>
+		<Description value="My new AXI IP">
+		</Description>
+		<CoreRevision value="4">
+		</CoreRevision>
+		<ComponentPath value="pl_bram_rd_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="zynq">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="AXI_Peripheral">
+			</Taxonomy>
+		</Taxonomies>
+		<Interfaces>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+	<IP>
+		<VLNV value="xilinx.com:user:Pro_FPGA_ctrl:1.0">
+		</VLNV>
+		<DisplayName value="Pro_FPGA_ctrl_v1.0">
+		</DisplayName>
+		<Description value="FPGA ctrl Pro">
+		</Description>
+		<CoreRevision value="11">
+		</CoreRevision>
+		<ComponentPath value="Pro_FPGA_ctrl_1.0/component.xml">
+		</ComponentPath>
+		<Families>
+			<Family name="zynq">
+				<Part status="Pre-Production" name="ALL">
+				</Part>
+			</Family>
+		</Families>
+		<Taxonomies>
+			<Taxonomy value="AXI_Peripheral">
+			</Taxonomy>
+		</Taxonomies>
+		<SubcoreVLNVs>
+			<SubcoreVLNV value="xilinx.com:ip:mult_gen:12.0">
+			</SubcoreVLNV>
+			<SubcoreVLNV value="xilinx.com:ip:blk_mem_gen:8.4">
+			</SubcoreVLNV>
+			<SubcoreVLNV value="xilinx.com:ip:div_gen:5.1">
+			</SubcoreVLNV>
+		</SubcoreVLNVs>
+		<Interfaces>
+			<Interface value="AXI4">
+			</Interface>
+		</Interfaces>
+	</IP>
+</Index>
+

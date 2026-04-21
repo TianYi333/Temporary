@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="Custom_Message_Header"/>
+			<item value="MMWL_DelayMs"/>
+			<item value="config_parameters_init_cascade_example"/>
+			<item value="check_user_input"/>
+			<item value="PS_AXI_TO_PL_Queue"/>
+		</list>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item key="size.width" value="621"/>
+		<item key="size.height" value="180"/>
+	</section>
+</section>
